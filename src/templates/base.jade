@@ -12,11 +12,12 @@ html(lang='en')
 						.col-sm-2
 							.header__coat
 						.col-sm-10.topmenu
-							ul.topmenu__lang
-								li Русский
-								li Английский
-								li Китайский
-								li Иврит
+							a(href="").topmenu__lang
+								ul
+									li Русский
+									li Английский
+									li Китайский
+									li Иврит
 							a(href="")
 								span.
 									<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
@@ -66,7 +67,15 @@ html(lang='en')
 				.row
 					.col-md-12.header__menu.text-center
 						a(href="").active Главная
-						a(href="").list О ЕАО
+						.submenu
+							a(href="") Menu item
+							ul
+								li
+									a(href="") Submenu item
+								li
+									a(href="") Submenu item
+								li
+									a(href="") Submenu item
 
 
 		block content

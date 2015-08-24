@@ -25,7 +25,7 @@
 		border 1px solid #e2e3e4
 		border-radius 31px
 		padding 7px
-		> a
+		> *
 			display inline-block
 			padding 13px 27px
 			color #242424
@@ -33,6 +33,32 @@
 			text-decoration none
 			font-weight bold
 			border-radius 23px
+			&.submenu
+				position relative
+				padding-right 40px
+				&:after
+					display block
+					position absolute
+					font-family FontAwesome
+					content "\f078"
+					font-size 11px
+					top 50%
+					transform translateY(-50%)
+					right 27px
+					transition transform 350 ms linear
+				a + ul
+					margin 0
+					padding 0
+					position absolute
+					left 0
+					//visibility hidden
+					//opacity 0
+					li
+						list-style none
+					a
+						display block
+						width auto
+						background #242424
 			&:not(:first-child)
 				margin-left 6px
 			&.active
