@@ -1,0 +1,67 @@
+.header
+	&__coat
+		position absolute
+		width 92px
+		height 103px
+		left 0
+		top -13px
+		background $brand-primary
+	&__topmenu
+		height 54px
+		padding 13px 0
+		&--black
+			background #242424
+			color #fff
+			fill #fff
+			a
+				color #fff
+				text-decoration none
+
+	&__title
+		font-size 20px
+		margin 22px 0
+
+	&__menu
+		border 1px solid #e2e3e4
+		border-radius 31px
+		padding 7px
+		> a
+			display inline-block
+			padding 13px 27px
+			color #242424
+			transition background 350ms, color 350ms
+			text-decoration none
+			font-weight bold
+			border-radius 23px
+			&:not(:first-child)
+				margin-left 6px
+			&.active
+				background $brand-primary
+				color #fff
+			&:hover
+				background #242424
+				color #fff
+			&:focus
+				outline none
+
+
+.topmenu
+	text-align right
+	& > *
+		display inline-block
+		padding 0
+		margin 0
+		&:not(:first-child)
+			margin-left 70px
+	svg
+		height 15px
+		width auto
+		position relative
+		top 3px
+		margin-right 18px
+
+	&__lang
+		li
+			display inline-block
+			cursor pointer
+
