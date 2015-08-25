@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
@@ -16,13 +16,15 @@
             <div class="col-sm-2">
               <div class="header__coat"></div>
             </div>
-            <div class="col-sm-10 topmenu"><a href="" class="topmenu__lang">
+            <div class="col-sm-10 topmenu">
+              <div class="topmenu__lang"><a href="">Русский</a>
                 <ul>
-                  <li>Русский</li>
-                  <li>Английский</li>
-                  <li>Китайский</li>
-                  <li>Иврит</li>
-                </ul></a><a href=""><span>
+                  <li><a href="" data-lang="ru">Русский</a></li>
+                  <li><a href="" data-lang="en">Английский</a></li>
+                  <li><a href="" data-lang="ch">Китайский</a></li>
+                  <li><a href="" data-lang="is">Иврит</a></li>
+                </ul>
+              </div><a href=""><span>
                   <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M91.464,85.134L89.1,77.758h-0.321
                   	c-2.057,3.138-4.173,5.314-6.349,6.527c-2.178,1.213-5.015,1.82-8.513,1.82c-4.301,0-7.686-1.488-10.155-4.465
@@ -57,7 +59,8 @@
                   	C24.762,38.37,25.886,37.198,27.27,37.198z"/>
                   <path d="M13.307,22.171h14.535c0.011,0,0.03,0,0.04,0c2.428-0.021,4.394-2.069,4.414-4.598c0-0.011,0-0.031,0-0.041
                   	V2.38c0-1.401-1.103-2.332-2.247-2.332c-0.552,0-1.104,0.21-1.565,0.69L11.721,18.201C10.317,19.663,11.31,22.171,13.307,22.171z"/>
-                  </svg></span>Для печати</a></div>
+                  </svg></span>Для печати</a>
+            </div>
           </div>
         </div>
       </div>
@@ -66,7 +69,8 @@
         <div class="row">
           <div class="col-md-12 header__menu text-center"><a href="" class="active">Главная</a>
             <div class="submenu"><a href="">ЕАО</a>
-              <ul>
+              <!-- TODO remove inline-->
+              <ul style="display: none">
                 <li><a href="">Submenu item</a></li>
                 <li><a href="">Submenu item</a></li>
                 <li><a href="">Submenu item</a></li>
@@ -77,12 +81,44 @@
       </div>
     </header>
     <div class="content">
+      <main class="container">
+        <div class="row">
+          <div class="col-md-6">Slider</div>
+          <div class="col-md-6">News</div>
+        </div>
+      </main>
     </div>
     <footer class="footer footer--gray">
       <div class="container">
         <div class="row">
-          <div class="col-md-4"></div>
-          <div class="col-md-6"></div>
+          <div class="col-md-4">
+            <p><strong>Официальный интернет-портал органов государственной власти Еврейской автономной области.</strong></p>
+            <p class="small"><i>Статус интернет-портала определен постановлением правительства ЕАО от 14.04.10 № 107-nn "О статусе Официального интернет-портала органов государственной власти Еврейской автономной области и регламенте его информационной поддержки".</i></p>
+            <p><strong>Адрес правительства ЕАО:</strong> 679016, г. Биробиджан, проспект 60-летия СССР, 18</p>
+            <p><strong>E-mail:</strong> gov(a)eao.ru</p>
+            <p>Place for counters</p>
+          </div>
+          <div class="col-md-7 col-md-push-1 footer__columns">
+            <div class="footer__column">
+              <h5>О ЕАО</h5><a href="" class="small">Ссылка</a><a href="" class="small">Ссылка</a><a href="" class="small">Ссылка</a><a href="" class="small">Ссылка</a>
+              <h5>О Власть</h5><a href="" class="small">Ссылка</a><a href="" class="small">Ссылка</a><a href="" class="small">Ссылка</a><a href="" class="small">Ссылка</a><a href="" class="small">Ссылка</a>
+            </div>
+            <div class="footer__column">
+              <h5>Губернатор</h5><a href="" class="small">Ссылка</a><a href="" class="small">Ссылка</a><a href="" class="small">Ссылка</a><a href="" class="small">Ссылка</a><a href="" class="small">Ссылка</a><a href="" class="small">Ссылка</a>
+              <h5>О Пресс-центр</h5><a href="" class="small">Ссылка</a><a href="" class="small">Ссылка</a><a href="" class="small">Ссылка</a><a href="" class="small">Ссылка</a><a href="" class="small">Ссылка</a>
+            </div>
+            <div class="footer__column">
+              <h5>Документры</h5><a href="" class="small">Ссылка</a><a href="" class="small">Ссылка</a><a href="" class="small">Ссылка</a><a href="" class="small">Ссылка</a><a href="" class="small">Ссылка</a><a href="" class="small">Ссылка</a>
+              <h5>Обращения граждан</h5><a href="" class="small">Ссылка</a><a href="" class="small">Ссылка</a><a href="" class="small">Ссылка</a><a href="" class="small">Ссылка</a><a href="" class="small">Ссылка</a><a href="" class="small">Ссылка</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom-line">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12">&copy; Комитет информационных технологий и связи Еврейской автономной области, 1999-2015</div>
+          </div>
         </div>
       </div>
     </footer>

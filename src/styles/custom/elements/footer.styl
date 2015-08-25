@@ -3,3 +3,20 @@
 
 	&--gray
 		background #f2f2f2
+
+	&__bottom-line
+		padding 19px 0 22px
+		border-top 1px solid #ddd
+		margin-top 47px
+
+	&__column
+		float left
+		width calc(33% - 30px * 2 /3)
+		&:not(:last-child)
+			margin-right 30px
+		a
+			display block
+			color #242424
+
+			& + h5
+				margin-top 30px

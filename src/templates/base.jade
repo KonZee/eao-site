@@ -1,5 +1,5 @@
 doctype html
-html(lang='en')
+html(lang='ru')
 
 	include elements/head
 
@@ -12,12 +12,17 @@ html(lang='en')
 						.col-sm-2
 							.header__coat
 						.col-sm-10.topmenu
-							a(href="").topmenu__lang
+							.topmenu__lang
+								a(href="") Русский
 								ul
-									li Русский
-									li Английский
-									li Китайский
-									li Иврит
+									li
+										a(href="" data-lang="ru") Русский
+									li
+										a(href="" data-lang="en") Английский
+									li
+										a(href="" data-lang="ch") Китайский
+									li
+										a(href="" data-lang="is") Иврит
 							a(href="")
 								span.
 									<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
@@ -69,7 +74,8 @@ html(lang='en')
 						a(href="").active Главная
 						.submenu
 							a(href="") ЕАО
-							ul
+							// TODO remove inline
+							ul(style="display: none")
 								li
 									a(href="") Submenu item
 								li
@@ -85,6 +91,60 @@ html(lang='en')
 			.container
 				.row
 					.col-md-4
-					.col-md-6
+						p
+							strong Официальный интернет-портал органов государственной власти Еврейской автономной области.
+						p.small
+							i Статус интернет-портала определен постановлением правительства ЕАО от 14.04.10 № 107-nn "О статусе Официального интернет-портала органов государственной власти Еврейской автономной области и регламенте его информационной поддержки".
+						p <strong>Адрес правительства ЕАО:</strong> 679016, г. Биробиджан, проспект 60-летия СССР, 18
+						p <strong>E-mail:</strong> gov(a)eao.ru
+						p Place for counters
+					.col-md-7.col-md-push-1.footer__columns
+						.footer__column
+							h5 О ЕАО
+							a(href="").small Ссылка
+							a(href="").small Ссылка
+							a(href="").small Ссылка
+							a(href="").small Ссылка
+							h5 О Власть
+							a(href="").small Ссылка
+							a(href="").small Ссылка
+							a(href="").small Ссылка
+							a(href="").small Ссылка
+							a(href="").small Ссылка
+						.footer__column
+							h5 Губернатор
+							a(href="").small Ссылка
+							a(href="").small Ссылка
+							a(href="").small Ссылка
+							a(href="").small Ссылка
+							a(href="").small Ссылка
+							a(href="").small Ссылка
+							h5 О Пресс-центр
+							a(href="").small Ссылка
+							a(href="").small Ссылка
+							a(href="").small Ссылка
+							a(href="").small Ссылка
+							a(href="").small Ссылка
+						.footer__column
+							h5 Документры
+							a(href="").small Ссылка
+							a(href="").small Ссылка
+							a(href="").small Ссылка
+							a(href="").small Ссылка
+							a(href="").small Ссылка
+							a(href="").small Ссылка
+							h5 Обращения граждан
+							a(href="").small Ссылка
+							a(href="").small Ссылка
+							a(href="").small Ссылка
+							a(href="").small Ссылка
+							a(href="").small Ссылка
+							a(href="").small Ссылка
+
+
+			.footer__bottom-line
+				.container
+					.row
+						.col-xs-12 &copy; Комитет информационных технологий и связи Еврейской автономной области, 1999-2015
 
 	include elements/scripts

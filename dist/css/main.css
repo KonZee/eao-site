@@ -28,6 +28,15 @@ body {
 	        flex: 1 0 auto;
 }
 
+.small {
+	font-size: 12px;
+}
+
+h5 {
+	font-weight: bold;
+	margin-bottom: 30px;
+}
+
 .header__coat {
 	position: absolute;
 	width: 92px;
@@ -150,9 +159,40 @@ body {
 	margin-right: 18px;
 }
 
-.topmenu__lang li {
-	display: inline-block;
-	cursor: pointer;
+.topmenu__lang {
+	position: relative;
+	width: 140px;
+	padding-right: 20px;
+	padding-left: 35px;
+}
+
+.topmenu__lang > ul {
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	top: 100%;
+	right: 0;
+	z-index: 1;
+}
+
+.topmenu__lang > ul li {
+	list-style: none;
+}
+
+.topmenu__lang > ul a {
+	display: block;
+	width: 100%;
+	background: #242424;
+	padding: 3px 20px 3px 35px;
+}
+
+.topmenu__lang > a:after {
+	position: absolute;
+	font-family: FontAwesome;
+	content: '\f078';
+	display: block;
+	top: 0;
+	right: 0;
 }
 
 .footer {
@@ -161,4 +201,28 @@ body {
 
 .footer--gray {
 	background: #F2F2F2;
+}
+
+.footer__bottom-line {
+	padding: 19px 0 22px;
+	border-top: 1px solid #DDDDDD;
+	margin-top: 47px;
+}
+
+.footer__column {
+	float: left;
+	width: calc(33% - 30px * 2 / 3);
+}
+
+.footer__column:not(:last-child) {
+	margin-right: 30px;
+}
+
+.footer__column a {
+	display: block;
+	color: #242424;
+}
+
+.footer__column a + h5 {
+	margin-top: 30px;
 }

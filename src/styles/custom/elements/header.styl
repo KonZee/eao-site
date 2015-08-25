@@ -87,7 +87,31 @@
 		margin-right 18px
 
 	&__lang
-		li
-			display inline-block
-			cursor pointer
+		position relative
+		width 140px
+		padding-right 20px
+		padding-left 35px
+		> ul
+			position absolute
+			margin 0
+			padding 0
+			top 100%
+			right 0
+			z-index 1
+			li
+				list-style none
+			a
+				display block
+				width 100%
+				background #242424
+				padding 3px 20px 3px 35px
+		> a:after
+			position absolute
+			font-family FontAwesome
+			content "\f078"
+			display block
+			top 0
+			right 0
+
+
 
