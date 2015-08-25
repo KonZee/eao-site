@@ -4,7 +4,37 @@ block title
 	| Главная - официальный портал ЕАО
 
 block content
-	main.container
-		.row
-			.col-md-6 Slider
-			.col-md-6 News
+	main
+		.wrapper.wrapper--gray
+			.container
+				.row
+					.col-md-6
+						.slider
+							ul
+								li.slider__item
+									img(src="/images/index-slider.jpg")
+									.slider__text
+										+lipsum(2, "sentences")
+								li.slider__item
+									img(src="/images/index-slider.jpg")
+									.slider__text
+										+lipsum(2, "sentences")
+								li.slider__item
+									img(src="/images/index-slider.jpg")
+									.slider__text
+										+lipsum(2, "sentences")
+							a(href="").slider__arrow.slider__arrow--prev.js-prev
+								i.fa.fa-chevron-left
+							a(href="").slider__arrow.slider__arrow--next.js-next
+								i.fa.fa-chevron-right
+
+					.col-md-6
+						.news
+							.news__tabs
+								a(href="").active Новости
+								a(href="") Новости органов власти
+								a(href="") Календарь событий
+							.news__lists
+		.wrapper
+		.wrapper.wrapper--gray
+		.wrapper
