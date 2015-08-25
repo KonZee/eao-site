@@ -1,9 +1,10 @@
 .header
+	position relative
 	&__coat
 		position absolute
 		width 92px
 		height 103px
-		left 0
+		left 15px
 		top -13px
 		background $brand-primary
 	&__topmenu
@@ -25,9 +26,10 @@
 		border 1px solid #e2e3e4
 		border-radius 31px
 		padding 7px
+		background #fff
 		> *
 			display inline-block
-			padding 13px 27px
+			padding 13px 24px
 			color #242424
 			transition background 350ms, color 350ms
 			text-decoration none
@@ -69,6 +71,17 @@
 				color #fff
 			&:focus
 				outline none
+
+	&:after
+		display block
+		content ""
+		position absolute
+		left 0
+		bottom 0
+		right 0
+		height 31px
+		background #f2f2f2
+		z-index -1
 
 
 .topmenu
