@@ -1,3 +1,33 @@
+html,
+body {
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display:         flex;
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	min-height: 100%;
+}
+
+body {
+	-webkit-flex: 1 1 auto;
+	    -ms-flex: 1 1 auto;
+	        flex: 1 1 auto;
+}
+
+.header,
+.footer {
+	-webkit-flex: 0 0 auto;
+	    -ms-flex: 0 0 auto;
+	        flex: 0 0 auto;
+}
+
+.content {
+	-webkit-flex: 1 0 auto;
+	    -ms-flex: 1 0 auto;
+	        flex: 1 0 auto;
+}
+
 .header__coat {
 	position: absolute;
 	width: 92px;
@@ -123,4 +153,12 @@
 .topmenu__lang li {
 	display: inline-block;
 	cursor: pointer;
+}
+
+.footer {
+	padding-top: 42px;
+}
+
+.footer--gray {
+	background: #F2F2F2;
 }
