@@ -38,7 +38,7 @@ block content
 								li(role="presentation").news-panel__tab
 									a(href="#events-tab") Календарь событий
 							.tab-content
-								#news-tab.tab-pane.news-panel__content.active(role="tabpanel")
+								#news-tab.tab-pane.active(role="tabpanel")
 									.news-panel__item
 										.data.small 27.09.2015
 										.text
@@ -59,13 +59,13 @@ block content
 										.text
 											+lipsum(15, 'words')
 											a(href="") Подробнее...
-								#official-tab.tab-pane.news-panel__content(role="tabpanel")
+								#official-tab.tab-pane(role="tabpanel")
 									.news-panel__item
 										.data.small 27.09.2015
 										.text
 											+lipsum(15, 'words')
 											a(href="") Подробнее...
-								#events-tab.tab-pane.news-panel__content(role="tabpanel")
+								#events-tab.tab-pane(role="tabpanel")
 									.news-panel__item
 										.data.small 27.09.2015
 										.text
@@ -73,28 +73,98 @@ block content
 											a(href="") Подробнее...
 		.wrapper
 			.container
-				.slider-long
-					ul
-						li
-							a(href="")
-								img(src="/images/index-small-slider.jpg")
-						li
-							a(href="")
-								img(src="/images/index-small-slider.jpg")
-						li
-							a(href="")
-								img(src="/images/index-small-slider.jpg")
-						li
-							a(href="")
-								img(src="/images/index-small-slider.jpg")
-						li
-							a(href="")
-								img(src="/images/index-small-slider.jpg")
-						li
-							a(href="")
-								img(src="/images/index-small-slider.jpg")
-						li
-							a(href="")
-								img(src="/images/index-small-slider.jpg")
+				.row
+					.col-xs-12
+						.slider
+							ul
+								li
+									a(href="")
+										img(src="/images/index-small-slider.jpg")
+								li
+									a(href="")
+										img(src="/images/index-small-slider.jpg")
+								li
+									a(href="")
+										img(src="/images/index-small-slider.jpg")
+								li
+									a(href="")
+										img(src="/images/index-small-slider.jpg")
+								li
+									a(href="")
+										img(src="/images/index-small-slider.jpg")
+								li
+									a(href="")
+										img(src="/images/index-small-slider.jpg")
+								li
+									a(href="")
+										img(src="/images/index-small-slider.jpg")
+							a(href="").slider__arrow.slider__arrow--prev.js-prev
+								i.fa.fa-chevron-left
+							a(href="").slider__arrow.slider__arrow--next.js-next
+								i.fa.fa-chevron-right
 		.wrapper.wrapper--gray
+			.container
+				.row
+					.col-md-4
+						.slider
+							ul
+								li.slider__item
+									img(src="/images/index-left-slider.jpg")
+									.slider__text
+										+lipsum(2, "sentences")
+								li.slider__item
+									img(src="/images/index-slider.jpg")
+									.slider__text
+										+lipsum(2, "sentences")
+								li.slider__item
+									img(src="/images/index-slider.jpg")
+									.slider__text
+										+lipsum(2, "sentences")
+							a(href="").slider__arrow.slider__arrow--prev.js-prev
+								i.fa.fa-chevron-left
+							a(href="").slider__arrow.slider__arrow--next.js-next
+								i.fa.fa-chevron-right
+
+					.col-md-4
+						.news-panel
+							.news-panel__item
+								.data.small 27.09.2015
+								.text
+									+lipsum(15, 'words')
+									a(href="") Подробнее...
+							.news-panel__item
+								.data.small 27.09.2015
+								.text
+									+lipsum(15, 'words')
+									a(href="") Подробнее...
+							.news-panel__item
+								.data.small 27.09.2015
+								.text
+									+lipsum(15, 'words')
+									a(href="") Подробнее...
+							.news-panel__item
+								.data.small 27.09.2015
+								.text
+									+lipsum(15, 'words')
+									a(href="") Подробнее...
+
+					.col-md-4
+						.slider
+							ul
+								li.slider__item
+									img(src="/images/index-right-slider.jpg")
+									.slider__text
+										+lipsum(2, "sentences")
+								li.slider__item
+									img(src="/images/index-slider.jpg")
+									.slider__text
+										+lipsum(2, "sentences")
+								li.slider__item
+									img(src="/images/index-slider.jpg")
+									.slider__text
+										+lipsum(2, "sentences")
+							a(href="").slider__arrow.slider__arrow--prev.js-prev
+								i.fa.fa-chevron-left
+							a(href="").slider__arrow.slider__arrow--next.js-next
+								i.fa.fa-chevron-right
 		.wrapper

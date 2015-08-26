@@ -341,6 +341,18 @@ h5 {
 	background: rgba(36,36,36,0.44);
 }
 
+.slider-long ul {
+	overflow: hidden;
+	position: relative;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+.slider-long li {
+	display: inline-block;
+}
+
 .news-panel__tabs {
 	position: relative;
 	border: none;
