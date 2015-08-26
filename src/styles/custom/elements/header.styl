@@ -9,7 +9,6 @@
 		background $brand-primary
 	&__topmenu
 		height 54px
-		padding 13px 0
 		&--black
 			background #242424
 			color #fff
@@ -90,8 +89,15 @@
 		display inline-block
 		padding 0
 		margin 0
-		&:not(:first-child)
-			margin-left 70px
+	& > a
+		&:not(:last-child)
+			padding 17px 35px
+		&:last-child
+			padding 17px 0 17px 35px
+	a img
+		margin-right 10px
+		position relative
+		top -2px
 	svg
 		height 15px
 		width auto
@@ -101,9 +107,6 @@
 
 	&__lang
 		position relative
-		width 140px
-		padding-right 20px
-		padding-left 35px
 		> ul
 			position absolute
 			margin 0
@@ -111,20 +114,29 @@
 			top 100%
 			right 0
 			z-index 1
+			pointer-events none
+			opacity 0
 			li
 				list-style none
 			a
 				display block
 				width 100%
 				background #242424
-				padding 3px 20px 3px 35px
-		> a:after
-			position absolute
-			font-family FontAwesome
-			content "\f078"
-			display block
-			top 0
-			right 0
-
+				padding 8px 35px
+		> a
+			display inline-block
+			width 210px
+			padding 17px 55px 17px 35px
+			text-align right
+			&:after
+				position absolute
+				font-family FontAwesome
+				content "\f078"
+				display block
+				top 18px
+				right 35px
+		&:hover > ul
+			pointer-events auto
+			opacity 1
 
 

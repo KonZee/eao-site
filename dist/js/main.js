@@ -1,5 +1,19 @@
 $(document).ready(function(){
+
+	// Language selector
+	$('.topmenu__lang a').click(function(e){
+		e.preventDefault();
+	});
+
+	// Init slider
 	indexSlider();
+
+	// Init tabs
+	$('.news-panel__tabs a').click(function (e) {
+		  e.preventDefault()
+		  $(this).tab('show')
+	})
+
 });
 
 var indexSlider = function(){

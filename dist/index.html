@@ -18,13 +18,12 @@
             </div>
             <div class="col-sm-10">
               <div class="topmenu">
-                <div class="topmenu__lang"><a href="">Русский</a>
-                  <!-- TODO remove inline-->
-                  <ul style="display: none;">
-                    <li><a href="" data-lang="ru">Русский</a></li>
-                    <li><a href="" data-lang="en">Английский</a></li>
-                    <li><a href="" data-lang="ch">Китайский</a></li>
-                    <li><a href="" data-lang="is">Иврит</a></li>
+                <div class="topmenu__lang"><a href="" data-lang="ru"><img src="/images/flag__ru.png">Русский</a>
+                  <ul>
+                    <li><a href="" data-lang="ru"><img src="/images/flag__ru.png">Русский</a></li>
+                    <li><a href="" data-lang="en"><img src="/images/flag__ru.png">Английский</a></li>
+                    <li><a href="" data-lang="cn"><img src="/images/flag__ru.png">Китайский</a></li>
+                    <li><a href="" data-lang="il"><img src="/images/flag__ru.png">Иврит</a></li>
                   </ul>
                 </div><a href=""><span>
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
@@ -135,30 +134,85 @@
                 <div class="slider">
                   <ul>
                     <li class="slider__item"><img src="/images/index-slider.jpg">
-                      <div class="slider__text">Adipiscing aliqua exercitation, eu aliqua, eiusmod dolor. Lorem veniam ea velit laboris elit lorem incididunt enim lorem, velit. 
+                      <div class="slider__text">Veniam enim qui enim ipsum officia incididunt anim proident nostrud in duis eiusmod occaecat sed. Consectetur, ut in in laborum. 
                       </div>
                     </li>
                     <li class="slider__item"><img src="/images/index-slider.jpg">
-                      <div class="slider__text">Sed enim do sit sit anim ut aliqua nisi, reprehenderit amet? Duis incididunt, nostrud qui enim proident. 
+                      <div class="slider__text">Excepteur dolore, quis, dolor, sint aliqua in lorem sint anim, officia nulla consequat. In adipiscing excepteur, laborum minim commodo culpa dolore nostrud reprehenderit occaecat, cupidatat, ad aliqua. 
                       </div>
                     </li>
                     <li class="slider__item"><img src="/images/index-slider.jpg">
-                      <div class="slider__text">Tempor minim amet sunt culpa occaecat, do, ea, anim velit, lorem, esse ea in tempor. Adipiscing duis minim do, aute sed eiusmod ipsum, officia consectetur adipiscing ullamco id. 
+                      <div class="slider__text">In dolor enim, eiusmod in ullamco consectetur, sunt, consequat est non ipsum in. Minim do exercitation ea. 
                       </div>
                     </li>
                   </ul><a href="" class="slider__arrow slider__arrow--prev js-prev"><i class="fa fa-chevron-left"></i></a><a href="" class="slider__arrow slider__arrow--next js-next"><i class="fa fa-chevron-right"></i></a>
                 </div>
               </div>
               <div class="col-md-6">
-                <div class="news">
-                  <div class="news__tabs"><a href="" class="active">Новости</a><a href="">Новости органов власти</a><a href="">Календарь событий</a></div>
-                  <div class="news__lists"></div>
+                <div class="news-panel">
+                  <ul class="nav nav-tabs news-panel__tabs clearfix">
+                    <li role="presentation" class="news-panel__tab active"><a href="#news-tab">Новости</a></li>
+                    <li role="presentation" class="news-panel__tab"><a href="#official-tab">Новости органов власти</a></li>
+                    <li role="presentation" class="news-panel__tab"><a href="#events-tab">Календарь событий</a></li>
+                  </ul>
+                  <div class="tab-content">
+                    <div id="news-tab" role="tabpanel" class="tab-pane news-panel__content active">
+                      <div class="news-panel__item">
+                        <div class="data small">27.09.2015</div>
+                        <div class="text">Sunt aliqua ullamco exercitation eu id eu officia nostrud magna officia ut amet est ea <a href="">Подробнее...</a>
+                        </div>
+                      </div>
+                      <div class="news-panel__item">
+                        <div class="data small">27.09.2015</div>
+                        <div class="text">Enim est nisi id elit cillum ea ullamco dolore dolore in ea ea enim nostrud <a href="">Подробнее...</a>
+                        </div>
+                      </div>
+                      <div class="news-panel__item">
+                        <div class="data small">27.09.2015</div>
+                        <div class="text">Laborum in ipsum ad lorem duis nisi sit labore ipsum laborum esse nostrud nulla consectetur <a href="">Подробнее...</a>
+                        </div>
+                      </div>
+                      <div class="news-panel__item">
+                        <div class="data small">27.09.2015</div>
+                        <div class="text">Ex magna commodo duis ad irure fugiat aliqua magna excepteur sed exercitation sunt lorem pariatur <a href="">Подробнее...</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="official-tab" role="tabpanel" class="tab-pane news-panel__content">
+                      <div class="news-panel__item">
+                        <div class="data small">27.09.2015</div>
+                        <div class="text">Incididunt cillum labore do labore non quis labore consequat non in culpa consequat enim aliquip <a href="">Подробнее...</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="events-tab" role="tabpanel" class="tab-pane news-panel__content">
+                      <div class="news-panel__item">
+                        <div class="data small">27.09.2015</div>
+                        <div class="text">Ad in non ullamco laboris consequat irure minim magna ex qui commodo dolor voluptate amet <a href="">Подробнее...</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="wrapper"></div>
+        <div class="wrapper">
+          <div class="container">
+            <div class="slider-long">
+              <ul>
+                <li><a href=""><img src="/images/index-small-slider.jpg"></a></li>
+                <li><a href=""><img src="/images/index-small-slider.jpg"></a></li>
+                <li><a href=""><img src="/images/index-small-slider.jpg"></a></li>
+                <li><a href=""><img src="/images/index-small-slider.jpg"></a></li>
+                <li><a href=""><img src="/images/index-small-slider.jpg"></a></li>
+                <li><a href=""><img src="/images/index-small-slider.jpg"></a></li>
+                <li><a href=""><img src="/images/index-small-slider.jpg"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
         <div class="wrapper wrapper--gray"></div>
         <div class="wrapper"></div>
       </main>
@@ -199,5 +253,6 @@
     </footer>
   </body>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <script src="js/tab.js"></script>
   <script src="js/main.js"></script>
 </html>

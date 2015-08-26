@@ -60,7 +60,6 @@ h5 {
 
 .header__topmenu {
 	height: 54px;
-	padding: 13px 0;
 }
 
 .header__topmenu--black {
@@ -172,8 +171,18 @@ h5 {
 	margin: 0;
 }
 
-.topmenu > *:not(:first-child) {
-	margin-left: 70px;
+.topmenu > a:not(:last-child) {
+	padding: 17px 35px;
+}
+
+.topmenu > a:last-child {
+	padding: 17px 0 17px 35px;
+}
+
+.topmenu a img {
+	margin-right: 10px;
+	position: relative;
+	top: -2px;
 }
 
 .topmenu svg {
@@ -186,9 +195,6 @@ h5 {
 
 .topmenu__lang {
 	position: relative;
-	width: 140px;
-	padding-right: 20px;
-	padding-left: 35px;
 }
 
 .topmenu__lang > ul {
@@ -198,6 +204,8 @@ h5 {
 	top: 100%;
 	right: 0;
 	z-index: 1;
+	pointer-events: none;
+	opacity: 0;
 }
 
 .topmenu__lang > ul li {
@@ -208,7 +216,14 @@ h5 {
 	display: block;
 	width: 100%;
 	background: #242424;
-	padding: 3px 20px 3px 35px;
+	padding: 8px 35px;
+}
+
+.topmenu__lang > a {
+	display: inline-block;
+	width: 210px;
+	padding: 17px 55px 17px 35px;
+	text-align: right;
 }
 
 .topmenu__lang > a:after {
@@ -216,8 +231,13 @@ h5 {
 	font-family: FontAwesome;
 	content: '\f078';
 	display: block;
-	top: 0;
-	right: 0;
+	top: 18px;
+	right: 35px;
+}
+
+.topmenu__lang:hover > ul {
+	pointer-events: auto;
+	opacity: 1;
 }
 
 .footer {
@@ -319,4 +339,72 @@ h5 {
 .slider__arrow:hover {
 	color: #F2F2F2;
 	background: rgba(36,36,36,0.44);
+}
+
+.news-panel__tabs {
+	position: relative;
+	border: none;
+	text-align: justify;
+	height: 36px;
+	margin-bottom: 10px;
+}
+
+.news-panel__tabs:before {
+	display: block;
+	content: '';
+	position: absolute;
+	height: 2px;
+	background: #DDDDDD;
+	left: 0;
+	right: 0;
+	top: 18px;
+}
+
+.news-panel__tabs:after {
+	content: '';
+	display: inline-block;
+	width: 100%;
+}
+
+.news-panel__tab {
+	display: inline-block;
+	position: relative;
+	z-index: 1;
+}
+
+.news-panel__tab a {
+	display: inline-block;
+	background: #FFFFFF;
+	height: 36px;
+	border-radius: 18px;
+	padding: 5px 19px;
+	border: 2px solid transparent;
+	text-decoration: none;
+	transition: background 350ms, color 350ms, border-color 350ms;
+}
+
+.news-panel__tab.active a {
+	background: #0E9877;
+	border-color: #DDDDDD;
+	color: #FFFFFF;
+}
+
+.news-panel__tab:hover a {
+	background: #242424;
+	color: #FFFFFF;
+	border-color: transparent;
+}
+
+.news-panel__item {
+	padding: 10px;
+	background: transparent;
+	transition: background 350ms;
+}
+
+.news-panel__item:hover {
+	background: #FFFFFF;
+}
+
+.news-panel__item .data {
+	color: #0E9877;
 }
