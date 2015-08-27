@@ -386,7 +386,7 @@ h5 {
 }
 
 .slider__item {
-	display: block;
+	display: inline-block;
 	position: relative;
 	border-radius: 4px;
 }
@@ -395,10 +395,6 @@ h5 {
 	width: 100%;
 	max-width: 100%;
 	height: auto;
-}
-
-.slider__item:not(:first-child) {
-	display: none;
 }
 
 .slider__text {

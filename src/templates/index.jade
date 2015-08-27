@@ -75,27 +75,27 @@ block content
 			.container
 				.row
 					.col-xs-12
-						.slider
+						.slider(data-showitems="5" data-nav-outside="true")
 							ul
-								li
+								li.slider__item
 									a(href="")
 										img(src="/images/index-small-slider.jpg")
-								li
+								li.slider__item
 									a(href="")
 										img(src="/images/index-small-slider.jpg")
-								li
+								li.slider__item
 									a(href="")
 										img(src="/images/index-small-slider.jpg")
-								li
+								li.slider__item
 									a(href="")
 										img(src="/images/index-small-slider.jpg")
-								li
+								li.slider__item
 									a(href="")
 										img(src="/images/index-small-slider.jpg")
-								li
+								li.slider__item
 									a(href="")
 										img(src="/images/index-small-slider.jpg")
-								li
+								li.slider__item
 									a(href="")
 										img(src="/images/index-small-slider.jpg")
 							a(href="").slider__arrow.slider__arrow--prev.js-prev
@@ -109,11 +109,11 @@ block content
 						.slider
 							ul
 								li.slider__item
-									img(src="/images/index-left-slider.jpg")
+									img(src="/images/index-slider.jpg")
 									.slider__text
 										+lipsum(2, "sentences")
 								li.slider__item
-									img(src="/images/index-slider.jpg")
+									img(src="/images/index-left-slider.jpg")
 									.slider__text
 										+lipsum(2, "sentences")
 								li.slider__item
