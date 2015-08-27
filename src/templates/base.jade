@@ -83,69 +83,88 @@ html(lang='ru')
 			.container
 				.row
 					.col-md-12
-						.header__menu
-							a(href="").active Главная
-							.submenu
-								a(href="") ЕАО
-								// TODO remove inline
-								ul(style="display: none")
-									li
-										a(href="") Submenu item
-									li
-										a(href="") Submenu item
-									li
-										a(href="") Submenu item
-							.submenu
-								a(href="") Власть
-								// TODO remove inline
-								ul(style="display: none")
-									li
-										a(href="") Submenu item
-									li
-										a(href="") Submenu item
-									li
-										a(href="") Submenu item
-							.submenu
-								a(href="") Губернатор
-								// TODO remove inline
-								ul(style="display: none")
-									li
-										a(href="") Submenu item
-									li
-										a(href="") Submenu item
-									li
-										a(href="") Submenu item
-							.submenu
-								a(href="") Пресс-центр
-								// TODO remove inline
-								ul(style="display: none")
-									li
-										a(href="") Submenu item
-									li
-										a(href="") Submenu item
-									li
-										a(href="") Submenu item
-							.submenu
-								a(href="") Документы
-								// TODO remove inline
-								ul(style="display: none")
-									li
-										a(href="") Submenu item
-									li
-										a(href="") Submenu item
-									li
-										a(href="") Submenu item
-							.submenu
-								a(href="") Обращения граждан
-								// TODO remove inline
-								ul(style="display: none")
-									li
-										a(href="") Submenu item
-									li
-										a(href="") Submenu item
-									li
-										a(href="") Submenu item
-							.search
+						//nav.navbar.navbar-default.header__menu
+							.navbar-header
+								button.navbar-toggle.collapsed(type="button" data-toggle="collapse" data-target="#main-menu" aria-expanded="false")
+									span.sr-only Меню
+									span.icon-bar
+									span.icon-bar
+									span.icon-bar
+								a(href="#").navbar-brand Brand
+							.collapse.navbar-collapse#main-menu
+								ul.nav.navbar-nav
+									li.active
+										a(href="") Главная
+									li.dropdown
+										a(href="").dropdown-toggle ЕАО
+
+
+						.header__menu.menu
+							ul
+								li.menu__top-item
+									a(href="").active Главная
+								li.menu__top-item.menu__top-item--submenu
+									a(href="") ЕАО
+									ul.menu__submenu.menu__submenu--1
+										li.menu__item
+											a(href="") Submenu item
+										li.menu__item.menu__item--submenu
+											a(href="") Submenu item
+											ul.menu__submenu.menu__submenu--2
+												li.menu__item
+													a(href="") Submenu level 2
+												li.menu__item
+													a(href="") Submenu level 2
+												li.menu__item
+													a(href="") Submenu level 2
+										li.menu__item
+											a(href="") Submenu item
+								li.menu__top-item.menu__top-item--submenu
+									a(href="") Власть
+									ul.menu__submenu.menu__submenu--1
+										li.menu__item
+											a(href="") Submenu item Submenu item Submenu item
+										li.menu__item
+											a(href="") Submenu item
+										li.menu__item
+											a(href="") Submenu item
+								li.menu__top-item.menu__top-item--submenu
+									a(href="") Губернатор
+									ul.menu__submenu.menu__submenu--1
+										li.menu__item
+											a(href="") Submenu item
+										li.menu__item
+											a(href="") Submenu item
+										li.menu__item
+											a(href="") Submenu item
+								li.menu__top-item.menu__top-item--submenu
+									a(href="") Пресс-центр
+									ul.menu__submenu.menu__submenu--1
+										li.menu__item
+											a(href="") Submenu item
+										li.menu__item
+											a(href="") Submenu item
+										li.menu__item
+											a(href="") Submenu item
+								li.menu__top-item.menu__top-item--submenu
+									a(href="") Документы
+									ul.menu__submenu.menu__submenu--1
+										li.menu__item
+											a(href="") Submenu item
+										li.menu__item
+											a(href="") Submenu item
+										li.menu__item
+											a(href="") Submenu item
+								li.menu__top-item.menu__top-item--submenu
+									a(href="") Обращения граждан
+									ul.menu__submenu.menu__submenu--1
+										li.menu__item
+											a(href="") Submenu item
+										li.menu__item
+											a(href="") Submenu item
+										li.menu__item
+											a(href="") Submenu item
+							.menu__search.search
 								i.fa.fa-search
 
 

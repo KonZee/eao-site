@@ -70,56 +70,76 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <div class="header__menu"><a href="" class="active">Главная</a>
-              <div class="submenu"><a href="">ЕАО</a>
-                <!-- TODO remove inline-->
-                <ul style="display: none">
-                  <li><a href="">Submenu item</a></li>
-                  <li><a href="">Submenu item</a></li>
-                  <li><a href="">Submenu item</a></li>
-                </ul>
-              </div>
-              <div class="submenu"><a href="">Власть</a>
-                <!-- TODO remove inline-->
-                <ul style="display: none">
-                  <li><a href="">Submenu item</a></li>
-                  <li><a href="">Submenu item</a></li>
-                  <li><a href="">Submenu item</a></li>
-                </ul>
-              </div>
-              <div class="submenu"><a href="">Губернатор</a>
-                <!-- TODO remove inline-->
-                <ul style="display: none">
-                  <li><a href="">Submenu item</a></li>
-                  <li><a href="">Submenu item</a></li>
-                  <li><a href="">Submenu item</a></li>
-                </ul>
-              </div>
-              <div class="submenu"><a href="">Пресс-центр</a>
-                <!-- TODO remove inline-->
-                <ul style="display: none">
-                  <li><a href="">Submenu item</a></li>
-                  <li><a href="">Submenu item</a></li>
-                  <li><a href="">Submenu item</a></li>
-                </ul>
-              </div>
-              <div class="submenu"><a href="">Документы</a>
-                <!-- TODO remove inline-->
-                <ul style="display: none">
-                  <li><a href="">Submenu item</a></li>
-                  <li><a href="">Submenu item</a></li>
-                  <li><a href="">Submenu item</a></li>
-                </ul>
-              </div>
-              <div class="submenu"><a href="">Обращения граждан</a>
-                <!-- TODO remove inline-->
-                <ul style="display: none">
-                  <li><a href="">Submenu item</a></li>
-                  <li><a href="">Submenu item</a></li>
-                  <li><a href="">Submenu item</a></li>
-                </ul>
-              </div>
-              <div class="search"><i class="fa fa-search"></i></div>
+            <!--nav.navbar.navbar-default.header__menu
+            .navbar-header
+            	button.navbar-toggle.collapsed(type="button" data-toggle="collapse" data-target="#main-menu" aria-expanded="false")
+            		span.sr-only Меню
+            		span.icon-bar
+            		span.icon-bar
+            		span.icon-bar
+            	a(href="#").navbar-brand Brand
+            .collapse.navbar-collapse#main-menu
+            	ul.nav.navbar-nav
+            		li.active
+            			a(href="") Главная
+            		li.dropdown
+            			a(href="").dropdown-toggle ЕАО
+            
+            
+            -->
+            <div class="header__menu menu">
+              <ul>
+                <li class="menu__top-item"><a href="" class="active">Главная</a></li>
+                <li class="menu__top-item menu__top-item--submenu"><a href="">ЕАО</a>
+                  <ul class="menu__submenu menu__submenu--1">
+                    <li class="menu__item"><a href="">Submenu item</a></li>
+                    <li class="menu__item menu__item--submenu"><a href="">Submenu item</a>
+                      <ul class="menu__submenu menu__submenu--2">
+                        <li class="menu__item"><a href="">Submenu level 2</a></li>
+                        <li class="menu__item"><a href="">Submenu level 2</a></li>
+                        <li class="menu__item"><a href="">Submenu level 2</a></li>
+                      </ul>
+                    </li>
+                    <li class="menu__item"><a href="">Submenu item</a></li>
+                  </ul>
+                </li>
+                <li class="menu__top-item menu__top-item--submenu"><a href="">Власть</a>
+                  <ul class="menu__submenu menu__submenu--1">
+                    <li class="menu__item"><a href="">Submenu item Submenu item Submenu item</a></li>
+                    <li class="menu__item"><a href="">Submenu item</a></li>
+                    <li class="menu__item"><a href="">Submenu item</a></li>
+                  </ul>
+                </li>
+                <li class="menu__top-item menu__top-item--submenu"><a href="">Губернатор</a>
+                  <ul class="menu__submenu menu__submenu--1">
+                    <li class="menu__item"><a href="">Submenu item</a></li>
+                    <li class="menu__item"><a href="">Submenu item</a></li>
+                    <li class="menu__item"><a href="">Submenu item</a></li>
+                  </ul>
+                </li>
+                <li class="menu__top-item menu__top-item--submenu"><a href="">Пресс-центр</a>
+                  <ul class="menu__submenu menu__submenu--1">
+                    <li class="menu__item"><a href="">Submenu item</a></li>
+                    <li class="menu__item"><a href="">Submenu item</a></li>
+                    <li class="menu__item"><a href="">Submenu item</a></li>
+                  </ul>
+                </li>
+                <li class="menu__top-item menu__top-item--submenu"><a href="">Документы</a>
+                  <ul class="menu__submenu menu__submenu--1">
+                    <li class="menu__item"><a href="">Submenu item</a></li>
+                    <li class="menu__item"><a href="">Submenu item</a></li>
+                    <li class="menu__item"><a href="">Submenu item</a></li>
+                  </ul>
+                </li>
+                <li class="menu__top-item menu__top-item--submenu"><a href="">Обращения граждан</a>
+                  <ul class="menu__submenu menu__submenu--1">
+                    <li class="menu__item"><a href="">Submenu item</a></li>
+                    <li class="menu__item"><a href="">Submenu item</a></li>
+                    <li class="menu__item"><a href="">Submenu item</a></li>
+                  </ul>
+                </li>
+              </ul>
+              <div class="menu__search search"><i class="fa fa-search"></i></div>
             </div>
           </div>
         </div>
@@ -134,15 +154,15 @@
                 <div class="slider">
                   <ul>
                     <li class="slider__item"><img src="/images/index-slider.jpg">
-                      <div class="slider__text">Fugiat et, fugiat officia exercitation deserunt magna? Proident cupidatat aliquip consectetur ipsum incididunt duis in? 
+                      <div class="slider__text">Proident, reprehenderit culpa nisi aliqua irure pariatur, ex reprehenderit cillum. Ullamco irure ut ex cillum anim reprehenderit consectetur lorem, est. 
                       </div>
                     </li>
                     <li class="slider__item"><img src="/images/index-slider.jpg">
-                      <div class="slider__text">Magna deserunt, sunt quis, minim in ipsum dolore ipsum esse nostrud sit cupidatat. Proident nostrud cupidatat ad aute ex sed enim laborum officia proident. 
+                      <div class="slider__text">Ut ut pariatur mollit exercitation cillum officia, magna eiusmod anim fugiat. Aliquip, nostrud quis, in, officia cillum dolor dolor dolore ad. 
                       </div>
                     </li>
                     <li class="slider__item"><img src="/images/index-slider.jpg">
-                      <div class="slider__text">Sit eu sint, culpa ut pariatur voluptate, nulla ea laboris do laborum. Esse aliquip veniam, dolor, commodo, occaecat ut ullamco. 
+                      <div class="slider__text">Aliqua adipiscing velit, aliqua voluptate est fugiat aute. Nisi enim consequat quis, deserunt do laborum ut proident. 
                       </div>
                     </li>
                   </ul><a href="" class="slider__arrow slider__arrow--prev js-prev"><i class="fa fa-chevron-left"></i></a><a href="" class="slider__arrow slider__arrow--next js-next"><i class="fa fa-chevron-right"></i></a>
@@ -159,36 +179,36 @@
                     <div id="news-tab" role="tabpanel" class="tab-pane active">
                       <div class="news-panel__item">
                         <div class="data small">27.09.2015</div>
-                        <div class="text">Ullamco reprehenderit pariatur pariatur sunt mollit non do labore duis aliquip nulla aliquip enim sed <a href="">Подробнее...</a>
+                        <div class="text">Amet sit tempor ut aliquip ut fugiat ullamco ut sint excepteur exercitation aliquip veniam ad <a href="">Подробнее...</a>
                         </div>
                       </div>
                       <div class="news-panel__item">
                         <div class="data small">27.09.2015</div>
-                        <div class="text">Velit officia consequat velit nisi in mollit ex lorem aliquip officia sunt deserunt ipsum ut <a href="">Подробнее...</a>
+                        <div class="text">Ea dolore eu aliquip fugiat sunt et do labore voluptate aliqua pariatur commodo veniam duis <a href="">Подробнее...</a>
                         </div>
                       </div>
                       <div class="news-panel__item">
                         <div class="data small">27.09.2015</div>
-                        <div class="text">Dolore aliquip veniam dolor ex sint enim occaecat sunt non proident fugiat esse nostrud amet <a href="">Подробнее...</a>
+                        <div class="text">Lorem adipiscing labore dolor consectetur in ullamco consequat veniam voluptate exercitation elit nisi sed irure <a href="">Подробнее...</a>
                         </div>
                       </div>
                       <div class="news-panel__item">
                         <div class="data small">27.09.2015</div>
-                        <div class="text">Cillum excepteur anim nisi dolor velit ea lorem duis labore voluptate veniam do mollit lorem <a href="">Подробнее...</a>
+                        <div class="text">Commodo aliquip culpa anim quis eu sed sed do lorem anim ex enim ut culpa <a href="">Подробнее...</a>
                         </div>
                       </div>
                     </div>
                     <div id="official-tab" role="tabpanel" class="tab-pane">
                       <div class="news-panel__item">
                         <div class="data small">27.09.2015</div>
-                        <div class="text">Ad dolor ut consequat ut cillum officia velit tempor deserunt ad incididunt cillum cupidatat ut <a href="">Подробнее...</a>
+                        <div class="text">Exercitation voluptate pariatur id est proident do enim dolor consectetur consequat elit do laborum est <a href="">Подробнее...</a>
                         </div>
                       </div>
                     </div>
                     <div id="events-tab" role="tabpanel" class="tab-pane">
                       <div class="news-panel__item">
                         <div class="data small">27.09.2015</div>
-                        <div class="text">Aliquip ullamco non ad ex duis aute tempor incididunt ullamco esse sed ullamco cupidatat reprehenderit <a href="">Подробнее...</a>
+                        <div class="text">Magna eiusmod nulla proident deserunt elit dolor velit sint ullamco consequat cillum minim dolor quis <a href="">Подробнее...</a>
                         </div>
                       </div>
                     </div>
@@ -224,15 +244,15 @@
                 <div class="slider">
                   <ul>
                     <li class="slider__item"><img src="/images/index-left-slider.jpg">
-                      <div class="slider__text">Ut, lorem ut reprehenderit esse officia, nulla dolore. Occaecat culpa amet minim dolor sit exercitation do, enim. 
+                      <div class="slider__text">Sit lorem, in mollit deserunt labore reprehenderit lorem consequat et sed, do ea. Esse enim, reprehenderit ipsum ut aliquip voluptate ut ullamco ea occaecat. 
                       </div>
                     </li>
                     <li class="slider__item"><img src="/images/index-slider.jpg">
-                      <div class="slider__text">Cupidatat amet fugiat in, officia minim incididunt, deserunt dolor, nostrud ut, nostrud ullamco, lorem est, culpa. Aliquip dolor aute laborum excepteur dolore, veniam esse? 
+                      <div class="slider__text">Aute velit duis lorem eu ex quis, est officia aute. Ut, ut, commodo exercitation nisi magna culpa anim. 
                       </div>
                     </li>
                     <li class="slider__item"><img src="/images/index-slider.jpg">
-                      <div class="slider__text">Quis amet non laboris reprehenderit minim, exercitation excepteur. Lorem, minim, fugiat reprehenderit dolore velit dolore in. 
+                      <div class="slider__text">Amet officia nisi lorem ut in incididunt laboris id laborum, esse. Qui et ullamco, officia dolore aliquip, quis sunt. 
                       </div>
                     </li>
                   </ul><a href="" class="slider__arrow slider__arrow--prev js-prev"><i class="fa fa-chevron-left"></i></a><a href="" class="slider__arrow slider__arrow--next js-next"><i class="fa fa-chevron-right"></i></a>
@@ -242,22 +262,22 @@
                 <div class="news-panel">
                   <div class="news-panel__item">
                     <div class="data small">27.09.2015</div>
-                    <div class="text">Minim tempor est eu laborum et minim ex ea culpa consequat veniam labore mollit enim <a href="">Подробнее...</a>
+                    <div class="text">Dolore ad sed commodo aliquip mollit officia aute eiusmod minim sed sint ex minim sit <a href="">Подробнее...</a>
                     </div>
                   </div>
                   <div class="news-panel__item">
                     <div class="data small">27.09.2015</div>
-                    <div class="text">Laboris ad ipsum sit anim anim aliqua commodo elit amet consequat cillum dolor in dolor <a href="">Подробнее...</a>
+                    <div class="text">Officia aute est duis sint lorem veniam nostrud cupidatat enim in mollit ut exercitation qui <a href="">Подробнее...</a>
                     </div>
                   </div>
                   <div class="news-panel__item">
                     <div class="data small">27.09.2015</div>
-                    <div class="text">Nisi ut reprehenderit dolore do voluptate ut cupidatat dolore aliqua ut velit pariatur adipiscing magna <a href="">Подробнее...</a>
+                    <div class="text">In ea irure dolore laborum fugiat anim qui laboris in tempor labore in incididunt do <a href="">Подробнее...</a>
                     </div>
                   </div>
                   <div class="news-panel__item">
                     <div class="data small">27.09.2015</div>
-                    <div class="text">Officia cupidatat laboris dolore nostrud reprehenderit qui ea aliquip laborum officia minim aliqua cillum ut <a href="">Подробнее...</a>
+                    <div class="text">Duis sit aute dolore sit cillum aliquip mollit deserunt tempor nisi aliqua adipiscing voluptate nostrud <a href="">Подробнее...</a>
                     </div>
                   </div>
                 </div>
@@ -266,15 +286,15 @@
                 <div class="slider">
                   <ul>
                     <li class="slider__item"><img src="/images/index-right-slider.jpg">
-                      <div class="slider__text">Ipsum ex duis aliqua irure laborum ullamco. Aliqua, ut do lorem do occaecat ipsum, labore, ullamco sit. 
+                      <div class="slider__text">Sit, cupidatat ut cillum sed, amet deserunt. Anim ad aliquip ut ut, ullamco eiusmod reprehenderit aute cillum deserunt pariatur. 
                       </div>
                     </li>
                     <li class="slider__item"><img src="/images/index-slider.jpg">
-                      <div class="slider__text">Laboris esse, ut excepteur sit duis dolore anim occaecat amet. Nulla nostrud, dolor ut esse veniam ea. 
+                      <div class="slider__text">Dolore, sed duis, dolore veniam irure eiusmod consectetur irure. Sit irure, dolor fugiat labore nulla minim aliqua tempor cupidatat. 
                       </div>
                     </li>
                     <li class="slider__item"><img src="/images/index-slider.jpg">
-                      <div class="slider__text">Non adipiscing voluptate sint ullamco esse? Irure, ea cupidatat ut veniam laboris pariatur veniam irure fugiat anim, occaecat ut, sunt? 
+                      <div class="slider__text">Lorem dolore quis ea, id, culpa dolore. Sed minim est ullamco, aliquip aliqua. 
                       </div>
                     </li>
                   </ul><a href="" class="slider__arrow slider__arrow--prev js-prev"><i class="fa fa-chevron-left"></i></a><a href="" class="slider__arrow slider__arrow--next js-next"><i class="fa fa-chevron-right"></i></a>
