@@ -94,10 +94,10 @@ block content
 										img(src="/images/index-small-slider.jpg")
 								li.slider__item
 									a(href="")
-										img(src="/images/index-small-slider.jpg")
+										img(src="/images/index-small-slider-red.jpg")
 								li.slider__item
 									a(href="")
-										img(src="/images/index-small-slider.jpg")
+										img(src="/images/index-small-slider-blue.jpg")
 							a(href="").slider__arrow.slider__arrow--prev.js-prev
 								i.fa.fa-chevron-left
 							a(href="").slider__arrow.slider__arrow--next.js-next
@@ -105,11 +105,15 @@ block content
 		.wrapper.wrapper--gray
 			.container
 				.row
-					.col-md-4
-						.slider
+					.col-md-8
+						.slider.slider--text(data-side-text=true)
 							ul
 								li.slider__item
-									img(src="/images/index-slider.jpg")
+									img(src="/images/index-left-slider.jpg")
+									.slider__text
+										+lipsum(2, "sentences")
+								li.slider__item
+									img(src="/images/index-left-slider.jpg")
 									.slider__text
 										+lipsum(2, "sentences")
 								li.slider__item
@@ -124,8 +128,28 @@ block content
 								i.fa.fa-chevron-left
 							a(href="").slider__arrow.slider__arrow--next.js-next
 								i.fa.fa-chevron-right
-
-					.col-md-4
+						.slider-text
+							.slider-text__item.active
+								.data.small 27.09.2015
+								.text
+									+lipsum(15, 'words')
+									a(href="") Подробнее...
+							.slider-text__item
+								.data.small 27.09.2015
+								.text
+									+lipsum(15, 'words')
+									a(href="") Подробнее...
+							.slider-text__item
+								.data.small 27.09.2015
+								.text
+									+lipsum(15, 'words')
+									a(href="") Подробнее...
+							.slider-text__item
+								.data.small 27.09.2015
+								.text
+									+lipsum(15, 'words')
+									a(href="") Подробнее...
+					//.col-md-4
 						.news-panel
 							.news-panel__item
 								.data.small 27.09.2015
@@ -163,8 +187,106 @@ block content
 									img(src="/images/index-slider.jpg")
 									.slider__text
 										+lipsum(2, "sentences")
+								li.slider__item
+									img(src="/images/index-slider.jpg")
+									.slider__text
+										+lipsum(2, "sentences")
+								li.slider__item
+									img(src="/images/index-slider.jpg")
+									.slider__text
+										+lipsum(2, "sentences")
+								li.slider__item
+									img(src="/images/index-slider.jpg")
+									.slider__text
+										+lipsum(2, "sentences")
+								li.slider__item
+									img(src="/images/index-slider.jpg")
+									.slider__text
+										+lipsum(2, "sentences")
 							a(href="").slider__arrow.slider__arrow--prev.js-prev
 								i.fa.fa-chevron-left
 							a(href="").slider__arrow.slider__arrow--next.js-next
 								i.fa.fa-chevron-right
 		.wrapper
+			.container
+				.row
+					.col-xs-12
+						.slider(data-showitems="5" data-nav-outside="true")
+							ul
+								li.slider__item
+									a(href="")
+										img(src="/images/index-small-slider.jpg")
+								li.slider__item
+									a(href="")
+										img(src="/images/index-small-slider.jpg")
+								li.slider__item
+									a(href="")
+										img(src="/images/index-small-slider.jpg")
+								li.slider__item
+									a(href="")
+										img(src="/images/index-small-slider.jpg")
+								li.slider__item
+									a(href="")
+										img(src="/images/index-small-slider.jpg")
+								li.slider__item
+									a(href="")
+										img(src="/images/index-small-slider-red.jpg")
+								li.slider__item
+									a(href="")
+										img(src="/images/index-small-slider.jpg")
+								li.slider__item
+									a(href="")
+										img(src="/images/index-small-slider.jpg")
+								li.slider__item
+									a(href="")
+										img(src="/images/index-small-slider.jpg")
+								li.slider__item
+									a(href="")
+										img(src="/images/index-small-slider-blue.jpg")
+							a(href="").slider__arrow.slider__arrow--prev.js-prev
+								i.fa.fa-chevron-left
+							a(href="").slider__arrow.slider__arrow--next.js-next
+								i.fa.fa-chevron-right
+		.wrapper
+			.container
+				.row
+					.col-xs-12
+						.slider(data-showitems="5" data-nav-outside="true")
+							ul
+								li.slider__item
+									a(href="")
+										img(src="/images/index-small-slider.jpg")
+								li.slider__item
+									a(href="")
+										img(src="/images/index-small-slider.jpg")
+								li.slider__item
+									a(href="")
+										img(src="/images/index-small-slider.jpg")
+								li.slider__item
+									a(href="")
+										img(src="/images/index-small-slider.jpg")
+								li.slider__item
+									a(href="")
+										img(src="/images/index-small-slider.jpg")
+								li.slider__item
+									a(href="")
+										img(src="/images/index-small-slider-red.jpg")
+								li.slider__item
+									a(href="")
+										img(src="/images/index-small-slider.jpg")
+								li.slider__item
+									a(href="")
+										img(src="/images/index-small-slider.jpg")
+								li.slider__item
+									a(href="")
+										img(src="/images/index-small-slider.jpg")
+								li.slider__item
+									a(href="")
+										img(src="/images/index-small-slider.jpg")
+								li.slider__item
+									a(href="")
+										img(src="/images/index-small-slider-blue.jpg")
+							a(href="").slider__arrow.slider__arrow--prev.js-prev
+								i.fa.fa-chevron-left
+							a(href="").slider__arrow.slider__arrow--next.js-next
+								i.fa.fa-chevron-right

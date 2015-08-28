@@ -379,10 +379,25 @@ h5 {
 }
 
 .slider ul {
+	display: block;
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
 	position: relative;
+}
+
+.slider ul.inline {
+	text-align: justify;
+}
+
+.slider ul.inline li {
+	display: inline-block;
+}
+
+.slider ul.inline:after {
+	content: '';
+	display: inline-block;
+	width: 100%;
 }
 
 .slider__item {
@@ -437,6 +452,44 @@ h5 {
 .slider__arrow:hover {
 	color: #F2F2F2;
 	background: rgba(36,36,36,0.44);
+}
+
+.slider--text {
+	float: left;
+	width: 360px;
+}
+
+.slider-text {
+	background: #FBFBFB;
+	border-radius: 0 4px 4px 0;
+	margin-left: 360px;
+}
+
+.slider-text__item {
+	padding: 10px;
+	cursor: pointer;
+	background: #FBFBFB;
+}
+
+.slider-text__item:not(:last-child) {
+	border-bottom: 1px solid #F2F2F2;
+}
+
+.slider-text__item:first-child {
+	border-top-right-radius: 4px;
+}
+
+.slider-text__item:last-child {
+	border-bottom-right-radius: 4px;
+}
+
+.slider-text__item:hover,
+.slider-text__item.active {
+	background: #FFFFFF;
+}
+
+.slider-text__item .data {
+	color: #0E9877;
 }
 
 .slider-long ul {
