@@ -11,9 +11,14 @@
 		this.each(function(){
 			var slider= $(this);
 
-			// Get number of items in view
+			// Get data
 			var showItems = slider.data('showitems');
 			if (showItems === undefined) {showItems = options.showItems;}
+			var sideText = slider.data('side-text');
+			if (sideText === undefined) {
+				sideText = options.sideText;
+
+			}
 
 			// Get slider items
 			var sliderItem = slider.find('li');
@@ -25,6 +30,13 @@
 			// Current and next item
 			var currentItem = 0;
 			var nextItem;
+
+			// If text exist, assign class to current text item
+			if(sideText){
+				var sliderText = $(this).siblings('.slider-text').find('.slider-text__item');
+				sliderText.eq(currentItem).addClass('active');
+			}
+
 			// Exit, if slider contain no more than 1 item
 			if(sliderLength <= showItems){
 				sliderContainer.addClass('inline');
@@ -138,6 +150,13 @@
 
 						}
 					}
+
+					// Update side text if exist
+					if(sideText){
+						sliderText.eq(currentItem).removeClass("active");
+						sliderText.eq(nextItem).addClass("active");
+					}
+
 					// Set new slide to current
 					currentItem = nextItem;
 				}
@@ -217,6 +236,12 @@
 								$(this).animate({'left': parseInt($(this).css('left')) - offset * (sliderLength - showItems)});
 							});
 						}
+					}
+
+					// Update side text if exist
+					if(sideText){
+						sliderText.eq(currentItem).removeClass("active");
+						sliderText.eq(nextItem).addClass("active");
 					}
 
 					// Assign new current item
