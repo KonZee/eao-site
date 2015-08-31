@@ -143,11 +143,12 @@
 			&.active
 				background $brand-primary
 				color #fff
-			&:hover
-				background #242424
-				color #fff
 			&:focus
 				outline none
+		&:hover
+			> a
+				background #242424
+				color #fff
 		&--submenu
 			> a
 				padding-right 40px
@@ -214,5 +215,42 @@
 
 	&__search
 		display inline-block
+
+.search
+	position relative
+	vertical-align top
+	margin 7px 0
+	&__icon
+		pointer-events none
+		margin 16px 1px 0 0
+	&__form
+		position absolute
+		top 0
+		right 0
+		padding-left 13px
+		background #fff
+		input
+			border none
+			border-bottom 1px solid transparent
+			height 46px
+			padding 13px 13px 13px 0
+			margin 0 0 0 13px
+			transition width 350ms, border 350ms
+			width 20px
+			&:focus
+				width 300px
+				border-bottom 1px solid #e2e3e4
+		a.submit
+			display block
+			position absolute
+			right 0
+			top 13px
+			width 17px
+			height 20px
+			cursor default
+			pointer-events none
+		input:focus + a.submit
+			cursor pointer
+			pointer-events auto
 
 
