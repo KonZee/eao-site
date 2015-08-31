@@ -249,7 +249,64 @@
 				}
 			});
 
-
+			// Text click
+			if(sideText){
+				sliderText.click(function(){
+					nextItem = $(this).index();
+					//console.log('currentItem: ', currentItem)
+					var deltaLeft = 0;
+					var deltaRight = 0;
+					if(nextItem !== currentItem){
+						if(nextItem > currentItem){
+							//console.log("Higher");
+							deltaRight = nextItem - currentItem;
+							deltaLeft = sliderLength - nextItem + currentItem;
+							//console.log("Delta left: ", deltaLeft, " Delta right: ", deltaRight);
+						}
+						else{
+							//console.log("Less");
+							deltaLeft = currentItem - nextItem;
+							deltaRight = sliderLength - currentItem + nextItem;
+							//console.log("Delta left: ", deltaLeft, " Delta right: ", deltaRight);
+						}
+					}
+					// Move right
+					if (deltaLeft >= deltaRight){
+						//console.log("right");
+						for (var i = 1; i <= deltaRight; i++){
+							//console.log("i: ",i);
+							if(i + currentItem < sliderLength){
+								sliderItem.eq(currentItem + i).css({'left': (i * offset + (offset - itemWIdth)/2 )});
+							}
+							else{
+								sliderItem.eq(currentItem + i - sliderLength).css({'left': (i * offset + (offset - itemWIdth)/2 )});
+							}
+						}
+						sliderItem.each(function(){
+							$(this).animate({'left': parseInt($(this).css('left')) - offset * deltaRight});
+						});
+					}
+					// Move left
+					else{
+						//console.log("left");
+						for (var i = 1; i <= deltaLeft; i++){
+							//console.log("i: ",i);
+							if(currentItem - i >=0){
+								sliderItem.eq(currentItem - i).css({'left': (i * -1 * offset + (offset - itemWIdth)/2 )});
+							}
+							else{
+								sliderItem.eq(sliderLength + currentItem - i).css({'left': (i * -1 * offset + (offset - itemWIdth)/2 )});
+							}
+						}
+						sliderItem.each(function(){
+							$(this).animate({'left': parseInt($(this).css('left')) + offset * deltaLeft});
+						});
+					}
+					sliderText.eq(currentItem).removeClass("active");
+					sliderText.eq(nextItem).addClass("active");
+					currentItem = nextItem;
+				});
+			}
 
 		});
 
