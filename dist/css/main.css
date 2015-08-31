@@ -654,3 +654,27 @@ h5 {
 .news-panel__item .data {
 	color: #0E9877;
 }
+
+.news__item {
+	height: 320px;
+	margin-bottom: 30px;
+	padding: 20px;
+	box-shadow: 0 0 18px 9px #F5F5F5;
+}
+
+.news__item h3 {
+	margin-top: 0;
+	color: #242424;
+}
+
+.news__item .data {
+	color: #CCCCCC;
+}
+
+.news__item .text {
+	color: #242424;
+}
+
+.news__item .more {
+	text-align: right;
+}
