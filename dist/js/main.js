@@ -13,5 +13,17 @@ $(document).ready(function(){
 
 	$('.slider').simpleSlider();
 
+	// Load more news
+	$('.js-load-more').click(function(e){
+		e.preventDefault();
+		$.ajax({
+			url: "morenews.html",
+			datatype: 'html',
+			success: function(html){
+				$(html).insertBefore($('#more-news-placeholder'));
+			}
+		});
+	});
+
 });
 

@@ -1,0 +1,32 @@
+.button
+	display inline-block
+	position relative
+	height 36px
+	padding 7px 17px
+	&:hover
+		text-decoration none
+
+	&--small
+		font-size 12px
+		padding 9px 17px
+
+	&--brand
+		background $brand-primary
+		color $white
+		transition background 350ms, color 350ms
+		&:hover
+			background $gray-light
+			color $black
+
+	&--white
+		color $black
+		transition color 350ms
+
+	&--bordered
+		border 1px solid #e1e1e1
+
+	&--right
+		float right
+
+	&--rounded
+		border-radius 18px

@@ -1,0 +1,37 @@
+.static
+	h2
+		margin 30px 0
+	&__symbols
+		.coat-of-arms
+			display inline-block
+			margin-right 19px
+			width 37px
+			height 43px
+			background url("../images/eao-symbols.png") no-repeat left top
+		.flag
+			display inline-block
+			width 60px
+			height 43px
+			background url("../images/eao-symbols.png") no-repeat right top
+
+.person
+	clear both
+	position relative
+	margin-bottom 20px
+	padding-bottom 20px
+	&:before
+		display block
+		position absolute
+		content ""
+		width 132px
+		height 1px
+		background $black
+		left 0
+		bottom 0
+
+	&__photo
+		float left
+		margin-right 20px
+
+	&__description
+		margin-left 132px

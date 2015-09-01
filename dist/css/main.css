@@ -472,6 +472,50 @@ h5 {
 	display: inline-block;
 }
 
+.button {
+	display: inline-block;
+	position: relative;
+	height: 36px;
+	padding: 7px 17px;
+}
+
+.button:hover {
+	text-decoration: none;
+}
+
+.button--small {
+	font-size: 12px;
+	padding: 9px 17px;
+}
+
+.button--brand {
+	background: #0E9877;
+	color: #FFFFFF;
+	transition: background 350ms, color 350ms;
+}
+
+.button--brand:hover {
+	background: #F2F2F2;
+	color: #242424;
+}
+
+.button--white {
+	color: #242424;
+	transition: color 350ms;
+}
+
+.button--bordered {
+	border: 1px solid #E1E1E1;
+}
+
+.button--right {
+	float: right;
+}
+
+.button--rounded {
+	border-radius: 18px;
+}
+
 .slider {
 	position: relative;
 }
@@ -671,6 +715,7 @@ h5 {
 }
 
 .news__item {
+	position: relative;
 	height: 320px;
 	margin-bottom: 30px;
 	padding: 20px;
@@ -690,8 +735,10 @@ h5 {
 	color: #242424;
 }
 
-.news__item .more {
-	text-align: right;
+.news__more {
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
 }
 
 .post-page__data {
@@ -729,6 +776,7 @@ h5 {
 }
 
 .other-news__item .data {
+	font-size: 12px;
 	color: #0E9877;
 	margin-bottom: 9px;
 }
@@ -740,4 +788,50 @@ h5 {
 .other-news__list {
 	padding: 0 30px;
 	font-size: 16px;
+}
+
+.static h2 {
+	margin: 30px 0;
+}
+
+.static__symbols .coat-of-arms {
+	display: inline-block;
+	margin-right: 19px;
+	width: 37px;
+	height: 43px;
+	background: url('../images/eao-symbols.png') no-repeat left top;
+}
+
+.static__symbols .flag {
+	display: inline-block;
+	width: 60px;
+	height: 43px;
+	background: url('../images/eao-symbols.png') no-repeat right top;
+}
+
+.person {
+	clear: both;
+	position: relative;
+	margin-bottom: 20px;
+	padding-bottom: 20px;
+}
+
+.person:before {
+	display: block;
+	position: absolute;
+	content: '';
+	width: 132px;
+	height: 1px;
+	background: #242424;
+	left: 0;
+	bottom: 0;
+}
+
+.person__photo {
+	float: left;
+	margin-right: 20px;
+}
+
+.person__description {
+	margin-left: 132px;
 }

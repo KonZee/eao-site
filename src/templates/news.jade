@@ -4,14 +4,14 @@ block title
 	| Новости - официальный портал ЕАО
 
 block content
+	.wrapper.wrapper--thin.wrapper--gray
+		.container
+			.breadcrumbs
+				a(href="").breadcrumbs__link Главная
+				.breadcrumbs__separator
+					i.fa.fa-chevron-right
+				.breadcrumbs__current Новости
 	main
-		.wrapper.wrapper--thin.wrapper--gray
-			.container
-				.breadcrumbs
-					a(href="").breadcrumbs__link Главная
-					.breadcrumbs__separator
-						i.fa.fa-chevron-right
-					.breadcrumbs__current Новости
 		.wrapper.wrapper--normal
 			.container
 				.row.news
@@ -22,7 +22,7 @@ block content
 							.data.small 27.09.2015
 							.text
 								+lipsum(3, "sentences")
-							a(href="").button More..
+							a(href="").button.button--small.button--brand.button--right.button--rounded.news__more Подробнее
 					.col-md-3
 						.news__item
 							h3
@@ -30,7 +30,7 @@ block content
 							.data.small 27.09.2015
 							.text
 								+lipsum(3, "sentences")
-							a(href="").button More..
+							a(href="").button.button--small.button--brand.button--right.button--rounded.news__more Подробнее
 					.col-md-3
 						.news__item
 							h3
@@ -38,7 +38,7 @@ block content
 							.data.small 27.09.2015
 							.text
 								+lipsum(3, "sentences")
-							a(href="").button More..
+							a(href="").button.button--small.button--brand.button--right.button--rounded.news__more Подробнее
 					.col-md-3
 						.news__item
 							h3
@@ -46,7 +46,7 @@ block content
 							.data.small 27.09.2015
 							.text
 								+lipsum(4, "sentences")
-							a(href="").button More..
+							a(href="").button.button--small.button--brand.button--right.button--rounded.news__more Подробнее
 					.col-md-3
 						.news__item
 							h3
@@ -54,7 +54,7 @@ block content
 							.data.small 27.09.2015
 							.text
 								+lipsum(3, "sentences")
-							a(href="").button More..
+							a(href="").button.button--small.button--brand.button--right.button--rounded.news__more Подробнее
 					.col-md-3
 						.news__item
 							h3
@@ -62,7 +62,7 @@ block content
 							.data.small 27.09.2015
 							.text
 								+lipsum(4, "sentences")
-							a(href="").button More..
+							a(href="").button.button--small.button--brand.button--right.button--rounded.news__more Подробнее
 					.col-md-3
 						.news__item
 							h3
@@ -70,7 +70,7 @@ block content
 							.data.small 27.09.2015
 							.text
 								+lipsum(3, "sentences")
-							a(href="").button More..
+							a(href="").button.button--small.button--brand.button--right.button--rounded.news__more Подробнее
 					.col-md-3
 						.news__item
 							h3
@@ -78,4 +78,7 @@ block content
 							.data.small 27.09.2015
 							.text
 								+lipsum(3, "sentences")
-							a(href="").button More..
+							a(href="").button.button--small.button--brand.button--right.button--rounded.news__more Подробнее
+					#more-news-placeholder
+					.col-xs-12.text-center
+						a(href="").button.button--white.button--bordered.button--rounded.js-load-more Загрузить больше
