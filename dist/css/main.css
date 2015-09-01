@@ -1,5 +1,5 @@
 body {
-	font-family: 'Open Sans', san-serif;
+	font-family: 'Open Sans', sans-serif;
 }
 
 ul {
@@ -17,6 +17,10 @@ ul {
 
 .wrapper--gray {
 	background: #F2F2F2;
+}
+
+.wrapper--bottom-border {
+	border-bottom: 1px solid #DDDDDD;
 }
 
 html,
@@ -226,12 +230,22 @@ h5 {
 .menu {
 	border: 1px solid #E2E3E4;
 	border-radius: 31px;
+	height: 62px;
 	padding: 0 7px;
 	background: #FFFFFF;
 }
 
 .menu > ul {
 	display: inline-block;
+	text-align: justify;
+	width: 100%;
+	position: relative;
+}
+
+.menu > ul:after {
+	display: inline-block;
+	width: 100%;
+	content: '';
 }
 
 .menu__top-item {
@@ -242,7 +256,7 @@ h5 {
 
 .menu__top-item > a {
 	display: inline-block;
-	padding: 13px 24px;
+	padding: 13px 19px;
 	color: #242424;
 	transition: background 350ms, color 350ms;
 	text-decoration: none;
@@ -265,7 +279,7 @@ h5 {
 }
 
 .menu__top-item--submenu > a {
-	padding-right: 40px;
+	padding-right: 35px;
 }
 
 .menu__top-item--submenu > a:after {
@@ -275,7 +289,7 @@ h5 {
 	content: '\f077';
 	font-size: 10px;
 	top: 23px;
-	right: 27px;
+	right: 22px;
 	transition: -webkit-transform 200ms linear, top 200ms linear;
 	transition:         transform 200ms linear, top 200ms linear;
 }
@@ -438,6 +452,7 @@ h5 {
 
 .breadcrumbs__link {
 	display: inline-block;
+	color: #242424;
 }
 
 .breadcrumbs__link:first-of-type:before {
@@ -677,4 +692,52 @@ h5 {
 
 .news__item .more {
 	text-align: right;
+}
+
+.post-page__data {
+	color: #0E9877;
+}
+
+.post-page__text {
+	margin-top: 35px;
+	font-size: 16px;
+}
+
+.post-page__text p:not(:last-child) {
+	margin-bottom: 30px;
+}
+
+.other-news {
+	background: #F2F2F2;
+	padding: 30px 0;
+}
+
+.other-news h2 {
+	margin-left: 30px;
+	margin-right: 30px;
+}
+
+.other-news__item {
+	padding: 20px 30px;
+	font-size: 16px;
+}
+
+.other-news__item--active {
+	background: #FFFFFF;
+	border-top: 1px solid #DDDDDD;
+	border-bottom: 1px solid #DDDDDD;
+}
+
+.other-news__item .data {
+	color: #0E9877;
+	margin-bottom: 9px;
+}
+
+.other-news__item a {
+	color: #242424;
+}
+
+.other-news__list {
+	padding: 0 30px;
+	font-size: 16px;
 }

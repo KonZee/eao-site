@@ -1,0 +1,50 @@
+extends base
+
+block title
+	| Отдельный пост - официальный портал ЕАО
+
+block content
+	.wrapper.wrapper--thin.wrapper--gray
+		.container
+			.breadcrumbs
+				a(href="").breadcrumbs__link Главная
+				.breadcrumbs__separator
+					i.fa.fa-chevron-right
+				.breadcrumbs__current Новости
+	.wrapper.wrapper--normal.wrapper--bottom-border
+		.container
+			.row
+				.col-md-8
+					main.post-page
+						h1
+							+lipsum(Math.floor(Math.random() * 5 + 3),"words")
+						.post-page__data 27.09.2015
+						.post-page__text
+							+lipsum(3, "paragraphs")
+				.col-md-4
+					aside.other-news
+						h2 Другие новости
+						.other-news__item
+							.data 27.09.2015
+							a(href="")
+								+lipsum(Math.floor(Math.random() * 4 + 8),"words")
+								| ...
+						.other-news__item.other-news__item--active
+							.data 27.09.2015
+							a(href="")
+								+lipsum(Math.floor(Math.random() * 4 + 8),"words")
+								| ...
+						.other-news__item
+							.data 27.09.2015
+							a(href="")
+								+lipsum(Math.floor(Math.random() * 4 + 8),"words")
+								| ...
+						.other-news__item
+							.data 27.09.2015
+							a(href="")
+								+lipsum(Math.floor(Math.random() * 4 + 8),"words")
+								| ...
+						a(href="").other-news__list Перейти к архиву новостей
+
+
+

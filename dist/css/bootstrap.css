@@ -1291,10 +1291,10 @@ html {
 }
 
 body {
-	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	font-size: 14px;
 	line-height: 1.428571429;
-	color: #7F7F7F;
+	color: #242424;
 	background-color: #FFFFFF;
 }
 
@@ -1538,7 +1538,6 @@ h2,
 .h2,
 h3,
 .h3 {
-	margin-top: 20px;
 	margin-bottom: 10px;
 }
 
@@ -2912,7 +2911,7 @@ select[multiple].form-group-lg .form-control {
 	display: block;
 	margin-top: 5px;
 	margin-bottom: 10px;
-	color: #9F9F9F;
+	color: #5B5B5B;
 }
 
 .form-horizontal .radio,
@@ -4717,7 +4716,7 @@ a.thumbnail.active {
 
 .thumbnail .caption {
 	padding: 9px;
-	color: #7F7F7F;
+	color: #242424;
 }
 
 .alert {
@@ -5753,7 +5752,7 @@ button.close {
 	z-index: 1070;
 	display: block;
 	visibility: visible;
-	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	font-size: 12px;
 	font-weight: normal;
 	line-height: 1.4;
@@ -5876,7 +5875,7 @@ button.close {
 	display: none;
 	max-width: 276px;
 	padding: 1px;
-	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	font-size: 14px;
 	font-weight: normal;
 	line-height: 1.428571429;
