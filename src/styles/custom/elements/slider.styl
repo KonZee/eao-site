@@ -2,6 +2,7 @@
 
 .slider
 	position relative
+
 	ul
 		display block
 		margin 0
@@ -26,17 +27,40 @@
 			max-width 100%
 			height auto
 		&:not(:first-child)
-			//display none
+			display none
 
 	&__text
 		display block
 		position absolute
-		bottom 0
+		bottom 40px
 		left 0
 		right 0
 		padding 12px 13px 10px
 		background rgba(36,36,36,0.44)
 		color #fff
+
+	&__nav
+		display block
+		position absolute
+		height 40px
+		bottom 0
+		left 0
+		right 0
+		background rgba(36,36,36,0.44)
+		text-align center
+
+		> *
+			display inline-block
+			width 10px
+			height 10px
+			margin 0 5px
+			border-radius 50%
+			background #757575
+			cursor pointer
+			transition background 350ms
+			&.active
+				background #fff
+				cursor default
 
 	&__arrow
 		display block
@@ -60,6 +84,38 @@
 		&:hover
 			color #f2f2f2
 			background rgba(36,36,36,0.44)
+
+	&--arrow-outside
+		padding 0 60px
+
+	&--multiply
+		ul
+			&:after
+				content ""
+				display table
+				clear both
+		.slider__item
+			display inline-block
+			float left
+			@media screen and (min-width: $screen-sm) and (max-width: $screen-sm-max)
+				width (100% / 3)
+				&:nth-child(n+4)
+					display none
+			@media screen and (min-width: $screen-md) and (max-width: $screen-md-max)
+				width 25%
+				&:nth-child(n+5)
+					display none
+			@media screen and (min-width: $screen-lg)
+				width 20%
+				&:nth-child(n+6)
+					display none
+
+			img
+				width auto
+				height auto
+				display table
+				margin-left auto
+				margin-right auto
 
 	&--text
 		float left

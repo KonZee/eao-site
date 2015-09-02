@@ -9,8 +9,8 @@ block content
 			.container
 				.row
 					.col-md-6
-						.slider
-							ul
+						.slider.js-slider-single
+							ul.slider__container
 								li.slider__item
 									img(src="/images/index-slider.jpg")
 									.slider__text
@@ -27,9 +27,11 @@ block content
 								i.fa.fa-chevron-left
 							a(href="").slider__arrow.slider__arrow--next.js-next
 								i.fa.fa-chevron-right
+							.slider__nav
+
 
 					.col-md-6
-						.news-panel
+						.news-panel.js-slider-tabs
 							ul.nav.nav-tabs.news-panel__tabs.clearfix
 								li(role="presentation").news-panel__tab.active
 									a(href="#news-tab") Новости
@@ -75,8 +77,8 @@ block content
 			.container
 				.row
 					.col-xs-12
-						.slider(data-showitems="5" data-nav-outside="true")
-							ul
+						.slider.slider--arrow-outside.slider--multiply.js-slider-multiply(data-showitems="5" data-nav-outside="true")
+							ul.slider__container
 								li.slider__item
 									a(href="")
 										img(src="/images/index-small-slider.jpg")
@@ -106,8 +108,8 @@ block content
 			.container
 				.row
 					.col-md-8
-						.slider.slider--text(data-side-text="true")
-							ul
+						.slider.slider--text.js-slider-text(data-side-text="true")
+							ul.slider__container
 								li.slider__item
 									img(src="/images/index-left-slider.jpg")
 									.slider__text
@@ -173,8 +175,8 @@ block content
 									a(href="") Подробнее...
 
 					.col-md-4
-						.slider
-							ul
+						.slider.js-slider-single
+							ul.slider__container
 								li.slider__item
 									img(src="/images/index-right-slider.jpg")
 									.slider__text
@@ -211,8 +213,8 @@ block content
 			.container
 				.row
 					.col-xs-12
-						.slider(data-showitems="5" data-nav-outside="true")
-							ul
+						.slider.slider--arrow-outside.slider--multiply.js-slider-multiply(data-showitems="5" data-nav-outside="true")
+							ul.slider__container
 								li.slider__item
 									a(href="")
 										img(src="/images/index-small-slider.jpg")
