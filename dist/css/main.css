@@ -561,7 +561,7 @@ h5 {
 .slider__text {
 	display: block;
 	position: absolute;
-	bottom: 40px;
+	bottom: 0;
 	left: 0;
 	right: 0;
 	padding: 12px 13px 10px;
@@ -571,13 +571,10 @@ h5 {
 
 .slider__nav {
 	display: block;
-	position: absolute;
 	height: 40px;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	background: rgba(36,36,36,0.44);
+	padding: 10px 0;
 	text-align: center;
+	z-index: 1;
 }
 
 .slider__nav > * {
@@ -592,8 +589,24 @@ h5 {
 }
 
 .slider__nav > *.active {
-	background: #FFFFFF;
+	background: #242424;
 	cursor: default;
+}
+
+.slider__nav--on-top {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(36,36,36,0.44);
+}
+
+.slider__nav--on-top ~ .slider__container .slider__text {
+	bottom: 40px;
+}
+
+.slider__nav--on-top > *.active {
+	background: #FFFFFF;
 }
 
 .slider__arrow {

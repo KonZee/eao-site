@@ -148,6 +148,50 @@ $(document).ready(function(){
 			currentItem = nextItem;
 		});
 
+		// Add points navigation
+		if(slider.children('.slider__nav').length > 0){
+			var sliderNav = slider.children('.slider__nav');
+			for(var i = 0; i < sliderLength; i++){
+				//$('.slider__nav').append($('<div/>').addClass('slider__click'));
+				if(i === 0){
+					sliderNav.append('<div class="js-circle-nav active"></div>')
+				}
+				else{
+					sliderNav.append('<div class="js-circle-nav"></div>')
+				}
+			}
+			sliderNav.on('click', '.js-circle-nav', function(){
+				var index = $(this).index();
+				if (index !== currentItem){
+					nextItem = index;
+
+					// Check short way
+					var deltaLeft = 0;
+					var deltaRight = 0;
+					if(nextItem > currentItem){
+						deltaRight = nextItem - currentItem;
+						deltaLeft = sliderLength - nextItem + currentItem;
+					}
+					else{
+						deltaLeft = currentItem - nextItem;
+						deltaRight = sliderLength - currentItem + nextItem;
+					}
+
+
+					// Move right
+					if (deltaLeft >= deltaRight){
+						moveRight(currentItem, sliderItem, sliderLength, sliderWidth);
+					}
+					// Move left
+					else{
+						moveLeft(currentItem, sliderItem, sliderLength, sliderWidth);
+					}
+
+					$(this).addClass('active').siblings().removeClass('active');
+					currentItem = nextItem;
+				}
+			});
+		}
 	});
 
 
@@ -185,14 +229,28 @@ var getSize = function(slider){
 // Move left function
 var moveLeft = function(currentItem, sliderItem , sliderLength, itemWidth, showItems){
 	if(showItems === undefined){showItems = 1}
-	for (var i = currentItem + 1; i < sliderLength; i++){
-		sliderItem.eq(i).css({'left': (sliderLength - i + currentItem) * -1 * itemWidth}	);
+	var endElements = currentItem + showItems; // Show how many items from ends needs to show
+	var headElements = 0;                      // Show how many items from head needs to show
+	if (endElements >= sliderLength){
+		headElements = endElements - sliderLength;
+		endElements = sliderLength;
 	}
-	for (var i = 0; i <= currentItem; i++){
-		sliderItem.eq(i).css({'left': (currentItem - i) * -1 * itemWidth}	);
+	for (var i = currentItem; i < endElements; i++){
+		console.log("Show end items i: ", i)
+		sliderItem.eq(i).css({'left': (i - currentItem) * itemWidth});
+	}
+	for (var i = 0; i < headElements; i++){
+		console.log("Show head items i: ", i)
+		sliderItem.eq(i).css({'left': (showItems - headElements + i) * itemWidth});
+	}
+	for (var i = headElements; i < currentItem; i++){
+		sliderItem.eq(i).css({'left': (currentItem - i) * -1 * itemWidth});
+	}
+	for (var i = currentItem + showItems + 1; i < sliderLength; i++){
+		sliderItem.eq(i).css({'left': (sliderLength - i + currentItem) * -1 * itemWidth});
 	}
 	sliderItem.each(function(){
-		//$(this).animate({'left': parseInt($(this).css('left')) + itemWidth});
+		$(this).animate({'left': parseInt($(this).css('left')) + (itemWidth * showItems)});
 	});
 }
 // Move right function
@@ -205,6 +263,6 @@ var moveRight = function(currentItem, sliderItem , sliderLength, itemWidth, show
 		sliderItem.eq(i).css({'left': (sliderLength - currentItem + i) * itemWidth});
 	}
 	sliderItem.each(function(){
-		$(this).animate({'left': parseInt($(this).css('left')) - itemWidth});
+		$(this).animate({'left': parseInt($(this).css('left')) - (itemWidth * showItems)});
 	});
 }
