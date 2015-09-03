@@ -41,6 +41,8 @@ $(document).ready(function(){
 			moveLeft(currentItem, sliderItem, sliderLength, itemWidth);
 
 			currentItem = nextItem;
+
+			slider.find('.js-circle-nav').eq(nextItem).addClass('active').siblings().removeClass('active');
 		});
 
 		// Click right
@@ -52,6 +54,8 @@ $(document).ready(function(){
 			moveRight(currentItem, sliderItem, sliderLength, itemWidth);
 
 			currentItem = nextItem;
+
+			slider.find('.js-circle-nav').eq(nextItem).addClass('active').siblings().removeClass('active');
 		});
 
 		// Add points navigation
@@ -86,15 +90,17 @@ $(document).ready(function(){
 
 					// Move right
 					if (deltaLeft >= deltaRight){
-						moveRight(currentItem, sliderItem, sliderLength, sliderWidth);
+						moveRight(currentItem, sliderItem, sliderLength, itemWidth);
 					}
 					// Move left
 					else{
-						moveLeft(currentItem, sliderItem, sliderLength, sliderWidth);
+						moveLeft(currentItem, sliderItem, sliderLength, itemWidth);
 					}
 
 					$(this).addClass('active').siblings().removeClass('active');
 					currentItem = nextItem;
+
+
 				}
 			});
 		}
@@ -111,13 +117,130 @@ $(document).ready(function(){
 		var itemWidth = sliderItem.width();
 		var showItems = sliderWidth / itemWidth;
 
+		// Variable for short slider
+		var doubled = false;
+
 		// Clone items if needs
 		if(sliderLength < showItems * 2){
 			sliderContainer.append(sliderItem.clone());
 			sliderLength *= 2;
 			sliderItem = slider.find('.slider__item');
+			doubled = true;
 		}
 
+		$.when(getSize(sliderContainer)).then(function(){
+			console.log(sliderWidth);
+			sliderItem.css({'display':'block', 'position':'absolute', 'width': itemWidth});
+			for(var i=0; i< sliderLength; i++){
+				sliderItem.eq(i).css({'left': i * itemWidth});
+			}
+		});
+
+		// Click left
+		slider.children('.js-prev').click(function(e){
+			e.preventDefault();
+			nextItem = currentItem - showItems;
+			if (nextItem < 0){nextItem = sliderLength + nextItem;}
+
+			console.log('currentItem: ', currentItem, ' nextItem: ', nextItem);
+
+			moveLeft(currentItem, sliderItem, sliderLength, itemWidth, showItems);
+
+			currentItem = nextItem;
+
+			if(doubled){
+				hideDoubles(sliderNav.children('.js-circle-nav'), currentItem, sliderLength);
+			}
+			slider.find('.js-circle-nav').eq(nextItem).addClass('active').siblings().removeClass('active');
+
+		});
+
+		// Click right
+		slider.children('.js-next').click(function(e){
+			e.preventDefault();
+			nextItem = currentItem + showItems;
+			if(nextItem >= sliderLength){nextItem = nextItem - sliderLength;}
+
+
+			moveRight(currentItem, sliderItem, sliderLength, itemWidth, showItems);
+
+			currentItem = nextItem;
+
+			if(doubled){
+				hideDoubles(sliderNav.children('.js-circle-nav'), currentItem, sliderLength);
+			}
+			slider.find('.js-circle-nav').eq(nextItem).addClass('active').siblings().removeClass('active');
+
+		});
+
+		// Add points navigation
+		if(slider.children('.slider__nav').length > 0){
+			var sliderNav = slider.children('.slider__nav');
+			for(var i = 0; i < sliderLength; i++){
+				//$('.slider__nav').append($('<div/>').addClass('slider__click'));
+				if(i === 0){
+					sliderNav.append('<div class="js-circle-nav active"></div>')
+				}
+				else{
+					sliderNav.append('<div class="js-circle-nav"></div>')
+				}
+			}
+			// if slider doubled, hide half or circle
+			if(doubled){
+				hideDoubles(sliderNav.children('.js-circle-nav'), currentItem, sliderLength);
+			}
+
+			sliderNav.on('click', '.js-circle-nav', function(){
+				var index = $(this).index();
+				if (index !== currentItem){
+					nextItem = index;
+
+					// Check short way
+					var deltaLeft = 0;
+					var deltaRight = 0;
+					if(nextItem > currentItem){
+						deltaRight = nextItem - currentItem;
+						deltaLeft = sliderLength - nextItem + currentItem;
+					}
+					else{
+						deltaLeft = currentItem - nextItem;
+						deltaRight = sliderLength - currentItem + nextItem;
+					}
+
+
+					// Move right
+					if (deltaLeft >= deltaRight){
+						console.log(currentItem, sliderLength, sliderWidth, showItems)
+						moveRight(currentItem, sliderItem, sliderLength, itemWidth, showItems, deltaRight);
+					}
+					// Move left
+					else{
+						console.log(currentItem, sliderLength, sliderWidth, showItems)
+						moveLeft(currentItem, sliderItem, sliderLength, itemWidth, showItems, deltaLeft);
+					}
+
+					$(this).addClass('active').siblings().removeClass('active');
+
+					currentItem = nextItem;
+				}
+			});
+		}
+	});
+
+
+
+	$('.js-slider-text').each(function(){
+		var slider = $(this);
+		var sliderContainer = $(this).children('.slider__container');
+		var sliderItem = slider.find('.slider__item');
+		var sliderLength = sliderItem.length;
+		var sliderWidth = slider.width();
+		var itemWidth = sliderWidth;
+		var currentItem = 0;
+		var nextItem;
+		var sliderText = slider.siblings('.slider-text');
+		var sliderTextContainer = sliderText.children('.slider-text__tab');
+		console.log("sliderTextContainer: ", sliderTextContainer);
 		$.when(getSize(sliderContainer)).then(function(){
 			console.log(sliderWidth);
 			sliderItem.css({'display':'block', 'position':'absolute', 'width': itemWidth});
@@ -132,9 +255,12 @@ $(document).ready(function(){
 			nextItem = currentItem - 1;
 			if (nextItem < 0){nextItem = sliderLength - 1;}
 
-			moveLeft(currentItem, sliderItem, sliderLength, itemWidth, showItems);
+			moveLeft(currentItem, sliderItem, sliderLength, itemWidth);
 
 			currentItem = nextItem;
+
+			changeText(sliderTextContainer, currentItem);
+			slider.find('.js-circle-nav').eq(nextItem).addClass('active').siblings().removeClass('active');
 		});
 
 		// Click right
@@ -143,9 +269,12 @@ $(document).ready(function(){
 			nextItem = currentItem + 1;
 			if(nextItem === sliderLength){nextItem = 0;}
 
-			moveRight(currentItem, sliderItem, sliderLength, itemWidth, showItems);
+			moveRight(currentItem, sliderItem, sliderLength, itemWidth);
 
 			currentItem = nextItem;
+
+			changeText(sliderTextContainer, currentItem);
+			slider.find('.js-circle-nav').eq(nextItem).addClass('active').siblings().removeClass('active');
 		});
 
 		// Add points navigation
@@ -180,21 +309,20 @@ $(document).ready(function(){
 
 					// Move right
 					if (deltaLeft >= deltaRight){
-						moveRight(currentItem, sliderItem, sliderLength, sliderWidth);
+						moveRight(currentItem, sliderItem, sliderLength, itemWidth);
 					}
 					// Move left
 					else{
-						moveLeft(currentItem, sliderItem, sliderLength, sliderWidth);
+						moveLeft(currentItem, sliderItem, sliderLength, itemWidth);
 					}
 
 					$(this).addClass('active').siblings().removeClass('active');
 					currentItem = nextItem;
+					changeText(sliderTextContainer, currentItem);
 				}
 			});
 		}
 	});
-
-
 
 
 
@@ -227,7 +355,7 @@ var getSize = function(slider){
 };
 
 // Move left function
-var moveLeft = function(currentItem, sliderItem , sliderLength, itemWidth, showItems){
+var moveLeft = function(currentItem, sliderItem , sliderLength, itemWidth, showItems, deltaLeft){
 	if(showItems === undefined){showItems = 1}
 	var endElements = currentItem + showItems; // Show how many items from ends needs to show
 	var headElements = 0;                      // Show how many items from head needs to show
@@ -249,12 +377,14 @@ var moveLeft = function(currentItem, sliderItem , sliderLength, itemWidth, showI
 	for (var i = currentItem + showItems + 1; i < sliderLength; i++){
 		sliderItem.eq(i).css({'left': (sliderLength - i + currentItem) * -1 * itemWidth});
 	}
+	var switcher;
+	if(deltaLeft !== undefined){switcher = deltaLeft} else {switcher = showItems}
 	sliderItem.each(function(){
-		$(this).animate({'left': parseInt($(this).css('left')) + (itemWidth * showItems)});
+		$(this).animate({'left': parseInt($(this).css('left')) + (itemWidth * switcher)});
 	});
 }
 // Move right function
-var moveRight = function(currentItem, sliderItem , sliderLength, itemWidth, showItems){
+var moveRight = function(currentItem, sliderItem , sliderLength, itemWidth, showItems, deltaRight){
 	if(showItems === undefined){showItems = 1}
 	for(var i = currentItem; i < sliderLength; i++){
 		sliderItem.eq(i).css({'left': (i - currentItem) * itemWidth});
@@ -262,7 +392,23 @@ var moveRight = function(currentItem, sliderItem , sliderLength, itemWidth, show
 	for(var i = 0; i < currentItem; i++){
 		sliderItem.eq(i).css({'left': (sliderLength - currentItem + i) * itemWidth});
 	}
+	var switcher;
+	if(deltaRight !== undefined){switcher = deltaRight} else {switcher = showItems}
 	sliderItem.each(function(){
-		$(this).animate({'left': parseInt($(this).css('left')) - (itemWidth * showItems)});
+		$(this).animate({'left': parseInt($(this).css('left')) - (itemWidth * switcher)});
 	});
+}
+
+var hideDoubles = function(circles, currentItem, sliderLength){
+	circles.show();
+	if(currentItem < sliderLength / 2){
+		circles.slice(sliderLength / 2, sliderLength).hide();
+	}
+	else{
+		circles.slice(0, sliderLength / 2).hide();
+	}
+}
+
+var changeText = function(text, currentItem){
+	console.log("text");
 }

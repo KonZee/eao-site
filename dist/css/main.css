@@ -567,6 +567,7 @@ h5 {
 	padding: 12px 13px 10px;
 	background: rgba(36,36,36,0.44);
 	color: #FFFFFF;
+	text-align: center;
 }
 
 .slider__nav {
@@ -672,6 +673,10 @@ h5 {
 	background: #FBFBFB;
 	border-radius: 0 4px 4px 0;
 	margin-left: 360px;
+}
+
+.slider-text__tab:not(:first-child) {
+	display: none;
 }
 
 .slider-text__item {

@@ -8,6 +8,7 @@ block content
 		.wrapper.wrapper--normal.wrapper--gray
 			.container
 				.row
+					//- First slider
 					.col-md-6
 						.slider.js-slider-single
 							.slider__nav.slider__nav--on-top
@@ -29,7 +30,7 @@ block content
 							a(href="").slider__arrow.slider__arrow--next.js-next
 								i.fa.fa-chevron-right
 
-
+					//- Tabs / Second slider
 					.col-md-6
 						.news-panel.js-slider-tabs
 							ul.nav.nav-tabs.news-panel__tabs.clearfix
@@ -110,48 +111,109 @@ block content
 				.row
 					.col-md-8
 						.slider.slider--text.js-slider-text(data-side-text="true")
+							.slider__nav.slider__nav--on-top
 							ul.slider__container
 								li.slider__item
 									img(src="/images/index-left-slider.jpg")
-									.slider__text
-										+lipsum(2, "sentences")
+									.slider__text Социальная сфера
 								li.slider__item
 									img(src="/images/index-left-slider.jpg")
-									.slider__text
-										+lipsum(2, "sentences")
+									.slider__text Здравоохранение
 								li.slider__item
 									img(src="/images/index-left-slider.jpg")
-									.slider__text
-										+lipsum(2, "sentences")
+									.slider__text Образование
 								li.slider__item
 									img(src="/images/index-slider.jpg")
-									.slider__text
-										+lipsum(2, "sentences")
+									.slider__text Спорт
 							a(href="").slider__arrow.slider__arrow--prev.js-prev
 								i.fa.fa-chevron-left
 							a(href="").slider__arrow.slider__arrow--next.js-next
 								i.fa.fa-chevron-right
 						.slider-text
-							.slider-text__item
-								.data.small 27.09.2015
-								.text
-									+lipsum(15, 'words')
-									a(href="") Подробнее...
-							.slider-text__item
-								.data.small 27.09.2015
-								.text
-									+lipsum(15, 'words')
-									a(href="") Подробнее...
-							.slider-text__item
-								.data.small 27.09.2015
-								.text
-									+lipsum(15, 'words')
-									a(href="") Подробнее...
-							.slider-text__item
-								.data.small 27.09.2015
-								.text
-									+lipsum(15, 'words')
-									a(href="") Подробнее...
+							.slider-text__tab
+								.slider-text__item
+									.data.small 27.09.2015
+									.text
+										+lipsum(15, 'words')
+										a(href="") Подробнее...
+								.slider-text__item
+									.data.small 27.09.2015
+									.text
+										+lipsum(15, 'words')
+										a(href="") Подробнее...
+								.slider-text__item
+									.data.small 27.09.2015
+									.text
+										+lipsum(15, 'words')
+										a(href="") Подробнее...
+								.slider-text__item
+									.data.small 27.09.2015
+									.text
+										+lipsum(15, 'words')
+										a(href="") Подробнее...
+							.slider-text__tab
+								.slider-text__item
+									.data.small 27.09.2015
+									.text
+										+lipsum(15, 'words')
+										a(href="") Подробнее...
+								.slider-text__item
+									.data.small 27.09.2015
+									.text
+										+lipsum(15, 'words')
+										a(href="") Подробнее...
+								.slider-text__item
+									.data.small 27.09.2015
+									.text
+										+lipsum(15, 'words')
+										a(href="") Подробнее...
+								.slider-text__item
+									.data.small 27.09.2015
+									.text
+										+lipsum(15, 'words')
+										a(href="") Подробнее...
+							.slider-text__tab
+								.slider-text__item
+									.data.small 27.09.2015
+									.text
+										+lipsum(15, 'words')
+										a(href="") Подробнее...
+								.slider-text__item
+									.data.small 27.09.2015
+									.text
+										+lipsum(15, 'words')
+										a(href="") Подробнее...
+								.slider-text__item
+									.data.small 27.09.2015
+									.text
+										+lipsum(15, 'words')
+										a(href="") Подробнее...
+								.slider-text__item
+									.data.small 27.09.2015
+									.text
+										+lipsum(15, 'words')
+										a(href="") Подробнее...
+							.slider-text__tab
+								.slider-text__item
+									.data.small 27.09.2015
+									.text
+										+lipsum(15, 'words')
+										a(href="") Подробнее...
+								.slider-text__item
+									.data.small 27.09.2015
+									.text
+										+lipsum(15, 'words')
+										a(href="") Подробнее...
+								.slider-text__item
+									.data.small 27.09.2015
+									.text
+										+lipsum(15, 'words')
+										a(href="") Подробнее...
+								.slider-text__item
+									.data.small 27.09.2015
+									.text
+										+lipsum(15, 'words')
+										a(href="") Подробнее...
 					//.col-md-4
 						.news-panel
 							.news-panel__item
@@ -177,6 +239,7 @@ block content
 
 					.col-md-4
 						.slider.js-slider-single
+							.slider__nav.slider__nav--on-top
 							ul.slider__container
 								li.slider__item
 									img(src="/images/index-right-slider.jpg")
@@ -250,3 +313,4 @@ block content
 								i.fa.fa-chevron-left
 							a(href="").slider__arrow.slider__arrow--next.js-next
 								i.fa.fa-chevron-right
+							.slider__nav
