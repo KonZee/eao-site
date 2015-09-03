@@ -20,57 +20,38 @@ $(document).ready(function(){
 		var sliderContainer = $(this).children('.slider__container');
 		var sliderItem = slider.find('.slider__item');
 		var sliderLength = sliderItem.length;
-		var sliderWidth;
+		var sliderWidth = slider.width();
+		var itemWidth = sliderWidth;
 		var currentItem = 0;
 		var nextItem;
 		$.when(getSize(sliderContainer)).then(function(){
-			sliderWidth = slider.width();
-			sliderItem.css({'display':'block', 'position':'absolute'});
+			console.log(sliderWidth);
+			sliderItem.css({'display':'block', 'position':'absolute', 'width': itemWidth});
 			for(var i=0; i< sliderLength; i++){
-				sliderItem.eq(i).css({'left': i * sliderWidth});
+				sliderItem.eq(i).css({'left': i * itemWidth});
 			}
 		});
 
 		// Click left
 		slider.children('.js-prev').click(function(e){
 			e.preventDefault();
-			console.log(currentItem);
 			nextItem = currentItem - 1;
 			if (nextItem < 0){nextItem = sliderLength - 1;}
-			for (var i = currentItem + 1; i < sliderLength; i++){
-				console.log("i higher: ", i);
-				sliderItem.eq(i).css({'left': (sliderLength - i + currentItem) * -1 * sliderWidth}	);
-			}
-			for (var i = 0; i <= currentItem; i++){
-				console.log("i less: ", i);
-				sliderItem.eq(i).css({'left': (currentItem - i) * -1 * sliderWidth}	);
-			}
-			sliderItem.each(function(){
-				$(this).animate({'left': parseInt($(this).css('left')) + sliderWidth});
-			});
+
+			moveLeft(currentItem, sliderItem, sliderLength, itemWidth);
+
 			currentItem = nextItem;
-			//moveLeft();
 		});
 
 		// Click right
 		slider.children('.js-next').click(function(e){
 			e.preventDefault();
-			console.log(currentItem);
 			nextItem = currentItem + 1;
 			if(nextItem === sliderLength){nextItem = 0;}
-			for(var i = currentItem; i < sliderLength; i++){
-				console.log("I=",i);
-				sliderItem.eq(i).css({'left': (i - currentItem) * sliderWidth});
-			}
-			for(var i = 0; i < currentItem; i++){
-				console.log("I'=",i);
-				sliderItem.eq(i).css({'left': (sliderLength - currentItem + i) * sliderWidth});
-			}
-			sliderItem.each(function(){
-				$(this).animate({'left': parseInt($(this).css('left')) - sliderWidth});
-			});
+
+			moveRight(currentItem, sliderItem, sliderLength, itemWidth);
+
 			currentItem = nextItem;
-			//moveRight();
 		});
 
 		// Add points navigation
@@ -105,27 +86,11 @@ $(document).ready(function(){
 
 					// Move right
 					if (deltaLeft >= deltaRight){
-						for(var i = currentItem; i < sliderLength; i++){
-							sliderItem.eq(i).css({'left': (i - currentItem) * sliderWidth});
-						}
-						for(var i = 0; i < currentItem; i++){
-							sliderItem.eq(i).css({'left': (sliderLength - currentItem + i) * sliderWidth});
-						}
-						sliderItem.each(function(){
-							$(this).animate({'left': parseInt($(this).css('left')) - sliderWidth});
-						});
+						moveRight(currentItem, sliderItem, sliderLength, sliderWidth);
 					}
 					// Move left
 					else{
-						for (var i = currentItem + 1; i < sliderLength; i++){
-							sliderItem.eq(i).css({'left': (sliderLength - i + currentItem) * -1 * sliderWidth}	);
-						}
-						for (var i = 0; i <= currentItem; i++){
-							sliderItem.eq(i).css({'left': (currentItem - i) * -1 * sliderWidth}	);
-						}
-						sliderItem.each(function(){
-							$(this).animate({'left': parseInt($(this).css('left')) + sliderWidth});
-						});
+						moveLeft(currentItem, sliderItem, sliderLength, sliderWidth);
 					}
 
 					$(this).addClass('active').siblings().removeClass('active');
@@ -134,6 +99,61 @@ $(document).ready(function(){
 			});
 		}
 	});
+
+	$('.js-slider-multiply').each(function(){
+		var slider = $(this);
+		var sliderContainer = $(this).children('.slider__container');
+		var sliderItem = slider.find('.slider__item');
+		var sliderLength = sliderItem.length;
+		var sliderWidth = slider.width();
+		var currentItem = 0;
+		var nextItem;
+		var itemWidth = sliderItem.width();
+		var showItems = sliderWidth / itemWidth;
+
+		// Clone items if needs
+		if(sliderLength < showItems * 2){
+			sliderContainer.append(sliderItem.clone());
+			sliderLength *= 2;
+			sliderItem = slider.find('.slider__item');
+		}
+
+		$.when(getSize(sliderContainer)).then(function(){
+			console.log(sliderWidth);
+			sliderItem.css({'display':'block', 'position':'absolute', 'width': itemWidth});
+			for(var i=0; i< sliderLength; i++){
+				sliderItem.eq(i).css({'left': i * itemWidth});
+			}
+		});
+
+		// Click left
+		slider.children('.js-prev').click(function(e){
+			e.preventDefault();
+			nextItem = currentItem - 1;
+			if (nextItem < 0){nextItem = sliderLength - 1;}
+
+			moveLeft(currentItem, sliderItem, sliderLength, itemWidth, showItems);
+
+			currentItem = nextItem;
+		});
+
+		// Click right
+		slider.children('.js-next').click(function(e){
+			e.preventDefault();
+			nextItem = currentItem + 1;
+			if(nextItem === sliderLength){nextItem = 0;}
+
+			moveRight(currentItem, sliderItem, sliderLength, itemWidth, showItems);
+
+			currentItem = nextItem;
+		});
+
+	});
+
+
+
+
+
 
 	// Load more news
 	$('.js-load-more').click(function(e){
@@ -157,20 +177,34 @@ var getSize = function(slider){
 			if($(this).height() > maxHeight){
 				maxHeight = $(this).height();
 			}
-			if($(this).width() > maxWidth){
-				maxWidth = $(this).width();
-			}
 		});
 		slider.height(maxHeight);
-		slider.find('.slider__item').width(maxWidth);
 	});
 };
 
-
-var moveLeft = function(items){
-	console.log("Let's move left");
-	console.log(currentItem);
+// Move left function
+var moveLeft = function(currentItem, sliderItem , sliderLength, itemWidth, showItems){
+	if(showItems === undefined){showItems = 1}
+	for (var i = currentItem + 1; i < sliderLength; i++){
+		sliderItem.eq(i).css({'left': (sliderLength - i + currentItem) * -1 * itemWidth}	);
+	}
+	for (var i = 0; i <= currentItem; i++){
+		sliderItem.eq(i).css({'left': (currentItem - i) * -1 * itemWidth}	);
+	}
+	sliderItem.each(function(){
+		//$(this).animate({'left': parseInt($(this).css('left')) + itemWidth});
+	});
 }
-var moveRight = function(items){
-	console.log("Let's move right");
+// Move right function
+var moveRight = function(currentItem, sliderItem , sliderLength, itemWidth, showItems){
+	if(showItems === undefined){showItems = 1}
+	for(var i = currentItem; i < sliderLength; i++){
+		sliderItem.eq(i).css({'left': (i - currentItem) * itemWidth});
+	}
+	for(var i = 0; i < currentItem; i++){
+		sliderItem.eq(i).css({'left': (sliderLength - currentItem + i) * itemWidth});
+	}
+	sliderItem.each(function(){
+		$(this).animate({'left': parseInt($(this).css('left')) - itemWidth});
+	});
 }
