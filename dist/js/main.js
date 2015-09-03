@@ -259,7 +259,7 @@ $(document).ready(function(){
 
 			currentItem = nextItem;
 
-			changeText(sliderTextContainer, currentItem);
+			changeTextContainer(sliderTextContainer, currentItem);
 			slider.find('.js-circle-nav').eq(nextItem).addClass('active').siblings().removeClass('active');
 		});
 
@@ -273,7 +273,7 @@ $(document).ready(function(){
 
 			currentItem = nextItem;
 
-			changeText(sliderTextContainer, currentItem);
+			changeTextContainer(sliderTextContainer, currentItem);
 			slider.find('.js-circle-nav').eq(nextItem).addClass('active').siblings().removeClass('active');
 		});
 
@@ -318,7 +318,7 @@ $(document).ready(function(){
 
 					$(this).addClass('active').siblings().removeClass('active');
 					currentItem = nextItem;
-					changeText(sliderTextContainer, currentItem);
+					changeTextContainer(sliderTextContainer, currentItem);
 				}
 			});
 		}
@@ -409,6 +409,7 @@ var hideDoubles = function(circles, currentItem, sliderLength){
 	}
 }
 
-var changeText = function(text, currentItem){
-	console.log("text");
+var changeTextContainer = function(text, currentItem){
+	text.hide();
+	text.eq(currentItem).fadeIn();
 }
