@@ -1,139 +1,177 @@
 .menu
-	border 1px solid #e2e3e4
-	border-radius 31px
-	height 62px
-	padding 0 7px
-	background #fff
+	position absolute
+	top 0
+	left 0
+	right 0
+	&__hamburger
+		cursor pointer
+		margin 17px 0 0 15px
+		border none
+		background transparent
+		span
+			display block
+			width 25px
+			height 2px
+			background $white
+			border-radius 1px
+			&:not(:last-child)
+				margin-bottom 7px
 	> ul
-		display inline-block
-		text-align justify
-		width 100%
+		display none
+		position absolute
+		margin 0
+		padding 0
+		left 0
+		right 0
+		top 54px
+		background alpha($black, 0.8)
+		z-index 100
+	a
+		color $white
+
+@media screen and (min-width: $screen-md)
+	.menu
+		position static
+		border 1px solid #e2e3e4
+		border-radius 31px
+		height 62px
+		padding 0 7px
+		background #fff
 		position relative
-		&:after
+		top 0
+		> ul
 			display inline-block
+			position static
+			background none
+			text-align justify
 			width 100%
-			content ""
-	&__top-item
-		display inline-block
-		position relative
-		padding 7px 0
-		> a
+			&:after
+				display inline-block
+				width 100%
+				content ""
+		&__top-item
 			display inline-block
-			padding 13px 19px
-			color #242424
-			transition background 350ms, color 350ms
-			text-decoration none
-			font-weight bold
-			border-radius 23px
-			&.active
-				background $brand-primary
-				color #fff
-			&:focus
-				outline none
-		&:hover
+			position relative
+			padding 7px 0
 			> a
-				background #242424
-				color #fff
-		&--submenu
-			> a
-				padding-right 35px
-				&:after
-					display block
-					position absolute
-					font-family FontAwesome
-					content "\f077"
-					font-size 10px
-					top 23px
-					right 22px
-					transition transform 200ms linear, top 200ms linear
+				display inline-block
+				padding 13px 19px
+				color #242424
+				transition background 350ms, color 350ms
+				text-decoration none
+				font-weight bold
+				border-radius 23px
+				&.active
+					background $brand-primary
+					color #fff
+				&:focus
+					outline none
 			&:hover
 				> a
+					background #242424
+					color #fff
+			&--submenu
+				> a
+					padding-right 35px
 					&:after
-						transform rotate(180deg)
-						top 25px
-	&__item
-		display block
-		width 100%
-		position relative
-		a
+						display block
+						position absolute
+						font-family FontAwesome
+						content "\f077"
+						font-size 10px
+						top 23px
+						right 22px
+						transition transform 200ms linear, top 200ms linear
+				&:hover
+					> a
+						&:after
+							transform rotate(180deg)
+							top 25px
+		&__hamburger
+			display none
+		&__item
 			display block
-			white-space nowrap
-			background #242424
-			padding 10px 18px
-			color #fff
-			text-decoration none
-			&:hover
-				background $brand-primary
-		&--submenu
-			> a
-				padding-right 30px
-				&:after
-					position absolute
-					display block
-					content "\f054"
-					font-family FontAwesome
-					font-size 10px
-					top 16px
-					right 15px
-	&__submenu
-		position absolute
-		z-index 1000
-		padding 10px 0
-		background #242424
-		opacity 0
-		visibility hiddne
-		pointer-events none
-		transition opacity 350ms
-		&--1
-			left 0
-			top 100%
-		&--2
-			left 100%
-			top 0
-
-	// Hovers
-	*:hover
-		> .menu__submenu
-			visibility visible
-			opacity 1
-			pointer-events auto
-
-	&__search
-		display inline-block
-
-.search
-	position relative
-	vertical-align top
-	margin 7px 0
-	&__icon
-		pointer-events none
-		margin 16px 1px 0 0
-	&__form
-		position absolute
-		top 0
-		right 0
-		padding-left 13px
-		background #fff
-		input
-			border none
-			border-bottom 1px solid transparent
-			height 46px
-			padding 13px 13px 13px 0
-			margin 0 0 0 13px
-			transition width 350ms, border 350ms
-			width 20px
-			&:focus
-				width 300px
-				border-bottom 1px solid #e2e3e4
-		a.submit
-			display block
+			width 100%
+			position relative
+			a
+				display block
+				white-space nowrap
+				background #242424
+				padding 10px 18px
+				color #fff
+				text-decoration none
+				&:hover
+					background $brand-primary
+			&--submenu
+				> a
+					padding-right 30px
+					&:after
+						position absolute
+						display block
+						content "\f054"
+						font-family FontAwesome
+						font-size 10px
+						top 16px
+						right 15px
+		&__submenu
 			position absolute
-			right 0
-			top 13px
-			width 17px
-			height 20px
-			cursor default
+			z-index 1000
+			padding 10px 0
+			background #242424
+			opacity 0
+			visibility hiddne
 			pointer-events none
-		input:focus + a.submit
-			cursor pointer
-			pointer-events auto
+			transition opacity 350ms
+			&--1
+				left 0
+				top 100%
+			&--2
+				left 100%
+				top 0
+
+		// Hovers
+		*:hover
+			> .menu__submenu
+				visibility visible
+				opacity 1
+				pointer-events auto
+
+		&__search
+			display inline-block
+
+	.search
+		position relative
+		vertical-align top
+		margin 7px 0
+		&__icon
+			pointer-events none
+			margin 16px 1px 0 0
+		&__form
+			position absolute
+			top 0
+			right 0
+			padding-left 13px
+			background #fff
+			input
+				border none
+				border-bottom 1px solid transparent
+				height 46px
+				padding 13px 13px 13px 0
+				margin 0 0 0 13px
+				transition width 350ms, border 350ms
+				width 20px
+				&:focus
+					width 300px
+					border-bottom 1px solid #e2e3e4
+			a.submit
+				display block
+				position absolute
+				right 0
+				top 13px
+				width 17px
+				height 20px
+				cursor default
+				pointer-events none
+			input:focus + a.submit
+				cursor pointer
+				pointer-events auto

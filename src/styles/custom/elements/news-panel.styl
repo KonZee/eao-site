@@ -1,28 +1,46 @@
 .news-panel
 
+
 	&__tabs
 		position relative
-		border none
-		text-align justify
-		height 36px
-		margin-bottom 10px
-		&:before
-			display block
-			content ""
-			position absolute
-			height 2px
-			background #ddd
-			left 0
-			right 0
-			top 18px
-		&:after
-			content ""
-			display inline-block
-			width 100%
+		margin-top 30px
+		@media screen and (min-width: $screen-md)
+			margin-top 0
+		ul
+			position relative
+			border none
+			height 36px
+			margin-bottom 10px
+			text-align center
+			@media screen and (min-width: $screen-md)
+				text-align justify
+				&:before
+					display block
+					content ""
+					position absolute
+					height 2px
+					background #ddd
+					left 0
+					right 0
+					top 18px
+			&:after
+				content ""
+				display inline-block
+				width 100%
+
+			@media screen and (min-width: $screen-md)
+				& ~ .slider__arrow
+				& ~ .slider__nav
+					display none
+
 	&__tab
-		display inline-block
-		position relative
-		z-index 1
+		@media screen and (max-width: $screen-sm-max)
+			&:not(:first-child)
+				display none
+		@media screen and (min-width: $screen-md)
+			display inline-block
+			position relative
+			z-index 1
 		a
 			display inline-block
 			background #fff

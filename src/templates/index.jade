@@ -32,14 +32,20 @@ block content
 
 					//- Tabs / Second slider
 					.col-md-6
-						.news-panel.js-slider-tabs
-							ul.nav.nav-tabs.news-panel__tabs.clearfix
-								li(role="presentation").news-panel__tab.active
-									a(href="#news-tab") Новости
-								li(role="presentation").news-panel__tab
-									a(href="#official-tab") Новости органов власти
-								li(role="presentation").news-panel__tab
-									a(href="#events-tab") Календарь событий
+						.news-panel
+							.news-panel__tabs.slider.js-slider-tabs
+								ul.nav.nav-tabs.clearfix
+									li(role="presentation").news-panel__tab.active
+										a(href="#news-tab") Новости
+									li(role="presentation").news-panel__tab
+										a(href="#official-tab") Новости органов власти
+									li(role="presentation").news-panel__tab
+										a(href="#events-tab") Календарь событий
+								a(href="").slider__arrow.slider__arrow--prev.js-prev
+									i.fa.fa-chevron-left
+								a(href="").slider__arrow.slider__arrow--next.js-next
+									i.fa.fa-chevron-right
+								.slider__nav
 							.tab-content
 								#news-tab.tab-pane.active(role="tabpanel")
 									.news-panel__item

@@ -7,6 +7,12 @@
 		left 15px
 		top -13px
 		background $brand-primary
+		@media screen and (max-width: $screen-sm-max)
+			left 50%
+			transform translateX(-50%)
+			top 0
+			width 70px
+			height 78px
 	&__topmenu
 		height 54px
 		&--black
@@ -20,7 +26,8 @@
 	&__title
 		font-size 20px
 		margin 22px 0
-
+		@media screen and (max-width: $screen-sm-max)
+			margin-top 40px
 	&__menu
 		> *
 			&.submenu
@@ -50,18 +57,19 @@
 						width auto
 						background #242424
 			&:not(:first-child)
-				margin-left 6px
-
-	&:after
-		display block
-		content ""
-		position absolute
-		left 0
-		bottom 0
-		right 0
-		height 31px
-		background #f2f2f2
-		z-index -1
+				@media screen and (min-width: $screen-md)
+					margin-left 6px
+	@media screen and (min-width: $screen-md)
+		&:after
+			display block
+			content ""
+			position absolute
+			left 0
+			bottom 0
+			right 0
+			height 31px
+			background #f2f2f2
+			z-index -1
 
 
 .topmenu
@@ -120,6 +128,15 @@
 		&:hover > ul
 			pointer-events auto
 			opacity 1
+		@media screen and (max-width: $screen-sm-max)
+			font-size 0.01px
+			> a
+				padding-right 35px
+				padding-left 15px
+				&:after
+					font-size 14px
+					top 11px
+					right 20px
 
 
 

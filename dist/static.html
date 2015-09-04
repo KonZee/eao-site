@@ -14,10 +14,10 @@
       <div class="header__topmenu header__topmenu--black">
         <div class="container">
           <div class="row">
-            <div class="col-sm-2">
+            <div class="col-md-2">
               <div class="header__coat"></div>
             </div>
-            <div class="col-sm-10">
+            <div class="col-md-10">
               <div class="topmenu">
                 <div class="topmenu__lang"><a href="" data-lang="ru"><img src="/images/flag__ru.png">Русский</a>
                   <ul>
@@ -26,7 +26,7 @@
                     <li><a href="" data-lang="cn"><img src="/images/flag__ru.png">Китайский</a></li>
                     <li><a href="" data-lang="il"><img src="/images/flag__ru.png">Иврит</a></li>
                   </ul>
-                </div><a href=""><span>
+                </div><a href="" class="hidden-xs hidden-sm"><span>
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M91.464,85.134L89.1,77.758h-0.321
                     	c-2.057,3.138-4.173,5.314-6.349,6.527c-2.178,1.213-5.015,1.82-8.513,1.82c-4.301,0-7.686-1.488-10.155-4.465
@@ -37,7 +37,7 @@
                     	c2.831,0,5.095-0.987,6.791-2.962c1.696-1.972,2.544-4.593,2.544-7.86V59.997z M38.983,68.247H17.63l-4.247,16.887H0.002
                     	l20.672-71.239h15.183L56.61,85.134H43.228L38.983,68.247z M29.387,29.669c-0.494-2.006-0.848-3.592-1.061-4.757
                     	c-0.882,4.142-3.406,14.381-7.572,30.718h15.264C32.091,40.326,29.881,31.673,29.387,29.669z"/>
-                    </svg></span>Для слабовидящих</a><a href=""><span>
+                    </svg></span>Для слабовидящих</a><a href="" class="hidden-xs hidden-sm"><span>
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M99.998,69.257v20.4c0,2.018-1.649,3.652-3.67,3.652H75.84c-2.026,0-3.67-1.635-3.67-3.652v-20.4
                     	c0-2.016,1.644-3.652,3.67-3.652h5.352V54.796H53.669v10.809h6.575c2.026,0,3.67,1.637,3.67,3.652v20.4
@@ -46,7 +46,7 @@
                     	c0-2.016,1.644-3.652,3.67-3.652h7.799V51.142c0-2.015,1.644-3.654,3.67-3.654h31.192V34.397h-6.575c-2.026,0-3.67-1.639-3.67-3.654
                     	V10.344c0-2.016,1.644-3.654,3.67-3.654h20.487c2.026,0,3.67,1.638,3.67,3.654v20.399c0,2.015-1.644,3.654-3.67,3.654h-6.575v13.091
                     	h31.192c2.024,0,3.67,1.639,3.67,3.654v14.463h7.798C98.35,65.605,99.998,67.242,99.998,69.257z"/>
-                    </svg></span>Карта сайта</a><a href=""><span>
+                    </svg></span>Карта сайта</a><a href="" class="hidden-xs hidden-sm"><span>
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
                     <path d="M84.329,11.293H81.52v71.885c0,4.775-3.731,8.663-8.316,8.663H44.745H22.114v2.665
                     	c0,3.052,2.377,5.529,5.307,5.529H55.87h28.449c2.93,0,5.307-2.477,5.307-5.529V16.821C89.626,13.77,87.258,11.293,84.329,11.293z"
@@ -67,10 +67,16 @@
           </div>
         </div>
       </div>
-      <div class="header__title text-center">Официальный портал органов государственной власти Еврейской автономной области</div>
       <div class="container">
         <div class="row">
-          <div class="col-md-12">
+          <div class="col-xs-12">
+            <div class="header__title text-center">Официальный портал органов государственной власти Еврейской автономной области</div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 no-mobile-relative">
             <!--nav.navbar.navbar-default.header__menu
             .navbar-header
             	button.navbar-toggle.collapsed(type="button" data-toggle="collapse" data-target="#main-menu" aria-expanded="false")
@@ -89,6 +95,7 @@
             
             -->
             <div class="header__menu menu">
+              <button class="menu__hamburger"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
               <ul>
                 <li class="menu__top-item"><a href="" class="active">Главная</a></li>
                 <li class="menu__top-item menu__top-item--submenu"><a href="">ЕАО</a>

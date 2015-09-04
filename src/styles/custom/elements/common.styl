@@ -10,9 +10,9 @@ ul
 // Wrappers
 .wrapper
 	&--normal
-		padding 40px
+		padding 40px 0
 	&--thin
-		padding 10px
+		padding 10px 0
 	&--gray
 		background $gray-light
 	&--bottom-border
@@ -41,3 +41,8 @@ body
 h5
 	font-weight bold
 	margin-bottom 30px
+
+// For menu
+@media screen and (max-width: $screen-sm-max)
+	.no-mobile-relative
+		position static
