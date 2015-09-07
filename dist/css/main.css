@@ -216,6 +216,11 @@ h5 {
 	text-decoration: none;
 }
 
+.topmenu__link:hover {
+	color: inherit;
+	text-decoration: none;
+}
+
 .menu {
 	position: absolute;
 	top: 0;
@@ -380,7 +385,7 @@ h5 {
 }
 
 .search__input:focus {
-	width: 360px;
+	width: 250px;
 }
 
 .search__search,
@@ -1041,6 +1046,10 @@ h5 {
 }
 
 @media screen and (min-width: 1200px) {
+	.search__input:focus {
+		width: 340px;
+	}
+
 	.slider--multiply .slider__item {
 		width: 20%;
 	}

@@ -15,7 +15,9 @@
 		width 100px
 		transition width 350ms
 		&:focus
-			width 360px
+			width 250px
+			@media screen and (min-width: $screen-lg)
+				width 340px
 
 	&__search
 	&__close
