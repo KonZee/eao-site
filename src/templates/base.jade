@@ -35,7 +35,7 @@ html(lang='ru')
 											a(href="" data-lang="il")
 												img(src="/images/flag__ru.png")
 												| Иврит
-								a(href="").hidden-xs.hidden-sm
+								a(href="").hidden-xs.hidden-sm.topmenu__link
 									span.
 										<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
 										<path fill-rule="evenodd" clip-rule="evenodd" d="M91.464,85.134L89.1,77.758h-0.321
@@ -49,7 +49,7 @@ html(lang='ru')
 											c-0.882,4.142-3.406,14.381-7.572,30.718h15.264C32.091,40.326,29.881,31.673,29.387,29.669z"/>
 										</svg>
 									| Для слабовидящих
-								a(href="").hidden-xs.hidden-sm
+								//a(href="").hidden-xs.hidden-sm.topmenu__link
 									span.
 										<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
 										<path fill-rule="evenodd" clip-rule="evenodd" d="M99.998,69.257v20.4c0,2.018-1.649,3.652-3.67,3.652H75.84c-2.026,0-3.67-1.635-3.67-3.652v-20.4
@@ -61,7 +61,7 @@ html(lang='ru')
 											h31.192c2.024,0,3.67,1.639,3.67,3.654v14.463h7.798C98.35,65.605,99.998,67.242,99.998,69.257z"/>
 										</svg>
 									| Карта сайта
-								a(href="").hidden-xs.hidden-sm
+								//a(href="").hidden-xs.hidden-sm.topmenu__link
 									span.
 										<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
 										<path d="M84.329,11.293H81.52v71.885c0,4.775-3.731,8.663-8.316,8.663H44.745H22.114v2.665
@@ -79,6 +79,12 @@ html(lang='ru')
 											V2.38c0-1.401-1.103-2.332-2.247-2.332c-0.552,0-1.104,0.21-1.565,0.69L11.721,18.201C10.317,19.663,11.31,22.171,13.307,22.171z"/>
 										</svg>
 									| Для печати
+								form.search
+									input.search__input(type="textfield" placeholder="Поиск")
+									a(href="").search__search
+										i.fa.fa-search.fa-fw
+									a(href="").search__close
+										i.fa.fa-times.fa-fw
 			.container
 				.row
 					.col-xs-12
@@ -171,12 +177,6 @@ html(lang='ru')
 											a(href="") Submenu item
 										li.menu__item
 											a(href="") Submenu item
-								li.menu__search.search
-									.search__form
-										form
-											input(type="textfield")
-											a(href="").submit
-									i.fa.fa-search.search__icon
 
 		.content
 			block content
