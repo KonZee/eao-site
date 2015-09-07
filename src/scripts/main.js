@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-	var screenMD = 992;
+
 
 	// Language selector
 	$('.topmenu__lang a').click(function(e){
@@ -30,6 +30,7 @@ $(document).ready(function(){
 var slidersInit = function(){
 	var screenXS = 480;
 	var screenSM = 768;
+	var screenMD = 992;
 
 	$('.js-slider-single').each(function(){
 		var slider = $(this);
@@ -254,8 +255,8 @@ var slidersInit = function(){
 		var itemWidth = sliderWidth;
 		var currentItem = 0;
 		var nextItem;
-		var sliderText = slider.siblings('.slider-text');
-		var sliderTextContainer = sliderText.children('.slider-text__tab');
+		var sliderText = slider.siblings('.slider-text, .other-news__texts');
+		var sliderTextContainer = sliderText.children('.slider-text__tab, .other-news__tab');
 		console.log("sliderTextContainer: ", sliderTextContainer);
 		$.when(getSize(sliderContainer)).then(function(){
 			console.log(sliderWidth);
@@ -340,85 +341,86 @@ var slidersInit = function(){
 		}
 	});
 
-	$('.js-slider-tabs').each(function(){
-		var currentItem = 0;
-		var nextItem;
-		var slider = $(this);
-		var sliderTab = slider.find('.news-panel__tab');
-		var sliderLength = sliderTab.length;
-		var itemWidth = slider.width();
-		sliderTab.css({'display':'block', 'position':'absolute', 'width': itemWidth});
-		for(var i=0; i< sliderLength; i++){
-			sliderTab.eq(i).css({'left': i * itemWidth});
-		}
-		slider.children('.js-prev').click(function(e){
-			e.preventDefault();
-			nextItem = currentItem - 1;
-			if (nextItem < 0){nextItem = sliderLength - 1;}
-			console.log("Next item: ", nextItem);
-			sliderTab.eq(nextItem).children('a').trigger('click');
-			moveLeft(currentItem, sliderTab, sliderLength, itemWidth);
-			slider.find('.js-circle-nav').eq(nextItem).addClass('active').siblings().removeClass('active');
-			currentItem = nextItem;
-		});
-		slider.children('.js-next').click(function(e){
-			e.preventDefault();
-			nextItem = currentItem + 1;
-			if(nextItem === sliderLength){nextItem = 0;}
-			console.log("Next item: ", nextItem);
-			sliderTab.eq(nextItem).children('a').trigger('click');
-			moveRight(currentItem, sliderTab, sliderLength, itemWidth);
-			slider.find('.js-circle-nav').eq(nextItem).addClass('active').siblings().removeClass('active');
-			currentItem = nextItem;
-		});
-
-		// Add points navigation
-		if(slider.children('.slider__nav').length > 0){
-			var sliderNav = slider.children('.slider__nav');
-			for(var i = 0; i < sliderLength; i++){
-				if(i === 0){
-					sliderNav.append('<div class="js-circle-nav active"></div>')
-				}
-				else{
-					sliderNav.append('<div class="js-circle-nav"></div>')
-				}
+	if($(window).width() < screenMD){
+		$('.js-slider-tabs').each(function(){
+			var currentItem = 0;
+			var nextItem;
+			var slider = $(this);
+			var sliderTab = slider.find('.news-panel__tab');
+			var sliderLength = sliderTab.length;
+			var itemWidth = slider.width();
+			sliderTab.css({'display':'block', 'position':'absolute', 'width': itemWidth});
+			for(var i=0; i< sliderLength; i++){
+				sliderTab.eq(i).css({'left': i * itemWidth});
 			}
-			sliderNav.on('click', '.js-circle-nav', function(){
-				var index = $(this).index();
-				if (index !== currentItem){
-					nextItem = index;
-
-					// Check short way
-					var deltaLeft = 0;
-					var deltaRight = 0;
-					if(nextItem > currentItem){
-						deltaRight = nextItem - currentItem;
-						deltaLeft = sliderLength - nextItem + currentItem;
-					}
-					else{
-						deltaLeft = currentItem - nextItem;
-						deltaRight = sliderLength - currentItem + nextItem;
-					}
-
-
-					// Move right
-					if (deltaLeft >= deltaRight){
-						moveRight(currentItem, sliderTab, sliderLength, itemWidth);
-					}
-					// Move left
-					else{
-						moveLeft(currentItem, sliderTab, sliderLength, itemWidth);
-					}
-
-					$(this).addClass('active').siblings().removeClass('active');
-					currentItem = nextItem;
-
-
-				}
+			slider.children('.js-prev').click(function(e){
+				e.preventDefault();
+				nextItem = currentItem - 1;
+				if (nextItem < 0){nextItem = sliderLength - 1;}
+				console.log("Next item: ", nextItem);
+				sliderTab.eq(nextItem).children('a').trigger('click');
+				moveLeft(currentItem, sliderTab, sliderLength, itemWidth);
+				slider.find('.js-circle-nav').eq(nextItem).addClass('active').siblings().removeClass('active');
+				currentItem = nextItem;
 			});
-		}
-	});
+			slider.children('.js-next').click(function(e){
+				e.preventDefault();
+				nextItem = currentItem + 1;
+				if(nextItem === sliderLength){nextItem = 0;}
+				console.log("Next item: ", nextItem);
+				sliderTab.eq(nextItem).children('a').trigger('click');
+				moveRight(currentItem, sliderTab, sliderLength, itemWidth);
+				slider.find('.js-circle-nav').eq(nextItem).addClass('active').siblings().removeClass('active');
+				currentItem = nextItem;
+			});
 
+			// Add points navigation
+			if(slider.children('.slider__nav').length > 0){
+				var sliderNav = slider.children('.slider__nav');
+				for(var i = 0; i < sliderLength; i++){
+					if(i === 0){
+						sliderNav.append('<div class="js-circle-nav active"></div>')
+					}
+					else{
+						sliderNav.append('<div class="js-circle-nav"></div>')
+					}
+				}
+				sliderNav.on('click', '.js-circle-nav', function(){
+					var index = $(this).index();
+					if (index !== currentItem){
+						nextItem = index;
+
+						// Check short way
+						var deltaLeft = 0;
+						var deltaRight = 0;
+						if(nextItem > currentItem){
+							deltaRight = nextItem - currentItem;
+							deltaLeft = sliderLength - nextItem + currentItem;
+						}
+						else{
+							deltaLeft = currentItem - nextItem;
+							deltaRight = sliderLength - currentItem + nextItem;
+						}
+
+
+						// Move right
+						if (deltaLeft >= deltaRight){
+							moveRight(currentItem, sliderTab, sliderLength, itemWidth);
+						}
+						// Move left
+						else{
+							moveLeft(currentItem, sliderTab, sliderLength, itemWidth);
+						}
+
+						$(this).addClass('active').siblings().removeClass('active');
+						currentItem = nextItem;
+
+
+					}
+				});
+			}
+		});
+	}
 
 };
 

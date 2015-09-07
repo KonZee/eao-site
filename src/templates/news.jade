@@ -11,74 +11,116 @@ block content
 				.breadcrumbs__separator
 					i.fa.fa-chevron-right
 				.breadcrumbs__current Новости
-	main
-		.wrapper.wrapper--normal
-			.container
-				.row.news
-					.col-md-3
-						.news__item
-							h3
-								+lipsum(5, "words")
-							.data.small 27.09.2015
-							.text
-								+lipsum(3, "sentences")
-							a(href="").button.button--small.button--brand.button--right.button--rounded.news__more Подробнее
-					.col-md-3
-						.news__item
-							h3
-								+lipsum(6, "words")
-							.data.small 27.09.2015
-							.text
-								+lipsum(3, "sentences")
-							a(href="").button.button--small.button--brand.button--right.button--rounded.news__more Подробнее
-					.col-md-3
-						.news__item
-							h3
-								+lipsum(5, "words")
-							.data.small 27.09.2015
-							.text
-								+lipsum(3, "sentences")
-							a(href="").button.button--small.button--brand.button--right.button--rounded.news__more Подробнее
-					.col-md-3
-						.news__item
-							h3
-								+lipsum(3, "words")
-							.data.small 27.09.2015
-							.text
-								+lipsum(4, "sentences")
-							a(href="").button.button--small.button--brand.button--right.button--rounded.news__more Подробнее
-					.col-md-3
-						.news__item
-							h3
-								+lipsum(5, "words")
-							.data.small 27.09.2015
-							.text
-								+lipsum(3, "sentences")
-							a(href="").button.button--small.button--brand.button--right.button--rounded.news__more Подробнее
-					.col-md-3
-						.news__item
-							h3
-								+lipsum(5, "words")
-							.data.small 27.09.2015
-							.text
-								+lipsum(4, "sentences")
-							a(href="").button.button--small.button--brand.button--right.button--rounded.news__more Подробнее
-					.col-md-3
-						.news__item
-							h3
-								+lipsum(5, "words")
-							.data.small 27.09.2015
-							.text
-								+lipsum(3, "sentences")
-							a(href="").button.button--small.button--brand.button--right.button--rounded.news__more Подробнее
-					.col-md-3
-						.news__item
-							h3
-								+lipsum(5, "words")
-							.data.small 27.09.2015
-							.text
-								+lipsum(3, "sentences")
-							a(href="").button.button--small.button--brand.button--right.button--rounded.news__more Подробнее
-					#more-news-placeholder
-					.col-xs-12.text-center
-						a(href="").button.button--white.button--bordered.button--rounded.js-load-more Загрузить больше
+	.wrapper.wrapper--normal.wrapper--bottom-border
+		.container
+			.row
+				.col-md-8
+					main.news
+						mixin news__item()
+							.news__item
+								h3
+									+lipsum(Math.floor(Math.random() * 5 + 3),"words")
+								.data.small 27.09.2015
+								.text
+									+lipsum(Math.floor(Math.random() * 7 + 3), "sentences")
+									a(href="") Подробнее...
+						+news__item()
+						+news__item()
+						+news__item()
+
+						.news__direction
+							ul.pagination
+								li
+									a(href=""  aria-label="Previous")
+										span(aria-hidden="true") &laquo;
+								li.active
+									a(href="") 1
+								li
+									a(href="") 2
+								li
+									a(href="") 3
+								li
+									a(href=""  aria-label="Next")
+										span(aria-hidden="true") &raquo;
+							a(href="") Перейти к списку новостей
+				.col-md-4
+					aside.other-news
+						h2.text-center Свежие события
+						.slider.slider--arrow-outside.slider--news.js-slider-text
+							ul.slider__container
+								li.slider__item
+									h3.slider__text Новости
+								li.slider__item
+									h3.slider__text Новости органов власти
+								li.slider__item
+									h3.slider__text Календарь событий
+							a(href="").slider__arrow.slider__arrow--prev.slider__arrow--small.js-prev
+								i.fa.fa-chevron-left
+							a(href="").slider__arrow.slider__arrow--next.slider__arrow--small.js-next
+								i.fa.fa-chevron-right
+						.other-news__texts
+							.other-news__tab
+								.other-news__item
+									.data.small 27.09.2015
+									.text
+										+lipsum(15, 'words')
+										a(href="") Подробнее...
+								.other-news__item
+									.data.small 27.09.2015
+									.text
+										+lipsum(15, 'words')
+										a(href="") Подробнее...
+								.other-news__item
+									.data.small 27.09.2015
+									.text
+										+lipsum(15, 'words')
+										a(href="") Подробнее...
+								.other-news__item
+									.data.small 27.09.2015
+									.text
+										+lipsum(15, 'words')
+										a(href="") Подробнее...
+							.other-news__tab
+								.other-news__item
+									.data.small 27.09.2015
+									.text
+										+lipsum(15, 'words')
+										a(href="") Подробнее...
+								.other-news__item
+									.data.small 27.09.2015
+									.text
+										+lipsum(15, 'words')
+										a(href="") Подробнее...
+								.other-news__item
+									.data.small 27.09.2015
+									.text
+										+lipsum(15, 'words')
+										a(href="") Подробнее...
+								.other-news__item
+									.data.small 27.09.2015
+									.text
+										+lipsum(15, 'words')
+										a(href="") Подробнее...
+							.other-news__tab
+								.other-news__item
+									.data.small 27.09.2015
+									.text
+										+lipsum(15, 'words')
+										a(href="") Подробнее...
+								.other-news__item
+									.data.small 27.09.2015
+									.text
+										+lipsum(15, 'words')
+										a(href="") Подробнее...
+								.other-news__item
+									.data.small 27.09.2015
+									.text
+										+lipsum(15, 'words')
+										a(href="") Подробнее...
+								.other-news__item
+									.data.small 27.09.2015
+									.text
+										+lipsum(15, 'words')
+										a(href="") Подробнее...
+
+
