@@ -22,9 +22,9 @@
 
 	&__title
 		font-size 20px
-		margin 22px 0
-		@media screen and (max-width: $screen-sm-max)
-			margin-top 40px
+		margin 40px 0 22px
+		@media screen and (min-width: $screen-md)
+			margin 22px 100px
 	&__menu
 		> *
 			&.submenu
@@ -53,9 +53,6 @@
 						display block
 						width auto
 						background #242424
-			&:not(:first-child)
-				@media screen and (min-width: $screen-md)
-					margin-left 6px
 	@media screen and (min-width: $screen-md)
 		&:after
 			display block
