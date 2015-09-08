@@ -68,13 +68,16 @@
 
 .topmenu
 	text-align right
+	position relative
 	& > *
 		display inline-block
 		padding 0
 		margin 0
 	& > a
+	& > span
+		cursor pointer
 		&:not(:last-child)
-			padding 17px 35px
+			padding 17px 30px
 		&:last-child
 			padding 17px 0 17px 35px
 	a img
@@ -140,6 +143,18 @@
 		&:hover
 			color inherit
 			text-decoration none
+
+		& > .topmenu__search
+			visibility none
+			pointer-events none
+			opacity 0
+			transition opacity 350ms
+
+		&:hover > .topmenu__search
+			visibility visible
+			pointer-events auto
+			opacity 1
+
 
 
 

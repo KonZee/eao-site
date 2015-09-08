@@ -128,6 +128,7 @@ h5 {
 
 .topmenu {
 	text-align: right;
+	position: relative;
 }
 
 .topmenu > * {
@@ -136,11 +137,18 @@ h5 {
 	margin: 0;
 }
 
-.topmenu > a:not(:last-child) {
-	padding: 17px 35px;
+.topmenu > a,
+.topmenu > span {
+	cursor: pointer;
 }
 
-.topmenu > a:last-child {
+.topmenu > a:not(:last-child),
+.topmenu > span:not(:last-child) {
+	padding: 17px 30px;
+}
+
+.topmenu > a:last-child,
+.topmenu > span:last-child {
 	padding: 17px 0 17px 35px;
 }
 
@@ -219,6 +227,19 @@ h5 {
 .topmenu__link:hover {
 	color: inherit;
 	text-decoration: none;
+}
+
+.topmenu__link > .topmenu__search {
+	visibility: none;
+	pointer-events: none;
+	opacity: 0;
+	transition: opacity 350ms;
+}
+
+.topmenu__link:hover > .topmenu__search {
+	visibility: visible;
+	pointer-events: auto;
+	opacity: 1;
 }
 
 .menu {
@@ -367,6 +388,9 @@ h5 {
 
 .search {
 	display: inline-block;
+	top: 0;
+	right: 0;
+	position: absolute;
 	background: #FFFFFF;
 	height: 34px;
 	border-radius: 17px;
@@ -380,11 +404,6 @@ h5 {
 	border: none;
 	padding: 7px 17px;
 	color: #242424;
-	width: 100px;
-	transition: width 350ms;
-}
-
-.search__input:focus {
 	width: 250px;
 }
 
@@ -1046,7 +1065,7 @@ h5 {
 }
 
 @media screen and (min-width: 1200px) {
-	.search__input:focus {
+	.search__input {
 		width: 340px;
 	}
 
