@@ -10,25 +10,23 @@ block content
 				.row
 					//- First slider
 					.col-md-6
-						.slider.js-slider-single
-							.slider__nav.slider__nav--on-top
-							ul.slider__container
-								li.slider__item
+						.slider.swiper-container.swiper-1
+							.swiper-wrapper
+								.slider__item.swiper-slide
 									img(src="/images/index-slider.jpg")
 									.slider__text
 										+lipsum(2, "sentences")
-								li.slider__item
+								.slider__item.swiper-slide
 									img(src="/images/index-slider.jpg")
 									.slider__text
 										+lipsum(2, "sentences")
-								li.slider__item
+								.slider__item.swiper-slide
 									img(src="/images/index-slider.jpg")
 									.slider__text
 										+lipsum(2, "sentences")
-							a(href="").slider__arrow.slider__arrow--prev.js-prev
-								i.fa.fa-chevron-left
-							a(href="").slider__arrow.slider__arrow--next.js-next
-								i.fa.fa-chevron-right
+							.swiper-pagination.swiper-pagination-1
+							.swiper-button-prev.swiper-button-prev-1
+							.swiper-button-next.swiper-button-next-1
 
 					//- Tabs / Second slider
 					.col-md-6
@@ -84,57 +82,53 @@ block content
 			.container
 				.row
 					.col-xs-12
-						.slider.slider--arrow-outside.slider--multiply.js-slider-multiply(data-showitems="5" data-nav-outside="true")
-							ul.slider__container
-								li.slider__item
+						.slider.slider--arrow-outside.slider--multiply.swiper-container.swiper-3
+							.swiper-wrapper
+								.slider__item.swiper-slide
 									a(href="")
 										img(src="/images/index-small-slider.jpg")
-								li.slider__item
+								.slider__item.swiper-slide
 									a(href="")
 										img(src="/images/index-small-slider.jpg")
-								li.slider__item
+								.slider__item.swiper-slide
 									a(href="")
 										img(src="/images/index-small-slider.jpg")
-								li.slider__item
+								.slider__item.swiper-slide
 									a(href="")
 										img(src="/images/index-small-slider.jpg")
-								li.slider__item
+								.slider__item.swiper-slide
 									a(href="")
 										img(src="/images/index-small-slider.jpg")
-								li.slider__item
+								.slider__item.swiper-slide
 									a(href="")
 										img(src="/images/index-small-slider-red.jpg")
-								li.slider__item
+								.slider__item.swiper-slide
 									a(href="")
 										img(src="/images/index-small-slider-blue.jpg")
-							a(href="").slider__arrow.slider__arrow--prev.js-prev
-								i.fa.fa-chevron-left
-							a(href="").slider__arrow.slider__arrow--next.js-next
-								i.fa.fa-chevron-right
-							.slider__nav
+							.slider__outside-pagination.swiper-pagination.swiper-pagination-3
+							.swiper-button-prev.swiper-button-prev-3
+							.swiper-button-next.swiper-button-next-3
 		.wrapper.wrapper--normal.wrapper--gray
 			.container
 				.row
 					.col-md-8
-						.slider.slider--text.js-slider-text(data-side-text="true")
-							.slider__nav.slider__nav--on-top
-							ul.slider__container
-								li.slider__item
+						.slider.slider--text.swiper-container.swiper-4
+							.swiper-wrapper
+								.slider__item.swiper-slide
 									img(src="/images/index-left-slider.jpg")
 									.slider__text Социальная сфера
-								li.slider__item
+								.slider__item.swiper-slide
 									img(src="/images/index-left-slider.jpg")
 									.slider__text Здравоохранение
-								li.slider__item
+								.slider__item.swiper-slide
 									img(src="/images/index-left-slider.jpg")
 									.slider__text Образование
-								li.slider__item
-									img(src="/images/index-slider.jpg")
+								.slider__item.swiper-slide
+									img(src="/images/index-left-slider.jpg")
 									.slider__text Спорт
-							a(href="").slider__arrow.slider__arrow--prev.js-prev
-								i.fa.fa-chevron-left
-							a(href="").slider__arrow.slider__arrow--next.js-next
-								i.fa.fa-chevron-right
+							.slider__outside-mobile-pagination.swiper-pagination.swiper-pagination-4
+							.swiper-button-prev.swiper-button-prev-4
+							.swiper-button-next.swiper-button-next-4
 						.slider-text
 							.slider-text__tab
 								.slider-text__item
@@ -220,103 +214,77 @@ block content
 									.text
 										+lipsum(15, 'words')
 										a(href="") Подробнее...
-					//.col-md-4
-						.news-panel
-							.news-panel__item
-								.data.small 27.09.2015
-								.text
-									+lipsum(15, 'words')
-									a(href="") Подробнее...
-							.news-panel__item
-								.data.small 27.09.2015
-								.text
-									+lipsum(15, 'words')
-									a(href="") Подробнее...
-							.news-panel__item
-								.data.small 27.09.2015
-								.text
-									+lipsum(15, 'words')
-									a(href="") Подробнее...
-							.news-panel__item
-								.data.small 27.09.2015
-								.text
-									+lipsum(15, 'words')
-									a(href="") Подробнее...
 
 					.col-md-4
-						.slider.js-slider-single
-							.slider__nav.slider__nav--on-top
-							ul.slider__container
-								li.slider__item
+						.slider.swiper-container.swiper-5
+							.swiper-wrapper
+								.slider__item.swiper-slide
 									img(src="/images/index-right-slider.jpg")
 									.slider__text
 										+lipsum(2, "sentences")
-								li.slider__item
-									img(src="/images/index-slider.jpg")
+								.slider__item.swiper-slide
+									img(src="/images/index-right-slider.jpg")
 									.slider__text
 										+lipsum(2, "sentences")
-								li.slider__item
-									img(src="/images/index-slider.jpg")
+								.slider__item.swiper-slide
+									img(src="/images/index-right-slider.jpg")
 									.slider__text
 										+lipsum(2, "sentences")
-								li.slider__item
-									img(src="/images/index-slider.jpg")
+								.slider__item.swiper-slide
+									img(src="/images/index-right-slider.jpg")
 									.slider__text
 										+lipsum(2, "sentences")
-								li.slider__item
-									img(src="/images/index-slider.jpg")
+								.slider__item.swiper-slide
+									img(src="/images/index-right-slider.jpg")
 									.slider__text
 										+lipsum(2, "sentences")
-								li.slider__item
-									img(src="/images/index-slider.jpg")
+								.slider__item.swiper-slide
+									img(src="/images/index-right-slider.jpg")
 									.slider__text
 										+lipsum(2, "sentences")
-								li.slider__item
-									img(src="/images/index-slider.jpg")
+								.slider__item.swiper-slide
+									img(src="/images/index-right-slider.jpg")
 									.slider__text
 										+lipsum(2, "sentences")
-							a(href="").slider__arrow.slider__arrow--prev.js-prev
-								i.fa.fa-chevron-left
-							a(href="").slider__arrow.slider__arrow--next.js-next
-								i.fa.fa-chevron-right
+							.swiper-pagination.swiper-pagination-5
+							.swiper-button-prev.swiper-button-prev-5
+							.swiper-button-next.swiper-button-next-5
 		.wrapper.wrapper--normal
 			.container
 				.row
 					.col-xs-12
-						.slider.slider--arrow-outside.slider--multiply.js-slider-multiply(data-showitems="5" data-nav-outside="true")
-							ul.slider__container
-								li.slider__item
+						.slider.slider--arrow-outside.slider--multiply.swiper-container.swiper-6
+							.swiper-wrapper
+								.slider__item.swiper-slide
 									a(href="")
 										img(src="/images/index-small-slider.jpg")
-								li.slider__item
+								.slider__item.swiper-slide
 									a(href="")
 										img(src="/images/index-small-slider.jpg")
-								li.slider__item
+								.slider__item.swiper-slide
 									a(href="")
 										img(src="/images/index-small-slider.jpg")
-								li.slider__item
+								.slider__item.swiper-slide
 									a(href="")
 										img(src="/images/index-small-slider.jpg")
-								li.slider__item
+								.slider__item.swiper-slide
 									a(href="")
 										img(src="/images/index-small-slider.jpg")
-								li.slider__item
+								.slider__item.swiper-slide
 									a(href="")
 										img(src="/images/index-small-slider-red.jpg")
-								li.slider__item
+								.slider__item.swiper-slide
 									a(href="")
 										img(src="/images/index-small-slider.jpg")
-								li.slider__item
+								.slider__item.swiper-slide
 									a(href="")
 										img(src="/images/index-small-slider.jpg")
-								li.slider__item
+								.slider__item.swiper-slide
 									a(href="")
 										img(src="/images/index-small-slider.jpg")
-								li.slider__item
+								.slider__item.swiper-slide
 									a(href="")
 										img(src="/images/index-small-slider-blue.jpg")
-							a(href="").slider__arrow.slider__arrow--prev.js-prev
-								i.fa.fa-chevron-left
-							a(href="").slider__arrow.slider__arrow--next.js-next
-								i.fa.fa-chevron-right
-							.slider__nav
+							.slider__outside-pagination.swiper-pagination.swiper-pagination-6
+							.swiper-button-prev.swiper-button-prev-6
+							.swiper-button-next.swiper-button-next-6
