@@ -46,20 +46,20 @@ block content
 				.col-md-4
 					aside.other-news
 						h2.text-center Свежие события
-						.slider.slider--arrow-outside.slider--news.js-slider-text
-							ul.slider__container
-								li.slider__item
-									h3.slider__text Новости
-								li.slider__item
-									h3.slider__text Новости органов власти
-								li.slider__item
-									h3.slider__text Календарь событий
-							a(href="").slider__arrow.slider__arrow--prev.slider__arrow--small.js-prev
-								i.fa.fa-chevron-left
-							a(href="").slider__arrow.slider__arrow--next.slider__arrow--small.js-next
-								i.fa.fa-chevron-right
+						.slider.slider--news.swiper-container.swiper-7
+							.swiper-wrapper
+								.slider__item.swiper-slide.text-center
+									h3 Новости
+								.slider__item.swiper-slide.text-center
+									h3 Новости органов власти
+								.slider__item.swiper-slide.text-center
+									h3 Календарь событий
+							.slider__outside-pagination.swiper-pagination.swiper-pagination-7
+							.swiper-button-prev.swiper-button-small.swiper-button-prev-7
+							.swiper-button-next.swiper-button-small.swiper-button-next-7
+
 						.other-news__texts
-							.other-news__tab
+							.other-news__tab.tab-1
 								.other-news__item
 									.data.small 27.09.2015
 									.text
@@ -80,7 +80,7 @@ block content
 									.text
 										+lipsum(15, 'words')
 										a(href="") Подробнее...
-							.other-news__tab
+							.other-news__tab.tab-2
 								.other-news__item
 									.data.small 27.09.2015
 									.text
@@ -101,7 +101,7 @@ block content
 									.text
 										+lipsum(15, 'words')
 										a(href="") Подробнее...
-							.other-news__tab
+							.other-news__tab.tab-3
 								.other-news__item
 									.data.small 27.09.2015
 									.text

@@ -72,7 +72,7 @@ module.exports = function (grunt){
 				files: [{
 					expand: true,
 					cwd: 'src/templates',
-					src: ['**/*.jade', '!base.jade', '!elements/*.jade'],
+					src: ['**/*.jade', '!base-accessability.jade', '!base-print.jade', '!base.jade', '!elements/*.jade'],
 					dest: 'dist',
 					filter: 'isFile',
 					ext: '.html'

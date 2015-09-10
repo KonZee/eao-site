@@ -81,6 +81,14 @@
 		font-size 17px
 		padding 10px 15px
 
+.swiper-button-prev.swiper-button-small,
+.swiper-button-next.swiper-button-small
+	width 20px
+	height 20px
+	&:after
+		font-size 13px
+		padding 1px 5px
+
 .swiper-button-prev.swiper-button-disabled,
 .swiper-button-next.swiper-button-disabled
 	cursor auto
@@ -414,16 +422,43 @@ button
 				font-size 15px
 				font-weight bold
 		@media screen and (min-width: $screen-md)
-			max-width calc(50% - 15px)
+			max-width 50%
 			float left
 			img
 				display block
+
+	&--news
+		height 40px
+		max-width 300px
 
 	img
 		width 100%
 		max-width 100%
 		height auto;
 
+.slider-text
+	background #fbfbfb
+	border-radius 0 4px 4px 0
+	@media screen and (min-width: $screen-sm)
+		margin-left 50%
+	&__tab
+		&:not(:first-child)
+			display none
+	&__item
+		padding 10px
+		cursor pointer
+		background #fbfbfb
+		&:not(:last-child)
+			border-bottom 1px solid #f2f2f2
+		&:first-child
+			border-top-right-radius 4px
+		&:last-child
+			border-bottom-right-radius 4px
+		&:hover
+		&.active
+			background #fff
+		.data
+			color $brand-primary
 
 
 //// Main page sliders
