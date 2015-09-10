@@ -1,0 +1,54 @@
+extends base-print
+
+block title
+	| Главная страница - печатная версия
+
+block content
+	.feed
+		h2.feed__title Новости
+		mixin feed__item()
+			.feed__item
+				span.data 27.09.2015
+				span.text
+					+lipsum(1,"sentences")
+		+feed__item()
+		+feed__item()
+		+feed__item()
+		+feed__item()
+		+feed__item()
+	.feed
+		h2.feed__title Новости органов власти
+		mixin feed__item()
+			.feed__item
+				span.data 27.09.2015
+				span.text
+					+lipsum(1,"sentences")
+		+feed__item()
+		+feed__item()
+		+feed__item()
+		+feed__item()
+		+feed__item()
+		h2.feed__title Календарь событий
+		mixin feed__item()
+			.feed__item
+				span.data 27.09.2015
+				span.text
+					+lipsum(1,"sentences")
+		+feed__item()
+		+feed__item()
+		+feed__item()
+		+feed__item()
+		+feed__item()
+		h2.feed__title Социальная сфера
+		mixin feed__item()
+			.feed__item
+				span.data 27.09.2015
+				span.text
+					+lipsum(1,"sentences")
+		+feed__item()
+		+feed__item()
+		+feed__item()
+		+feed__item()
+		+feed__item()
+
+

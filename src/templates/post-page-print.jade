@@ -1,0 +1,12 @@
+extends base-print
+
+block title
+	| Cтраница одной новости/поста - печатная версия
+
+block content
+	.post
+		h1.post__title
+			+lipsum(Math.floor(Math.random() * 5 + 3),"words")
+		.post__data
+		.post__text
+			+lipsum(Math.floor(Math.random() * 5 + 1),"paragraphs")

@@ -1,0 +1,25 @@
+doctype html
+
+include elements/lipsum
+
+html
+	head
+		meta(charset='utf-8')
+
+		title
+			block title
+				Print page title
+
+		link(href='css/print.css?' + timestamp rel='stylesheet')
+
+	body
+		.container
+			header.header.clearfix
+				.header__coat
+					img(src="images/coat-of-arms.png")
+				.header__title Официальный портал органов государственной власти Еврейской автономной области
+
+			main
+				block content
+
+			footer.footer © Комитет информационных технологий и связи Еврейской автономной области, 1999-2015

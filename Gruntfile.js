@@ -24,7 +24,8 @@ module.exports = function (grunt){
 					paths: ['src/styles']
 				},
 				files: {
-					'dist/css/main.css': 'src/styles/custom/main.styl'
+					'dist/css/main.css': 'src/styles/custom/main.styl',
+					'dist/css/print.css': 'src/styles/custom/print.styl'
 				}
 			}
 		},

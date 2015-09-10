@@ -1,0 +1,69 @@
+.container
+	display table
+	margin-left auto
+	margin-right auto
+	max-width 1200px
+
+.clearfix
+	&:before
+	&:after
+		content ""
+		display table
+	&:after
+		clear both
+
+.header
+	&__coat
+		display inline-block
+		vertical-align middle
+		width 100px
+	&__title
+		display inline-block
+		vertical-align middle
+		font-size 24px
+		text-align center
+		width calc(100% - 110px)
+
+
+.feed
+	.data
+		margin-right 20px
+
+.news
+	&__item
+		margin-bottom 20px
+	.data
+		display inline-block
+		margin-right 20px
+	.title
+		display inline-block
+		margin-bottom 0
+
+.static
+	&__symbols
+		.coat-of-arms
+			display inline-block
+			margin-right 19px
+			width 37px
+			height 43px
+			background url("../images/eao-symbols.png") no-repeat left top
+		.flag
+			display inline-block
+			width 60px
+			height 43px
+			background url("../images/eao-symbols.png") no-repeat right top
+.person
+	margin-bottom 40px
+	&__photo
+		display inline-block
+		width 154px
+		vertical-align top
+	&__description
+		display inline-block
+		width calc(100% - 160px)
+		vertical-align top
+
+
+.footer
+	text-align center
+	margin-top 50px
