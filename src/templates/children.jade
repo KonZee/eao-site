@@ -1,0 +1,64 @@
+extends base
+
+block title
+	| Усыновление и опека - официальный портал ЕАО
+
+block content
+	.wrapper.wrapper--thin.wrapper--gray
+		.container
+			.breadcrumbs
+				a(href="").breadcrumbs__link Главная
+				.breadcrumbs__separator
+					i.fa.fa-chevron-right
+				.breadcrumbs__current Усыновление, опека (попечительство), приемная семья
+	main
+		.wrapper.wrapper--normal.wrapper--bottom-border.children
+			.container
+				.row
+					.col-xs-12
+						h1 Усыновление, опека (попечительство), приемная семья
+						mixin children__info()
+							.col-sm-6.col-md-4
+								.children__info.children-info
+									.children-info__image
+										img(src="http://dummyimage.com/76x76/999999/fff.png")
+									.children-info__name-age
+										.name
+											+lipsum(Math.floor(Math.random() * 12 + 3),"characters")
+										.age 3 года
+									.children-info__description
+										.text
+											+lipsum(1,"paragraphs")
+										.switch
+											.closed Развернуть
+											.open Свернуть
+						.children__data
+							| Дата размещения информации:
+							span.data 27.09.2015
+						.row
+							+children__info()
+							+children__info()
+							+children__info()
+							+children__info()
+							+children__info()
+
+						.children__data
+							| Дата размещения информации:
+							span.data 27.09.2015
+						.row
+							+children__info()
+							+children__info()
+
+						ul.pagination
+							li
+								a(href=""  aria-label="Previous")
+									span(aria-hidden="true") &laquo;
+							li.active
+								a(href="") 1
+							li
+								a(href="") 2
+							li
+								a(href="") 3
+							li
+								a(href=""  aria-label="Next")
+									span(aria-hidden="true") &raquo;

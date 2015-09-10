@@ -104,10 +104,26 @@ $(document).ready(function(){
 			swiper7Text.children().hide();
 			swiper7Text.children().eq(swiper7.activeIndex).fadeIn();
 		});
-
-
-
 	}
+
+
+	// Children page show/hide text
+	$('.children-info__description .switch').on('click', function(){
+		var button = $(this);
+		var text = button.prev('.text');
+		var open = button.children('.open');
+		var closed = button.children('.closed');
+		if ((text).hasClass('expanded')){
+			text.removeClass('expanded');
+			open.hide();
+			closed.show()
+		}
+		else{
+			text.addClass('expanded');
+			open.show()
+			closed.hide()
+		}
+	});
 
 });
 
