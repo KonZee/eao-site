@@ -125,6 +125,20 @@ $(document).ready(function(){
 		}
 	});
 
+	// Change font-size
+	$('.sizes--normal').on('click', function(e){
+		e.preventDefault();
+		$('body').removeClass('medium big');
+	});
+	$('.sizes--one-and-half').on('click', function(e){
+		e.preventDefault();
+		$('body').removeClass('big').addClass('medium');
+	});
+	$('.sizes--double').on('click', function(e){
+		e.preventDefault();
+		$('body').removeClass('medium').addClass('big');
+	});
+
 });
 
 var cloneText = function(text){

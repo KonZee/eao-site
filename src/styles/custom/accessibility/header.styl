@@ -1,0 +1,76 @@
+.header
+	position relative
+	&__coat
+		position absolute
+		width 92px
+		height 103px
+		left 15px
+		top -13px
+		@media screen and (max-width: $screen-sm-max)
+			left 50%
+			transform translateX(-50%)
+			top 0
+			width 70px
+			height 78px
+	&__topmenu
+		height 54px
+		padding-top 10px
+		&--black
+			color $color
+			fill $color
+
+	&__title
+		font-size 1.4em
+		padding 40px 0 22px
+		border-bottom 1px solid $color
+		@media screen and (min-width: $screen-md)
+			padding 10px 100px 22px
+
+.topmenu
+	text-align justify
+	&__colors
+		display inline-block
+	&__sizes
+		display inline-block
+		a
+			margin-left 5px
+			&:last-child
+				margin-left 20px
+	&:after
+		display inline-block
+		content ""
+		width 100%
+
+.color
+	display inline-block
+	border 1px solid $color
+	padding 2px 8px
+	border-radius 4px
+	margin-left 10px
+	text-decoration none
+	&:hover
+		text-decoration inherit
+	&--white
+		color #000
+		background #fff
+		&:focus
+		&:hover
+			color #000
+	&--black
+		color #fff
+		background #000
+		&:focus
+		&:hover
+			color #fff
+
+.sizes
+	line-height (14px * 1.4)
+	&--normal
+		font-size 14px
+		font-size 1rem
+	&--one-and-half
+		font-size 21px
+		font-size 1.5rem
+	&--double
+		font-size 28px
+		font-size 2rem

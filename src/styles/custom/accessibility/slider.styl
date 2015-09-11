@@ -1,0 +1,425 @@
+// Swiper styles
+
+.swiper-container
+	margin 0 auto
+	position relative
+	overflow hidden
+	/* Fix of Webkit flickering */
+	z-index 1
+
+.swiper-container-no-flexbox .swiper-slide
+	float left
+
+.swiper-container-vertical > .swiper-wrapper
+	flex-direction column
+
+.swiper-wrapper
+	position relative
+	width 100%
+	height 100%
+	z-index 1
+	display flex
+	box-sizing content-box
+
+.swiper-container-android .swiper-slide,
+.swiper-wrapper
+	transform: translate3d(0px, 0, 0)
+
+.swiper-container-multirow > .swiper-wrapper
+	flex-wrap wrap
+
+.swiper-container-free-mode > .swiper-wrapper
+	transition-timing-function ease-out
+	margin 0 auto
+
+.swiper-slide
+	flex-shrink 0
+	width 100%
+	height 100%
+	positon relative
+
+.swiper-container .swiper-notification
+	position absolute
+	left 0
+	top 0
+	pointer-events none
+	opacity 0
+	z-index -1000
+
+/* IE10 Windows Phone 8 Fixes */
+.swiper-wp8-horizontal
+	-ms-touch-action pan-y
+	touch-action pan-y
+.swiper-wp8-vertical
+	-ms-touch-action pan-x
+	touch-action pan-x
+
+.swiper-button-prev,
+.swiper-button-next
+	position absolute
+	top 50%
+	width 42px
+	height 42px
+	transform translateY(-50%)
+	z-index 10
+	cursor pointer
+	background-position center
+	border-radius 50%
+	background-repeat no-repeat
+	transition color 350ms, background 350ms
+	color $color
+	background-color $background
+	border 2px solid $color
+	&:after
+		content ""
+		display block
+		position absolute
+		font-family FontAwesome
+		font-size 17px
+		padding 8px 13px
+
+.swiper-button-prev.swiper-button-small,
+.swiper-button-next.swiper-button-small
+	width 20px
+	height 20px
+	&:after
+		font-size 13px
+		padding 1px 5px
+
+.swiper-button-prev.swiper-button-disabled,
+.swiper-button-next.swiper-button-disabled
+	cursor auto
+	pointer-events none
+
+.swiper-button-prev,
+.swiper-container-rtl .swiper-button-next
+	left 0
+	@media screen and (min-width: $screen-md)
+		left 10px
+	&:after
+		content "\f053"
+
+.swiper-button-prev.swiper-button-black,
+.swiper-container-rtl .swiper-button-next.swiper-button-black
+	//background-image url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23000000'%2F%3E%3C%2Fsvg%3E")
+
+.swiper-button-prev.swiper-button-white,
+.swiper-container-rtl .swiper-button-next.swiper-button-white
+	//background-image urlurl("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E")
+
+.swiper-button-next,
+.swiper-container-rtl .swiper-button-prev
+	right 0
+	@media screen and (min-width: $screen-md)
+		right 10px
+	&:after
+		content "\f054"
+
+.swiper-button-next.swiper-button-black,
+.swiper-container-rtl .swiper-button-prev.swiper-button-black
+	//background-image url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23000000'%2F%3E%3C%2Fsvg%3E")
+
+.swiper-button-next.swiper-button-white,
+.swiper-container-rtl .swiper-button-prev.swiper-button-white
+	//background-image url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E")
+
+.swiper-pagination
+	text-align center
+	transition 300ms
+	transform translate3d(0, 0, 0)
+	z-index 10
+	&.swiper-pagination-hidden
+		opacity 0
+
+.swiper-pagination-bullet
+	width 10px
+	height 10px
+	display inline-block
+	border-radius 50%
+	background #757575
+	cursor pointer
+	border 1px solid alpha($color, 50%)
+
+button
+	&.swiper-pagination-bullet
+		border none
+		margin 0
+		padding 0
+		box-shadow none
+		appearance none
+
+.swiper-pagination-clickable
+	.swiper-pagination-bullet
+		cursor pointer
+
+.swiper-pagination-white
+	.swiper-pagination-bullet
+		background #fff
+	.swiper-pagination-bullet-active
+		background #fff
+
+.swiper-pagination-bullet-active
+	background $white
+	cursor default
+
+.swiper-pagination-black
+	.swiper-pagination-bullet-active
+		background $black
+
+.swiper-container-vertical
+	& > .swiper-pagination
+		right 10px
+		top 50%
+		transform translate3d(0px, -50%, 0)
+		.swiper-pagination-bullet
+			margin 5px 0
+			display block
+	& > .swiper-scrollbar
+		position absolute
+		right 3px
+		top 1%
+		z-index 50
+		width 5px
+		height 98%
+
+.swiper-container-horizontal
+	& > .swiper-pagination
+		bottom 10px
+		left 0
+		width 100%
+		.swiper-pagination-bullet
+			margin 0 5px
+	& > .swiper-scrollbar
+		position absolute
+		left 1%
+		bottom 3px
+		z-index 50
+		height 5px
+		width 98%
+
+.swiper-container-3d
+	perspective 1200px
+	.swiper-slide-shadow-left
+		background-image linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0))
+	.swiper-slide-shadow-right
+		background-image linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0))
+	.swiper-slide-shadow-top
+		background-image linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0))
+	.swiper-slide-shadow-bottom
+		background-image linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0))
+
+.swiper-container-3d .swiper-wrapper,
+.swiper-container-3d .swiper-slide,
+.swiper-container-3d .swiper-slide-shadow-left,
+.swiper-container-3d .swiper-slide-shadow-right,
+.swiper-container-3d .swiper-slide-shadow-top,
+.swiper-container-3d .swiper-slide-shadow-bottom,
+.swiper-container-3d .swiper-cube-shadow
+	transform-style preserve-3d
+
+.swiper-container-3d .swiper-slide-shadow-left,
+.swiper-container-3d .swiper-slide-shadow-right,
+.swiper-container-3d .swiper-slide-shadow-top,
+.swiper-container-3d .swiper-slide-shadow-bottom
+	position absolute
+	left 0
+	top 0
+	width 100%
+	height 100%
+	pointer-events none
+	z-index 10
+
+.swiper-container-coverflow
+	.swiper-wrapper
+		-ms-perspective 1200px
+
+.swiper-container-fade
+	&.swiper-container-free-mode
+		.swiper-slide
+			transition-timing-function ease-out
+	.swiper-slide
+		pointer-events none
+		.swiper-slide
+			pointer-events none
+
+.swiper-container-fade .swiper-slide-active,
+.swiper-container-fade .swiper-slide-active .swiper-slide-active
+	pointer-events auto
+
+.swiper-container-cube
+	overflow visible
+	.swiper-slide
+		pointer-events none
+		visibility hidden
+		transform-origin 0 0
+		backface-visibility hidden
+		width 100%
+		height 100%
+		z-index 1
+	&.swiper-container-rtl
+		.swiper-slide
+			transform-origin 100% 0
+	.swiper-cube-shadow
+		position absolute
+		left 0
+		bottom 0px
+		width 100%
+		height 100%
+		background #000
+		opacity 0.6
+		-webkit-filter blur(50px)
+		filter blur(50px)
+		z-index 0
+
+.swiper-container-cube .swiper-slide-active,
+.swiper-container-cube .swiper-slide-next,
+.swiper-container-cube .swiper-slide-prev,
+.swiper-container-cube .swiper-slide-next + .swiper-slide
+	pointer-events auto
+	visibility visible
+
+.swiper-container-cube .swiper-slide-shadow-top,
+.swiper-container-cube .swiper-slide-shadow-bottom,
+.swiper-container-cube .swiper-slide-shadow-left,
+.swiper-container-cube .swiper-slide-shadow-right
+	z-index 0
+	-webkit-backface-visibility hidden
+	-moz-backface-visibility hidden
+	-ms-backface-visibility hidden
+	backface-visibility hidden
+
+.swiper-scrollbar
+	border-radius 10px
+	position relative
+	-ms-touch-action none
+	background rgba(0, 0, 0, 0.1)
+
+.swiper-scrollbar-drag
+	height 100%
+	width 100%
+	position relative
+	background rgba(0, 0, 0, 0.5)
+	border-radius 10px
+	left 0
+	top 0
+
+.swiper-scrollbar-cursor-drag
+	cursor move
+
+.swiper-lazy-preloader
+	width 42px
+	height 42px
+	position absolute
+	left 50%
+	top 50%
+	margin-left -21px
+	margin-top -21px
+	z-index 10
+	transform-origin 50%
+	animation swiper-preloader-spin 1s steps(12, end) infinite
+	&:after
+		display block
+		content ""
+		width 100%
+		height 100%
+		background-image url("data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D'0%200%20120%20120'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20xmlns%3Axlink%3D'http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink'%3E%3Cdefs%3E%3Cline%20id%3D'l'%20x1%3D'60'%20x2%3D'60'%20y1%3D'7'%20y2%3D'27'%20stroke%3D'%236c6c6c'%20stroke-width%3D'11'%20stroke-linecap%3D'round'%2F%3E%3C%2Fdefs%3E%3Cg%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(30%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(60%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(90%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(120%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(150%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.37'%20transform%3D'rotate(180%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.46'%20transform%3D'rotate(210%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.56'%20transform%3D'rotate(240%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.66'%20transform%3D'rotate(270%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.75'%20transform%3D'rotate(300%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.85'%20transform%3D'rotate(330%2060%2C60)'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E")
+		background-position 50%
+		background-size 100%
+		background-repeat no-repeat
+
+.swiper-lazy-preloader-white
+	&:after
+		background-image url("data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D'0%200%20120%20120'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20xmlns%3Axlink%3D'http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink'%3E%3Cdefs%3E%3Cline%20id%3D'l'%20x1%3D'60'%20x2%3D'60'%20y1%3D'7'%20y2%3D'27'%20stroke%3D'%23fff'%20stroke-width%3D'11'%20stroke-linecap%3D'round'%2F%3E%3C%2Fdefs%3E%3Cg%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(30%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(60%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(90%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(120%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(150%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.37'%20transform%3D'rotate(180%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.46'%20transform%3D'rotate(210%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.56'%20transform%3D'rotate(240%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.66'%20transform%3D'rotate(270%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.75'%20transform%3D'rotate(300%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.85'%20transform%3D'rotate(330%2060%2C60)'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E")
+
+
+@keyframes swiper-preloader-spin
+	100%
+		transform rotate(360deg)
+
+
+// SLider itself
+.slider
+	&__item
+		position relative
+	&__text
+		display block
+		padding 12px 13px
+		text-align center
+
+	&__outside-pagination
+		position relative
+		bottom -5px !important
+
+	&__outside-mobile-pagination
+		@media screen and (max-width: $screen-sm-max)
+			position relative
+			bottom -5px !important
+
+	&--multiply
+		.slider__item
+			display inline-block
+			float left
+			@media screen and (max-width: $screen-xs-max)
+				width (100%)
+			@media screen and (min-width: $screen-sm) and (max-width: $screen-sm-max)
+				width (100% / 3)
+			@media screen and (min-width: $screen-md) and (max-width: $screen-md-max)
+				width 25%
+			@media screen and (min-width: $screen-lg)
+				width 20%
+
+			img
+				width auto
+				height auto
+				display table
+				margin-left auto
+				margin-right auto
+
+	&--arrow-outside
+		padding-left 60px
+		padding-right 60px
+		//- mask out of slider items. Not best idea
+		&:before
+		&:after
+			display block
+			position absolute
+			content ""
+			top 0
+			bottom 0
+			width 60px
+			background $background
+			z-index 2
+		&:before
+			left 0
+		&:after
+			right 0
+
+	&--text
+		img
+			display none
+		@media screen and (min-width: $screen-md)
+			max-width 50%
+			float left
+			img
+				display block
+
+	&--news
+		height 40px
+		max-width 300px
+
+	img
+		width 100%
+		max-width 100%
+		height auto;
+
+.slider-text
+	@media screen and (min-width: $screen-sm)
+		margin-left 50%
+	&__tab
+		&:not(:first-child)
+			display none
+	&__item
+		padding 10px
+		cursor pointer
+		&:not(:last-child)
+			border-bottom 1px solid $color

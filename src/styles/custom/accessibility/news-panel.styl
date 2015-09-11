@@ -1,0 +1,18 @@
+.news-panel
+	&__tab
+		position relative
+		display inline-block
+		&:not(:last-child)
+			margin-right 0.5em
+		&.active
+			font-weight bold
+			&:after
+				display block
+				content ""
+				position absolute
+
+	&__item
+		margin-top 1em
+
+	.slider__arrow
+		display none

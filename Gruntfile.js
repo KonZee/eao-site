@@ -25,7 +25,8 @@ module.exports = function (grunt){
 				},
 				files: {
 					'dist/css/main.css': 'src/styles/custom/main.styl',
-					'dist/css/print.css': 'src/styles/custom/print.styl'
+					'dist/css/print.css': 'src/styles/custom/print.styl',
+					'dist/css/accessibility.css': 'src/styles/custom/accessibility.styl'
 				}
 			}
 		},
@@ -73,7 +74,7 @@ module.exports = function (grunt){
 				files: [{
 					expand: true,
 					cwd: 'src/templates',
-					src: ['**/*.jade', '!base-accessability.jade', '!base-print.jade', '!base.jade', '!elements/*.jade'],
+					src: ['**/*.jade', '!base-accessibility.jade', '!base-print.jade', '!base.jade', '!elements/*.jade'],
 					dest: 'dist',
 					filter: 'isFile',
 					ext: '.html'

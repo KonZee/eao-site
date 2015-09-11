@@ -1,0 +1,20 @@
+.footer
+	padding-top 42px
+	border-top 1px solid $color
+
+	&__bottom-line
+		padding 19px 0 22px
+		border-top 1px solid $color
+		margin-top 47px
+
+	&__column
+		float left
+		width calc(33% - 30px * 2 /3)
+		&:not(:last-child)
+			margin-right 30px
+		a
+			display block
+			color $color
+
+			& + h5
+				margin-top 30px
