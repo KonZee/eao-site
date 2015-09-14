@@ -19,15 +19,19 @@ a:hover {
 }
 h1 {
 	font-size: 2.6em;
+	margin-top: 0;
 }
 h2 {
 	font-size: 2.15em;
+	margin-top: 0;
 }
 h3 {
 	font-size: 1.7em;
+	margin-top: 0;
 }
 h4 {
 	font-size: 1.25em;
+	margin-top: 0;
 }
 ul {
 	margin: 0;
@@ -41,8 +45,11 @@ ul {
 .clearfix:after {
 	clear: both;
 }
-.wrapper {
+.wrapper--normal {
 	padding: 40px 0;
+}
+.wrapper--thin {
+	padding: 0;
 }
 .header {
 	position: relative;
@@ -178,6 +185,16 @@ ul {
 }
 .languages__list img {
 	margin-right: 0.5em;
+}
+.breadcrumbs {
+	border-bottom: 1px solid #000000;
+	padding: 10px 14px;
+}
+.breadcrumbs > * {
+	display: inline-block;
+}
+.breadcrumbs > *:not(:last-child) {
+	margin-right: 1em;
 }
 .menu {
 	position: relative;
