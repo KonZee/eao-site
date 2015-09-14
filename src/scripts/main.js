@@ -47,21 +47,18 @@ $(document).ready(function(){
 		nextButton: '.swiper-button-next-4',
 		prevButton: '.swiper-button-prev-4',
 		loop: true,
-	});
-	// Prepare texts for swiper4
-	if(swiper4.activeIndex !== undefined ){
-		var swiper4Text = $('.swiper-4').siblings('.slider-text');
-		cloneText(swiper4Text);
-		swiper4Text.children().hide();
-		swiper4Text.children().eq(swiper4.activeIndex).show();
-
-		// Check control
-		swiper4.on('click', function(){
+		onInit: function(swiper){
+			var swiper4Text = $('.swiper-4').siblings('.slider-text');
+			cloneText(swiper4Text);
 			swiper4Text.children().hide();
-			swiper4Text.children().eq(swiper4.activeIndex).fadeIn();
-		});
-	}
-
+			swiper4Text.children().eq(swiper.activeIndex).show();
+		},
+		onSlideChangeEnd: function(swiper){
+			var swiper4Text = $('.swiper-4').siblings('.slider-text');
+			swiper4Text.children().hide();
+			swiper4Text.children().eq(swiper.activeIndex).fadeIn();
+		},
+	});
 
 	// Bottom right frontpage slider
 	var swiper5 = new Swiper('.swiper-5', {
@@ -89,22 +86,18 @@ $(document).ready(function(){
 		nextButton: '.swiper-button-next-7',
 		prevButton: '.swiper-button-prev-7',
 		loop: true,
-	});
-
-	// Prepare texts for swiper7
-	if(swiper7.activeIndex !== undefined ){
-		var swiper7Text = $('.swiper-7').siblings('.other-news__texts');
-		var active7 = swiper7.activeIndex
-		cloneText(swiper7Text);
-		swiper7Text.children().hide();
-		swiper7Text.children().eq(swiper7.activeIndex).show();
-
-		// Check control
-		swiper7.on('click', function(){
+		onInit: function(swiper){
+			var swiper7Text = $('.swiper-7').siblings('.other-news__texts');
+			cloneText(swiper7Text);
 			swiper7Text.children().hide();
-			swiper7Text.children().eq(swiper7.activeIndex).fadeIn();
-		});
-	}
+			swiper7Text.children().eq(swiper.activeIndex).show();
+		},
+		onSlideChangeEnd: function(swiper){
+			var swiper7Text = $('.swiper-7').siblings('.other-news__texts');
+			swiper7Text.children().hide();
+			swiper7Text.children().eq(swiper.activeIndex).fadeIn();
+		},
+	});
 
 
 	// Children page show/hide text
@@ -141,6 +134,7 @@ $(document).ready(function(){
 
 });
 
+// Prepare linked text for looped swiper slider
 var cloneText = function(text){
 	var firstEl = text.children().eq(0).clone();
 	var lastEl = text.children().eq(text.children().length - 1).clone();
