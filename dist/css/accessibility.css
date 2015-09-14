@@ -170,6 +170,15 @@ ul {
 .footer__column a + h5 {
 	margin-top: 30px;
 }
+.languages__current {
+	display: none;
+}
+.languages__list li {
+	display: block;
+}
+.languages__list img {
+	margin-right: 0.5em;
+}
 .menu {
 	position: relative;
 	top: 0;
