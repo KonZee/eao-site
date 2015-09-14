@@ -83,21 +83,24 @@ ul {
 	}
 }
 .topmenu {
+	display: none;
+}
+.topmenu-accessibility {
 	text-align: justify;
 }
-.topmenu__colors {
+.topmenu-accessibility__colors {
 	display: inline-block;
 }
-.topmenu__sizes {
+.topmenu-accessibility__sizes {
 	display: inline-block;
 }
-.topmenu__sizes a {
+.topmenu-accessibility__sizes a {
 	margin-left: 5px;
 }
-.topmenu__sizes a:last-child {
+.topmenu-accessibility__sizes a:last-child {
 	margin-left: 20px;
 }
-.topmenu:after {
+.topmenu-accessibility:after {
 	display: inline-block;
 	content: '';
 	width: 100%;
