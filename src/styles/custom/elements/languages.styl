@@ -1,0 +1,83 @@
+.languages
+	position relative
+	text-align left
+	&__list
+		position absolute
+		margin 0
+		padding 0
+		left 0
+		right 0
+		z-index 1
+		pointer-events none
+		opacity 0
+		transition opacity 350ms
+		li
+			list-style none
+		a
+			display block
+			width 100%
+		&--header
+			top 100%
+			a
+				background $black
+				padding 8px 35px
+		&--footer
+			bottom 100%
+			a
+				padding 3px 20px
+				background $gray-light
+	&__current
+		display inline-block
+		text-align left
+		&:after
+			position absolute
+			font-family FontAwesome
+			display block
+		&--header
+			width 190px
+			padding 17px 35px
+			&:after
+				top 15px
+				left 13px
+				content "\f078"
+		&--footer
+			padding 0 20px
+			&:after
+				top 0
+				left 0
+				content "\f077"
+	&--header
+		a
+			color $white
+			text-decoration none
+	&--footer
+		a
+			color $black
+			text-decoration none
+
+	img
+		margin-right 10px
+		position relative
+		top -2px
+	&:hover
+		.languages__list
+			pointer-events auto
+			opacity 1
+	@media screen and (max-width: $screen-sm-max)
+		font-size 0.01px
+		position relative
+		z-index 100
+		&__current
+			width auto
+			&:after
+				font-size 14px
+			&--header
+				&:after
+					top 11px
+					left 10px
+			&--footer
+				&:after
+					top -5px
+					left 3px
+		img
+			margin 0

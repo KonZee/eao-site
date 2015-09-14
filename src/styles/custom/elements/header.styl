@@ -79,10 +79,6 @@
 			padding 17px 30px
 		&:last-child
 			padding 17px 0 17px 35px
-	a img
-		margin-right 10px
-		position relative
-		top -2px
 	svg
 		height 15px
 		width auto
@@ -91,52 +87,7 @@
 		margin-right 18px
 		fill $white
 
-	&__lang
-		position relative
-		> ul
-			position absolute
-			margin 0
-			padding 0
-			top 100%
-			right 0
-			z-index 1
-			pointer-events none
-			opacity 0
-			transition opacity 350ms
-			li
-				list-style none
-			a
-				display block
-				width 100%
-				background #242424
-				padding 8px 35px
-		> a
-			display inline-block
-			width 210px
-			padding 17px 55px 17px 35px
-			text-align right
-			&:after
-				position absolute
-				font-family FontAwesome
-				content "\f078"
-				display block
-				top 18px
-				right 35px
-		a
-			color #fff
-			text-decoration none
-		&:hover > ul
-			pointer-events auto
-			opacity 1
-		@media screen and (max-width: $screen-sm-max)
-			font-size 0.01px
-			> a
-				padding-right 35px
-				padding-left 15px
-				&:after
-					font-size 14px
-					top 11px
-					right 20px
+
 	&__link
 		color #fff
 		text-decoration none
