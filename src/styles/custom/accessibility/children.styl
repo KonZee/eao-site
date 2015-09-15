@@ -1,0 +1,27 @@
+.children
+
+	&__data
+		font-size 1.7em
+		margin 1em 0
+
+		.data
+			margin-left 0.5em
+
+
+		& + .row [class^="col-"]
+			&:nth-child(3n + 1)
+				clear both
+
+.children-info
+	&__image
+		display inline-block
+		width 85px
+		vertical-align middle
+	&__name-age
+		display inline-block
+		font-size 1.25em
+		vertical-align middle
+	&__description
+		margin 1em 0
+		.switch
+			display none

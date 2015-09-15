@@ -33,6 +33,9 @@ h4 {
 	font-size: 1.25em;
 	margin-top: 0;
 }
+h5 {
+	font-size: 1.1em;
+}
 ul {
 	margin: 0;
 	padding: 0;
@@ -195,6 +198,33 @@ ul {
 }
 .breadcrumbs > *:not(:last-child) {
 	margin-right: 1em;
+}
+.pagination {
+	border-radius: 0;
+}
+.pagination > li > a {
+	text-decoration: underline;
+}
+.pagination > li > a,
+.pagination > li > span {
+	background: #FFFFFF;
+	color: #000000;
+	padding: 0.4em 0.7em;
+}
+.pagination > li > a:hover,
+.pagination > li > span:hover {
+	background: #FFFFFF;
+	color: #000000;
+}
+.pagination > li.active > a {
+	background: #000000;
+	color: #FFFFFF;
+	border-color: #000000;
+	font-weight: bold;
+}
+.pagination > li.active > a:hover {
+	background: #000000;
+	color: #FFFFFF;
 }
 .menu {
 	position: relative;
@@ -784,5 +814,31 @@ button.swiper-pagination-bullet {
 	margin-top: 1em;
 }
 .news-panel .slider__arrow {
+	display: none;
+}
+.children__data {
+	font-size: 1.7em;
+	margin: 1em 0;
+}
+.children__data .data {
+	margin-left: 0.5em;
+}
+.children__data + .row [class^='col-']:nth-child(3n + 1) {
+	clear: both;
+}
+.children-info__image {
+	display: inline-block;
+	width: 85px;
+	vertical-align: middle;
+}
+.children-info__name-age {
+	display: inline-block;
+	font-size: 1.25em;
+	vertical-align: middle;
+}
+.children-info__description {
+	margin: 1em 0;
+}
+.children-info__description .switch {
 	display: none;
 }

@@ -1,0 +1,31 @@
+extends base-print
+
+block title
+	| Усыновление и опека - официальный портал ЕАО - печатная версия
+
+block content
+	.children
+		h1 Усыновление, опека (попечительство), приемная семья
+		mixin children__info()
+			.children__info.children-info
+				.children-info__image
+					img(src="http://dummyimage.com/76x76/999999/fff.png")
+				.children-info__name-age
+					.name
+						+lipsum(Math.floor(Math.random() * 12 + 3),"characters")
+					.age 3 года
+				.children-info__description
+					.text
+						+lipsum(1,"paragraphs")
+
+		h3 Дата размещения информации <strong>27.09.2015</strong>
+		+children__info()
+		+children__info()
+		+children__info()
+		+children__info()
+		+children__info()
+
+		h3 Дата размещения информации <strong>27.09.2015</strong>
+		+children__info()
+		+children__info()
+		+children__info()

@@ -64,6 +64,19 @@
 	width: calc(100% - 160px);
 	vertical-align: top;
 }
+.children__info {
+	margin-top: 2em;
+}
+.children-info__image {
+	display: inline-block;
+	width: 85px;
+	vertical-align: top;
+}
+.children-info__name-age {
+	font-size: 1.25em;
+	display: inline-block;
+	vertical-align: top;
+}
 .footer {
 	text-align: center;
 	margin-top: 50px;
