@@ -118,6 +118,24 @@ $(document).ready(function(){
 		}
 	});
 
+
+	// Section page toggle text
+	$('.section__authority .title').on('click', function(){
+		$(this).parent().toggleClass('collapsed');
+		$(this).siblings('.description').slideToggle();
+	});
+	// Section page news height
+	if($(window).width() >= 768){
+		var sectionNews = 0;
+		$('.section-news').each(function(){
+			if($(this).height() > sectionNews){
+				sectionNews = $(this).height();
+			}
+		});
+		$('.section-news').height(sectionNews);
+	}
+
+
 	// Change font-size
 	$('.sizes--normal').on('click', function(e){
 		e.preventDefault();

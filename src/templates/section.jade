@@ -1,0 +1,166 @@
+extends base
+
+block title
+	| Комитет тарифов и цен правительства Еврейской автономной области - официальный портал ЕАО
+
+block content
+	.wrapper.wrapper--thin.wrapper--gray
+		.container
+			.breadcrumbs
+				a(href="").breadcrumbs__link Главная
+				.breadcrumbs__separator
+					i.fa.fa-chevron-right
+				.breadcrumbs__current Страница
+	main
+		.wrapper.wrapper--normal.section
+			.container
+				.row
+					.col-xs-12
+						h1.text-brand Комитет тарифов и цен правительства Еврейской автономной области
+					.col-xs-12.col-md-8
+						mixin person()
+							.col-xs-12.col-sm-6.section__person.section-person
+								.section-person__image
+									img(src="http://dummyimage.com/76x76/999999/fff.png")
+								.section-person__card
+									.position
+										+lipsum(Math.floor(Math.random() * 7 + 3),"words")
+									.name
+										+lipsum(3,"words")
+						.row
+							+person()
+							+person()
+							+person()
+							+person()
+							+person()
+							+person()
+					.col-xs-12.col-md-4
+						.section__contacts
+							h2.text-brand Контакты
+							p <strong>Адрес:</strong> 679016, Еврейская автономная область, г. Биробиджан, ул. Трансформаторная, д. 3а
+							p <strong>E-mail:</strong> cen@post.eao.ru
+							p <strong>Справочная служба:</strong> +7 (42622) 22-22-22
+				.row.section__docs
+					.col-xs-12.col-md-4
+						ul
+							li
+								a(href="") Положение
+							li
+								a(href="") Нормативно-правовые акты
+							li
+								a(href="") Порядок обслуживания НПА
+							li
+								a(href="") Перечень подведомственных организаций
+							li
+								a(href="") Администратвные регламенты
+							li
+								a(href="") Планы и отчеты
+					.col-xs-12.col-md-4
+						ul
+							li
+								a(href="") Установленные формы обращений, заявлений и иных документов
+							li
+								a(href="") Перечень государственных программ
+							li
+								a(href="") Государственные услуги
+							li
+								a(href="") Тексты официальных выступлений и заявлений
+							li
+								a(href="") Информация о проверках
+					.col-xs-12.col-md-4
+						ul
+							li
+								a(href="") Информация о размещении госсазака
+							li
+								a(href="") Статистическая информация
+							li
+								a(href="") Вакансии и формирование кадрового резерва
+							li
+								a(href="") Работа с обращениями граждан
+							li
+								a(href="") Перечень информационных систем
+							li
+								a(href="") Противодейсвие коррупции
+
+				.row
+					.col-xs-12
+						.section__authority.collapsed
+							.title Полномочия, функции, задачи
+							.description
+								+lipsum(2, "paragraphs")
+
+				.row.section__other
+					.col-xs-12.col-xs-12
+						h2.text-brand Иная информация
+					mixin other()
+						.col-xs-12.col-sm-6.col-md-3
+							a(href="")
+								+lipsum(Math.floor(Math.random() * 7 + 2),"words")
+					-for(var i=0; i<4; i++){
+						-for(var j=0; j<6; j++){
+							+other()
+						-}
+					-}
+
+				.row.section__slider
+					.col-xs-12
+						.slider.slider--arrow-outside.slider--multiply.swiper-container.swiper-3
+							.swiper-wrapper
+								.slider__item.swiper-slide
+									a(href="")
+										img(src="/images/index-small-slider.jpg")
+								.slider__item.swiper-slide
+									a(href="")
+										img(src="/images/index-small-slider.jpg")
+								.slider__item.swiper-slide
+									a(href="")
+										img(src="/images/index-small-slider.jpg")
+								.slider__item.swiper-slide
+									a(href="")
+										img(src="/images/index-small-slider.jpg")
+								.slider__item.swiper-slide
+									a(href="")
+										img(src="/images/index-small-slider.jpg")
+								.slider__item.swiper-slide
+									a(href="")
+										img(src="/images/index-small-slider-red.jpg")
+								.slider__item.swiper-slide
+									a(href="")
+										img(src="/images/index-small-slider-blue.jpg")
+							.slider__outside-pagination.swiper-pagination.swiper-pagination-3
+							.swiper-button-prev.swiper-button-prev-3
+							.swiper-button-next.swiper-button-next-3
+
+				.row.section__text
+					.col-xs-12
+						p Уважаемые посетители сайта!
+						p Приветствую вас на официальном Интернет-сайте комитета тарифов и цен правительства Еврейской автономной области.
+						p Комитет является органом исполнительной власти Еврейской автономной области, формируемым правительством области, осуществляющим государственное регулирование цен и тарифов, а также контроль за соблюдением порядка ценообразования на территории Еврейской автономной области.
+						p Комитет осуществляет свою деятельность во взаимодействии с Федеральной службой по тарифам Российской Федерации на единой нормативно - методической основе, утверждаемой Правительством Российской Федерации, и является независимым в своих решениях в пределах полномочий, предоставленных ему законодательством.
+						p Назначение нашего Интернет-сайта — предоставить максимально подробную информацию обо всех сферах тарифного регулирования и перспективных направлениях деятельности комитета. Вы сможете найти практически все нормативные документы, регламентирующие установленные тарифы, а также деятельность комитета. Также Вы можете задать интересующий Вас вопрос в сфере тарифного регулирования.
+						p Мы искренне рады видеть вас на нашем официальном сайте и готовы к установлению конструктивного и взаимовыгодного диалога.
+						p
+							| С уважением,
+							br
+							| Председатель комитета
+							br
+							| Шлыкова Галина Феликсовна
+
+				.row.section__news
+					.col-xs-12
+						h2.text-brand Новости
+						a(href="").all-news
+							h2 Все новости
+					mixin news()
+						.col-xs-12.col-sm-6
+							.section-news
+								.title
+									+lipsum(Math.floor(Math.random() * 7 + 2),"words")
+								.data 27.09.2015
+								.text
+									+lipsum(Math.floor(Math.random() * 10 + 10),"words")
+									a(href="") Подробнее...
+					+news()
+					+news()
+
+
