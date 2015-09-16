@@ -77,6 +77,36 @@
 	display: inline-block;
 	vertical-align: top;
 }
+.section-person {
+	display: inline-block;
+	width: 49%;
+	margin: 20px 0;
+}
+.section-person__image {
+	display: inline-block;
+	vertical-align: top;
+	width: 100px;
+}
+.section-person__card {
+	display: inline-block;
+	vertical-align: top;
+	width: calc(100% - 110px);
+}
+.section-person__card .position {
+	font-size: 1.25em;
+}
+.section-person__card .name {
+	margin-top: 0.5em;
+	font-size: 1.25em;
+	font-weight: bold;
+}
+.section__docs,
+.section__authority {
+	margin: 20px 0;
+}
+.section__text {
+	margin: 80px 0;
+}
 .footer {
 	text-align: center;
 	margin-top: 50px;
