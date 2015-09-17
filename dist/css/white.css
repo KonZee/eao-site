@@ -63,6 +63,7 @@ ul {
 	height: 103px;
 	left: 15px;
 	top: -13px;
+	z-index: 1;
 }
 @media screen and (max-width: 991px) {
 	.header__coat {
@@ -694,6 +695,19 @@ button.swiper-pagination-bullet {
 		position: relative;
 		bottom: -5px !important;
 	}
+}
+.slider__ribbon {
+	display: block;
+	position: absolute;
+	top: 3px;
+	right: 3px;
+	z-index: 1;
+	padding: 1em;
+	background: #FFFFFF;
+	color: #000000;
+}
+.slider__ribbon:hover {
+	color: #000000;
 }
 .slider--multiply .slider__item {
 	display: inline-block;

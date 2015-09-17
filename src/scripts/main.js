@@ -10,6 +10,10 @@ $(document).ready(function(){
 	// Tabs
 	$('.news-panel__tabs a').click(function (e) {
 		e.preventDefault();
+		if($(this).parent().hasClass("active")){
+			var url = $(this).data('url');
+			window.location.replace(url);
+		}
 		$(this).tab('show');
 	});
 

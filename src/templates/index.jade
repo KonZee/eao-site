@@ -27,6 +27,7 @@ block content
 							.swiper-pagination.swiper-pagination-1
 							.swiper-button-prev.swiper-button-prev-1
 							.swiper-button-next.swiper-button-next-1
+							a(href="").slider__ribbon Все новости региона
 
 					//- Tabs / Second slider
 					.col-md-6
@@ -34,11 +35,11 @@ block content
 							.news-panel__tabs.slider.js-slider-tabs
 								ul.nav.nav-tabs.clearfix
 									li(role="presentation").news-panel__tab.active
-										a(href="#news-tab") Новости
+										a(href="#news-tab" data-url="news.html") Новости
 									li(role="presentation").news-panel__tab
-										a(href="#official-tab") Новости органов власти
+										a(href="#official-tab" data-url="/news.html") Новости органов власти
 									li(role="presentation").news-panel__tab
-										a(href="#events-tab") Календарь событий
+										a(href="#events-tab" data-url="/css/white.css") Календарь событий
 								a(href="").slider__arrow.slider__arrow--prev.js-prev
 									i.fa.fa-chevron-left
 								a(href="").slider__arrow.slider__arrow--next.js-next

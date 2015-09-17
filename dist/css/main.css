@@ -76,6 +76,7 @@ h5 {
 	height: 103px;
 	left: 15px;
 	top: -13px;
+	z-index: 1;
 }
 
 .header__topmenu {
@@ -879,6 +880,21 @@ button.swiper-pagination-bullet {
 .slider__outside-pagination {
 	position: relative;
 	bottom: -5px !important;
+}
+
+.slider__ribbon {
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 1;
+	padding: 10px;
+	background: #0E9877;
+	color: #FFFFFF;
+}
+
+.slider__ribbon:hover {
+	color: #FFFFFF;
 }
 
 .slider--multiply .slider__item {
