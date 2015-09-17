@@ -157,12 +157,10 @@ $(document).ready(function(){
 	// Change color scheme
 	$('.color.color--white').click(function (e){
 		e.preventDefault();
-		console.log('white');
 		$('link[href^="css/black.css"]').attr('href','css/white.css');
 	});
 	$('.color.color--black').click(function (e){
 		e.preventDefault();
-		console.log('black');
 		$('link[href^="css/white.css"]').attr('href','css/black.css');
 	});
 
