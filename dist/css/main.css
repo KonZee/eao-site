@@ -342,6 +342,11 @@ h5 {
 	text-align: left;
 }
 
+.languages img {
+	width: 18px;
+	height: 12px;
+}
+
 .languages__list {
 	position: absolute;
 	margin: 0;

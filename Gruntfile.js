@@ -124,6 +124,15 @@ module.exports = function (grunt){
 					filter: 'isFile'
 				}]
 			},
+			svg: {
+				files: [{
+					expand: true,
+					cwd: 'src/images',
+					src: ['**/*.svg'],
+					dest: 'dist/images',
+					filter: 'isFile'
+				}]
+			},
 		},
 
 		imagemin: {
