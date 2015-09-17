@@ -11,7 +11,7 @@ $(document).ready(function(){
 	$('.news-panel__tabs a').click(function (e) {
 		e.preventDefault();
 		$(this).tab('show');
-	})
+	});
 
 	// Mobile menu
 	$('.menu__hamburger').click(function(){
@@ -109,12 +109,12 @@ $(document).ready(function(){
 		if ((text).hasClass('expanded')){
 			text.removeClass('expanded');
 			open.hide();
-			closed.show()
+			closed.show();
 		}
 		else{
 			text.addClass('expanded');
-			open.show()
-			closed.hide()
+			open.show();
+			closed.hide();
 		}
 	});
 
@@ -136,6 +136,10 @@ $(document).ready(function(){
 	}
 
 
+	/*
+	 * Accessibility
+	 */
+
 	// Change font-size
 	$('.sizes--normal').on('click', function(e){
 		e.preventDefault();
@@ -148,6 +152,18 @@ $(document).ready(function(){
 	$('.sizes--double').on('click', function(e){
 		e.preventDefault();
 		$('body').removeClass('medium').addClass('big');
+	});
+
+	// Change color scheme
+	$('.color.color--white').click(function (e){
+		e.preventDefault();
+		console.log('white');
+		$('link[href^="css/black.css"]').attr('href','css/white.css');
+	});
+	$('.color.color--black').click(function (e){
+		e.preventDefault();
+		console.log('black');
+		$('link[href^="css/white.css"]').attr('href','css/black.css');
 	});
 
 });

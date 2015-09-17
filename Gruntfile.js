@@ -26,7 +26,8 @@ module.exports = function (grunt){
 				files: {
 					'dist/css/main.css': 'src/styles/custom/main.styl',
 					'dist/css/print.css': 'src/styles/custom/print.styl',
-					'dist/css/accessibility.css': 'src/styles/custom/accessibility.styl'
+					'dist/css/white.css': 'src/styles/custom/white.styl',
+					'dist/css/black.css': 'src/styles/custom/black.styl'
 				}
 			}
 		},
