@@ -141,6 +141,19 @@ $(document).ready(function(){
 
 
 	/*
+	 * Tables
+	 */
+	$("[class^='minitable']").click(function(){
+		$("html").toggleClass( $(this).attr("class") );
+		if($(this).css('display') == 'table'){
+			$(this).removeAttr('style');
+		}
+		else{
+			$(this).css({'display':'table'})
+		}
+	});
+
+	/*
 	 * Accessibility
 	 */
 

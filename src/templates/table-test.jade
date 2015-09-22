@@ -1,0 +1,714 @@
+extends base
+
+block title
+	| Тест таблиц - официальный портал ЕАО
+
+
+block content
+	main
+		.wrapper.wrapper--normal.wrapper--gray
+			.container
+				.row
+					.col-xs-12
+						table
+							thead
+								tr
+									th
+								tr
+									th
+
+							tr
+								td
+
+						h1 Bootstrap responsive table
+						.table-responsive
+							table(align='center', cellspacing='0', cellpadding='4', border='1', width='100%')
+								tbody
+									tr
+										td(rowspan='2')
+											p(align='center')
+												| Фамилия и инициалы лица, чьи сведения размещаются
+										td(colspan='4')
+											p(align='center')
+												| Объекты недвижимости, находящиеся в собственности
+										td(colspan='3')
+											p(align='center')
+												| Объекты недвижимости, находящиеся в пользовании
+										td(rowspan='2')
+											p(align='center')
+												| Транспортные средства
+												br
+												| (вид, марка)
+										td(rowspan='2')
+											p(align='center')
+												| Декларированный годовой доход (руб.)
+									tr
+										td
+											p(align='center')
+												| вид объекта
+										td
+											p(align='center')
+												| вид собственности
+										td
+											p(align='center')
+												| площадь (кв.м)
+										td
+											p(align='center')
+												| страна расположения
+										td
+											p(align='center')
+												| вид объекта
+										td
+											p(align='center')
+												| площадь
+												br
+												| 					(кв.м)
+										td
+											p(align='center')
+												| страна расположения
+									tr
+										td
+											p(align='center')
+												| Винников Александр Аронович
+											p(align='center')
+										td
+											p(align='center')
+												| Приусадебный земельный участок
+											p(align='center')
+												| жилой дом
+											p(align='center')
+												| квартира
+											p(align='center')
+										td
+											p(align='center')
+												| совместная
+												br
+												| 					с супругой
+												br
+												| 					½ доли
+											p(align='center')
+												| совместная
+												br
+												| 					с супругой
+												br
+												| 					½ доли,
+											p(align='center')
+												| совместная
+												br
+												| 					с супругой
+												br
+												| 					½ доли
+										td
+											p(align='center')
+												| 1060,0
+											p(align='center')
+												| 31,4
+											p(align='center')
+												| 168,7
+											p(align='center')
+										td
+											p(align='center')
+												| Россия
+											p(align='center')
+												| Россия
+											p(align='center')
+												| Россия
+										td
+											p(align='center')
+												| земельный участок
+										td
+											p(align='center')
+												| 1165,0
+										td
+											p(align='center')
+												| Россия
+										td
+											p(align='center')
+												| легковой
+												br
+												| 					автомобиль
+												br
+												| 					"NISSAN MURANO", (совместный
+												br
+												| 					с супругой)
+										td
+											p(align='center')
+												| 3843547,93
+									tr
+										td
+											p(align='center')
+												| Супруга
+										td
+											p(align='center')
+												| Приусадебный земельный участок
+											p(align='center')
+												| жилой дом
+											p(align='center')
+												| квартира
+										td
+											p(align='center')
+												| совместная
+												br
+												| 					с супругом ½ доли
+											p(align='center')
+												| совместная
+												br
+												| 					с супругом ½ доли,
+											p(align='center')
+												| совместная
+												br
+												| 					с супругом ½ доли
+										td
+											p(align='center')
+												| 1060,0
+											p(align='center')
+												| 31,4
+											p(align='center')
+												| 168,7
+										td
+											p(align='center')
+												| Россия
+											p(align='center')
+												| Россия
+											p(align='center')
+												| Россия
+										td
+											p(align='center')
+												| земельный участок
+										td
+											p(align='center')
+												| 1165,0
+										td
+											p(align='center')
+												| Россия
+										td
+											p(align='center')
+												| легковой
+												br
+												| 					автомобиль
+												br
+												| 					"NISSAN MURANO", (совместный
+												br
+												| 					с супругом)
+										td
+											p(align='center')
+												| 501334,22
+
+						h1 Вариант с минитаблицей
+						h2 Первая таблица
+						table(align='center', cellspacing='0', cellpadding='4', border='1', width='100%').minitable-1
+							tbody
+								tr
+									td(rowspan='2')
+										p(align='center')
+											| Фамилия и инициалы лица, чьи сведения размещаются
+									td(colspan='4')
+										p(align='center')
+											| Объекты недвижимости, находящиеся в собственности
+									td(colspan='3')
+										p(align='center')
+											| Объекты недвижимости, находящиеся в пользовании
+									td(rowspan='2')
+										p(align='center')
+											| Транспортные средства
+											br
+											| (вид, марка)
+									td(rowspan='2')
+										p(align='center')
+											| Декларированный годовой доход (руб.)
+								tr
+									td
+										p(align='center')
+											| вид объекта
+									td
+										p(align='center')
+											| вид собственности
+									td
+										p(align='center')
+											| площадь (кв.м)
+									td
+										p(align='center')
+											| страна расположения
+									td
+										p(align='center')
+											| вид объекта
+									td
+										p(align='center')
+											| площадь
+											br
+											| 					(кв.м)
+									td
+										p(align='center')
+											| страна расположения
+								tr
+									td
+										p(align='center')
+											| Винников Александр Аронович
+										p(align='center')
+									td
+										p(align='center')
+											| Приусадебный земельный участок
+										p(align='center')
+											| жилой дом
+										p(align='center')
+											| квартира
+										p(align='center')
+									td
+										p(align='center')
+											| совместная
+											br
+											| 					с супругой
+											br
+											| 					½ доли
+										p(align='center')
+											| совместная
+											br
+											| 					с супругой
+											br
+											| 					½ доли,
+										p(align='center')
+											| совместная
+											br
+											| 					с супругой
+											br
+											| 					½ доли
+									td
+										p(align='center')
+											| 1060,0
+										p(align='center')
+											| 31,4
+										p(align='center')
+											| 168,7
+										p(align='center')
+									td
+										p(align='center')
+											| Россия
+										p(align='center')
+											| Россия
+										p(align='center')
+											| Россия
+									td
+										p(align='center')
+											| земельный участок
+									td
+										p(align='center')
+											| 1165,0
+									td
+										p(align='center')
+											| Россия
+									td
+										p(align='center')
+											| легковой
+											br
+											| 					автомобиль
+											br
+											| 					"NISSAN MURANO", (совместный
+											br
+											| 					с супругой)
+									td
+										p(align='center')
+											| 3843547,93
+								tr
+									td
+										p(align='center')
+											| Супруга
+									td
+										p(align='center')
+											| Приусадебный земельный участок
+										p(align='center')
+											| жилой дом
+										p(align='center')
+											| квартира
+									td
+										p(align='center')
+											| совместная
+											br
+											| 					с супругом ½ доли
+										p(align='center')
+											| совместная
+											br
+											| 					с супругом ½ доли,
+										p(align='center')
+											| совместная
+											br
+											| 					с супругом ½ доли
+									td
+										p(align='center')
+											| 1060,0
+										p(align='center')
+											| 31,4
+										p(align='center')
+											| 168,7
+									td
+										p(align='center')
+											| Россия
+										p(align='center')
+											| Россия
+										p(align='center')
+											| Россия
+									td
+										p(align='center')
+											| земельный участок
+									td
+										p(align='center')
+											| 1165,0
+									td
+										p(align='center')
+											| Россия
+									td
+										p(align='center')
+											| легковой
+											br
+											| 					автомобиль
+											br
+											| 					"NISSAN MURANO", (совместный
+											br
+											| 					с супругом)
+									td
+										p(align='center')
+											| 501334,22
+						h2 Вторая таблица
+						table(align='center', cellspacing='0', cellpadding='4', border='1', width='100%').minitable-2
+							tbody
+								tr
+									td(rowspan='2')
+										p(align='center')
+											| Фамилия и инициалы лица, чьи сведения размещаются
+									td(colspan='4')
+										p(align='center')
+											| Объекты недвижимости, находящиеся в собственности
+									td(colspan='3')
+										p(align='center')
+											| Объекты недвижимости, находящиеся в пользовании
+									td(rowspan='2')
+										p(align='center')
+											| Транспортные средства
+											br
+											| (вид, марка)
+									td(rowspan='2')
+										p(align='center')
+											| Декларированный годовой доход (руб.)
+								tr
+									td
+										p(align='center')
+											| вид объекта
+									td
+										p(align='center')
+											| вид собственности
+									td
+										p(align='center')
+											| площадь (кв.м)
+									td
+										p(align='center')
+											| страна расположения
+									td
+										p(align='center')
+											| вид объекта
+									td
+										p(align='center')
+											| площадь
+											br
+											| 					(кв.м)
+									td
+										p(align='center')
+											| страна расположения
+								tr
+									td
+										p(align='center')
+											| Винников Александр Аронович
+										p(align='center')
+									td
+										p(align='center')
+											| Приусадебный земельный участок
+										p(align='center')
+											| жилой дом
+										p(align='center')
+											| квартира
+										p(align='center')
+									td
+										p(align='center')
+											| совместная
+											br
+											| 					с супругой
+											br
+											| 					½ доли
+										p(align='center')
+											| совместная
+											br
+											| 					с супругой
+											br
+											| 					½ доли,
+										p(align='center')
+											| совместная
+											br
+											| 					с супругой
+											br
+											| 					½ доли
+									td
+										p(align='center')
+											| 1060,0
+										p(align='center')
+											| 31,4
+										p(align='center')
+											| 168,7
+										p(align='center')
+									td
+										p(align='center')
+											| Россия
+										p(align='center')
+											| Россия
+										p(align='center')
+											| Россия
+									td
+										p(align='center')
+											| земельный участок
+									td
+										p(align='center')
+											| 1165,0
+									td
+										p(align='center')
+											| Россия
+									td
+										p(align='center')
+											| легковой
+											br
+											| 					автомобиль
+											br
+											| 					"NISSAN MURANO", (совместный
+											br
+											| 					с супругой)
+									td
+										p(align='center')
+											| 3843547,93
+								tr
+									td
+										p(align='center')
+											| Супруга
+									td
+										p(align='center')
+											| Приусадебный земельный участок
+										p(align='center')
+											| жилой дом
+										p(align='center')
+											| квартира
+									td
+										p(align='center')
+											| совместная
+											br
+											| 					с супругом ½ доли
+										p(align='center')
+											| совместная
+											br
+											| 					с супругом ½ доли,
+										p(align='center')
+											| совместная
+											br
+											| 					с супругом ½ доли
+									td
+										p(align='center')
+											| 1060,0
+										p(align='center')
+											| 31,4
+										p(align='center')
+											| 168,7
+									td
+										p(align='center')
+											| Россия
+										p(align='center')
+											| Россия
+										p(align='center')
+											| Россия
+									td
+										p(align='center')
+											| земельный участок
+									td
+										p(align='center')
+											| 1165,0
+									td
+										p(align='center')
+											| Россия
+									td
+										p(align='center')
+											| легковой
+											br
+											| 					автомобиль
+											br
+											| 					"NISSAN MURANO", (совместный
+											br
+											| 					с супругом)
+									td
+										p(align='center')
+											| 501334,22
+
+						h1 Original table
+						table(align='center', cellspacing='0', cellpadding='4', border='1', width='100%')
+							tbody
+								tr
+									td(rowspan='2')
+										p(align='center')
+											| Фамилия и инициалы лица, чьи сведения размещаются
+									td(colspan='4')
+										p(align='center')
+											| Объекты недвижимости, находящиеся в собственности
+									td(colspan='3')
+										p(align='center')
+											| Объекты недвижимости, находящиеся в пользовании
+									td(rowspan='2')
+										p(align='center')
+											| Транспортные средства
+											br
+											| (вид, марка)
+									td(rowspan='2')
+										p(align='center')
+											| Декларированный годовой доход (руб.)
+								tr
+									td
+										p(align='center')
+											| вид объекта
+									td
+										p(align='center')
+											| вид собственности
+									td
+										p(align='center')
+											| площадь (кв.м)
+									td
+										p(align='center')
+											| страна расположения
+									td
+										p(align='center')
+											| вид объекта
+									td
+										p(align='center')
+											| площадь
+											br
+											| 					(кв.м)
+									td
+										p(align='center')
+											| страна расположения
+								tr
+									td
+										p(align='center')
+											| Винников Александр Аронович
+										p(align='center')
+									td
+										p(align='center')
+											| Приусадебный земельный участок
+										p(align='center')
+											| жилой дом
+										p(align='center')
+											| квартира
+										p(align='center')
+									td
+										p(align='center')
+											| совместная
+											br
+											| 					с супругой
+											br
+											| 					½ доли
+										p(align='center')
+											| совместная
+											br
+											| 					с супругой
+											br
+											| 					½ доли,
+										p(align='center')
+											| совместная
+											br
+											| 					с супругой
+											br
+											| 					½ доли
+									td
+										p(align='center')
+											| 1060,0
+										p(align='center')
+											| 31,4
+										p(align='center')
+											| 168,7
+										p(align='center')
+									td
+										p(align='center')
+											| Россия
+										p(align='center')
+											| Россия
+										p(align='center')
+											| Россия
+									td
+										p(align='center')
+											| земельный участок
+									td
+										p(align='center')
+											| 1165,0
+									td
+										p(align='center')
+											| Россия
+									td
+										p(align='center')
+											| легковой
+											br
+											| 					автомобиль
+											br
+											| 					"NISSAN MURANO", (совместный
+											br
+											| 					с супругой)
+									td
+										p(align='center')
+											| 3843547,93
+								tr
+									td
+										p(align='center')
+											| Супруга
+									td
+										p(align='center')
+											| Приусадебный земельный участок
+										p(align='center')
+											| жилой дом
+										p(align='center')
+											| квартира
+									td
+										p(align='center')
+											| совместная
+											br
+											| 					с супругом ½ доли
+										p(align='center')
+											| совместная
+											br
+											| 					с супругом ½ доли,
+										p(align='center')
+											| совместная
+											br
+											| 					с супругом ½ доли
+									td
+										p(align='center')
+											| 1060,0
+										p(align='center')
+											| 31,4
+										p(align='center')
+											| 168,7
+									td
+										p(align='center')
+											| Россия
+										p(align='center')
+											| Россия
+										p(align='center')
+											| Россия
+									td
+										p(align='center')
+											| земельный участок
+									td
+										p(align='center')
+											| 1165,0
+									td
+										p(align='center')
+											| Россия
+									td
+										p(align='center')
+											| легковой
+											br
+											| 					автомобиль
+											br
+											| 					"NISSAN MURANO", (совместный
+											br
+											| 					с супругом)
+									td
+										p(align='center')
+											| 501334,22

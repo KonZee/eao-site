@@ -1756,6 +1756,66 @@ button.swiper-pagination-bullet {
 	}
 }
 
+@media screen and (max-width: 768px) {
+	html[class^='minitable'] h1,
+	html[class^='minitable'] h2,
+	html[class^='minitable'] h3,
+	html[class^='minitable'] p,
+	html[class^='minitable'] table,
+	html[class^='minitable'] header,
+	html[class^='minitable'] footer {
+		display: none;
+	}
+
+	html[class^='minitable'] .wrapper {
+		background: transparent;
+		padding: 0;
+	}
+
+	html[class^='minitable'] table[class^='minitable'] {
+		position: relative;
+	}
+
+	html[class^='minitable'] table[class^='minitable'] p {
+		display: inline;
+		font-size: 1em;
+	}
+
+	html[class^='minitable'] table[class^='minitable'] th,
+	html[class^='minitable'] table[class^='minitable'] td {
+		height: auto;
+	}
+
+	html:not([class^='minitable']) table[class^='minitable'] {
+		font-size: 0;
+		padding: 0;
+		height: 0.5em;
+		position: relative;
+		cursor: pointer;
+	}
+
+	html:not([class^='minitable']) table[class^='minitable'] th,
+	html:not([class^='minitable']) table[class^='minitable'] td {
+		background: #7C7C7C;
+	}
+
+	html:not([class^='minitable']) table[class^='minitable']:before {
+		content: 'Нажмите, чтобы увеличить таблицу';
+		display: block;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		z-index: 1;
+		-webkit-transform: translate(-50%, -50%);
+		        transform: translate(-50%, -50%);
+		font-size: 18px;
+		font-size: 1.5rem;
+		font-weight: bold;
+		text-align: center;
+		color: #FFFFFF;
+	}
+}
+
 @media screen and (max-width: 767px) {
 	.slider--multiply .slider__item {
 		width: 100%;

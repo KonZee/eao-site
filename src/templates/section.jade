@@ -93,13 +93,14 @@ block content
 					.col-xs-12.col-xs-12
 						h2.text-brand Иная информация
 					mixin other()
-						.col-xs-12.col-sm-6.col-md-3
-							a(href="")
-								+lipsum(Math.floor(Math.random() * 7 + 2),"words")
+						a(href="")
+							+lipsum(Math.floor(Math.random() * 7 + 2),"words")
 					-for(var i=0; i<4; i++){
-						-for(var j=0; j<6; j++){
-							+other()
-						-}
+						.col-xs-12.col-sm-6.col-md-3
+							-var items = Math.floor(Math.random() * 3 + 6)
+							-for(var j=0; j<items; j++){
+								+other()
+							-}
 					-}
 
 				.row.section__slider
