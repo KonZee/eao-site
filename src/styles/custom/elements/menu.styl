@@ -111,7 +111,7 @@
 						content "\f054"
 						font-family FontAwesome
 						font-size 10px
-						top 16px
+						top 14px
 						right 15px
 		&__submenu
 			position absolute
@@ -128,7 +128,25 @@
 			&--2
 				left 100%
 				top 0
-
+		// Open last menu items to left instead to right
+		&__top-item:nth-last-child(-n+2)
+			.menu__item
+				&--submenu
+					> a
+						padding-left 30px
+						padding-right 18px
+						&:after
+							right auto
+							left 15px
+							//content "\f053"
+							transform rotate(180deg)
+			.menu__submenu
+				&--1
+					left auto
+					right 0
+				&--2
+					left auto
+					right 100%
 		// Hovers
 		*:hover
 			> .menu__submenu

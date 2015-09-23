@@ -1577,7 +1577,7 @@ button.swiper-pagination-bullet {
 		content: '\f054';
 		font-family: FontAwesome;
 		font-size: 10px;
-		top: 16px;
+		top: 14px;
 		right: 15px;
 	}
 
@@ -1600,6 +1600,28 @@ button.swiper-pagination-bullet {
 	.menu__submenu--2 {
 		left: 100%;
 		top: 0;
+	}
+
+	.menu__top-item:nth-last-child(-n+2) .menu__item--submenu > a {
+		padding-left: 30px;
+		padding-right: 18px;
+	}
+
+	.menu__top-item:nth-last-child(-n+2) .menu__item--submenu > a:after {
+		right: auto;
+		left: 15px;
+		-webkit-transform: rotate(180deg);
+		        transform: rotate(180deg);
+	}
+
+	.menu__top-item:nth-last-child(-n+2) .menu__submenu--1 {
+		left: auto;
+		right: 0;
+	}
+
+	.menu__top-item:nth-last-child(-n+2) .menu__submenu--2 {
+		left: auto;
+		right: 100%;
 	}
 
 	.menu *:hover > .menu__submenu {
