@@ -145,11 +145,11 @@ $(document).ready(function(){
 	 */
 	$("[class^='minitable']").click(function(){
 		$("html").toggleClass( $(this).attr("class") );
-		if($(this).css('display') == 'table'){
+		if($(this).css('display') === 'table'){
 			$(this).removeAttr('style');
 		}
 		else{
-			$(this).css({'display':'table'})
+			$(this).css({'display':'table'});
 		}
 	});
 

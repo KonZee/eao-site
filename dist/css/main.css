@@ -156,15 +156,6 @@ h5 {
 	padding: 17px 0 17px 35px;
 }
 
-.topmenu svg {
-	height: 15px;
-	width: auto;
-	position: relative;
-	top: 3px;
-	margin-right: 18px;
-	fill: #FFFFFF;
-}
-
 .topmenu__link {
 	color: #FFFFFF;
 	text-decoration: none;
@@ -187,6 +178,15 @@ h5 {
 	visibility: visible;
 	pointer-events: auto;
 	opacity: 1;
+}
+
+.topmenu__link svg {
+	height: 15px;
+	width: 15px;
+	position: relative;
+	top: 3px;
+	margin-right: 18px;
+	fill: #FFFFFF;
 }
 
 .topmenu-accessibility {
@@ -343,7 +343,7 @@ h5 {
 }
 
 .languages img {
-	width: 18px;
+	width: 16px;
 	height: 12px;
 }
 
