@@ -132,6 +132,9 @@ $(document).ready(function(){
 				sliderItem.eq(i).css({'left':itemWidth * i});
 			}
 
+			var sliderText = slider.siblings('.slider-text, .other-news__texts');
+			var sliderTextContainer = sliderText.children('.slider-text__tab, .other-news__tab');
+
 			var currentItem = 0;
 			var nextItem;
 
@@ -149,11 +152,9 @@ $(document).ready(function(){
 					endElements = sliderLength;
 				}
 				for (var i = currentItem; i < endElements; i++){
-					console.log("Show end items i: ", i)
 					sliderItem.eq(i).css({'left': (i - currentItem) * itemWidth});
 				}
 				for (var i = 0; i < headElements; i++){
-					console.log("Show head items i: ", i)
 					sliderItem.eq(i).css({'left': (itemPerView - headElements + i) * itemWidth});
 				}
 				for (var i = headElements; i < currentItem; i++){
@@ -166,6 +167,10 @@ $(document).ready(function(){
 					$(this).animate({'left': parseInt($(this).css('left')) + (itemWidth * itemPerView)})
 				});
 				currentItem = nextItem;
+
+				sliderTextContainer.hide();
+				sliderTextContainer.eq(currentItem).fadeIn();
+
 			});
 			next.click(function(){
 				if(currentItem + itemPerView < sliderLength){
@@ -184,6 +189,10 @@ $(document).ready(function(){
 					$(this).animate({'left': parseInt($(this).css('left')) - (itemWidth * itemPerView)})
 				});
 				currentItem = nextItem;
+
+				sliderTextContainer.hide();
+				sliderTextContainer.eq(currentItem).fadeIn();
+
 			});
 		});
 	}

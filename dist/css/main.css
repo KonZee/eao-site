@@ -1655,6 +1655,7 @@ button.swiper-pagination-bullet {
 
 	.slider--text {
 		max-width: 50%;
+		min-width: 50%;
 		float: left;
 	}
 
