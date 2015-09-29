@@ -181,12 +181,6 @@ ul {
 .footer__column a + h5 {
 	margin-top: 30px;
 }
-.languages .flag-wrapper {
-	width: 1.5em;
-	height: 1.125281320330083em;
-	display: inline-block;
-	margin-right: 0.5em;
-}
 .languages img {
 	width: 1.5em;
 	height: auto;

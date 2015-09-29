@@ -355,8 +355,8 @@ h5 {
 	right: 0;
 	z-index: 1;
 	pointer-events: none;
-	opacity: 0;
 	transition: opacity 350ms;
+	display: none;
 }
 
 .languages__list li {
@@ -437,6 +437,7 @@ h5 {
 .languages:hover .languages__list {
 	pointer-events: auto;
 	opacity: 1;
+	display: block;
 }
 
 .search {
@@ -868,6 +869,9 @@ button.swiper-pagination-bullet {
 
 .slider__item {
 	position: relative;
+	display: block;
+	max-width: 100%;
+	max-height: 100%;
 }
 
 .slider__text {
@@ -1587,9 +1591,8 @@ button.swiper-pagination-bullet {
 		padding: 10px 0;
 		background: #242424;
 		opacity: 0;
-		visibility: hiddne;
-		pointer-events: none;
 		transition: opacity 350ms;
+		display: none;
 	}
 
 	.menu__submenu--1 {
@@ -1625,9 +1628,8 @@ button.swiper-pagination-bullet {
 	}
 
 	.menu *:hover > .menu__submenu {
-		visibility: visible;
 		opacity: 1;
-		pointer-events: auto;
+		display: block;
 	}
 
 	.swiper-button-prev,
