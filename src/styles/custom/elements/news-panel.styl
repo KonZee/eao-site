@@ -4,6 +4,7 @@
 	&__tabs
 		position relative
 		margin-top 30px
+		overflow hidden
 		@media screen and (min-width: $screen-md)
 			margin-top 0
 		ul
@@ -34,9 +35,6 @@
 					display none
 
 	&__tab
-		@media screen and (max-width: $screen-sm-max)
-			&:not(:first-child)
-				display none
 		@media screen and (min-width: $screen-md)
 			display inline-block
 			position relative
@@ -50,6 +48,8 @@
 			border 2px solid transparent
 			text-decoration none
 			transition background 350ms, color 350ms, border-color 350ms
+			@media screen and (min-width: $screen-md) and (max-width: $screen-md-max)
+				padding 5px
 		&.active
 			a
 				background $brand-primary
@@ -69,3 +69,11 @@
 			background #fff
 		.data
 			color $brand-primary
+
+	.slider__arrow
+		position absolute
+		top 5px
+		&--prev
+			left 0
+		&--next
+			right 0

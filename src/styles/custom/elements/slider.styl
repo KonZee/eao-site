@@ -454,7 +454,9 @@ button
 .slider-text
 	background #fbfbfb
 	border-radius 0 4px 4px 0
-	@media screen and (min-width: $screen-sm)
+	@media screen and (max-width: $screen-sm-max)
+		margin-top 10px
+	@media screen and (min-width: $screen-md)
 		margin-left 50%
 	&__tab
 		&:not(:first-child)
