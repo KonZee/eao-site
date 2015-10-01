@@ -70,24 +70,6 @@ $(document).ready(function(){
 			loop: true,
 		});
 		// Tabs/slider (top right) frontpage slider
-//		var swiper2 = new Swiper('.swiper-2', {
-//			pagination: '.swiper-pagination-2',
-//			paginationClickable: true,
-//			nextButton: '.swiper-button-next-2',
-//			prevButton: '.swiper-button-prev-2',
-//			loop: true,
-////			onInit: function(swiper){
-////				var swiper2Text = $('.swiper-2').siblings('.tab-content');
-////				cloneText(swiper2Text);
-////				swiper4Text.children().hide();
-////				swiper4Text.children().eq(swiper.activeIndex).show();
-////			},
-//			onSlideChangeEnd: function(swiper){
-//				var swiper2Text = $('.swiper-2').siblings('.tab-content');
-//				swiper2Text.children().hide();
-//				swiper2Text.children().eq(swiper.activeIndex).fadeIn();
-//			},
-//		});
 
 		// First small wide frontpage slider
 		var swiper3 = new Swiper('.swiper-3', {
@@ -256,6 +238,11 @@ $(document).ready(function(){
 
 
 	// Children page show/hide text
+	var childrenNumber = $('.children-info__description').length;
+	for (var i=0; i < childrenNumber; i++){
+		$('.children-info__description').eq(i).css({'z-index': 1000-i});
+	}
+
 	$('.children-info__description .switch').on('click', function(){
 		var button = $(this);
 		var text = button.prev('.text');
@@ -263,11 +250,13 @@ $(document).ready(function(){
 		var closed = button.children('.closed');
 		if ((text).hasClass('expanded')){
 			text.removeClass('expanded');
+//			text.parent().removeClass('text-expanded');
 			open.hide();
 			closed.show();
 		}
 		else{
 			text.addClass('expanded');
+//			text.parent().addClass('text-expanded');
 			open.show();
 			closed.hide();
 		}
