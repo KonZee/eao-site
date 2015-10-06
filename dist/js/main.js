@@ -53,6 +53,28 @@ $(document).ready(function(){
 	$('.menu__hamburger').click(function(){
 		$(this).siblings('ul').slideToggle();
 	});
+	$('.menu__top-item--submenu > a').click(function(e){
+		e.preventDefault();
+		var sub = $(this).siblings('.menu__submenu--1');
+		if(sub.is(':visible')){
+			sub.slideUp();
+		}
+		else{
+			$('.menu__submenu--1').not(sub).slideUp();
+			sub.slideDown();
+		}
+	});
+	$('.menu__item--submenu > a').click(function(e){
+		e.preventDefault();
+		var sub = $(this).siblings('.menu__submenu--2');
+		if(sub.is(':visible')){
+			sub.slideUp();
+		}
+		else{
+			$('.menu__submenu--2').not(sub).slideUp();
+			sub.slideDown();
+		}
+	});
 
 	// Check ie9
 	var ua = window.navigator.userAgent;

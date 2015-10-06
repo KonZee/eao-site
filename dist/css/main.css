@@ -91,7 +91,7 @@ h5 {
 
 .header__title {
 	font-size: 20px;
-	margin: 40px 0 22px;
+	margin: 50px 0 22px;
 }
 
 .header__menu > *.submenu {
@@ -219,15 +219,18 @@ h5 {
 	margin-bottom: 7px;
 }
 
-.menu > ul {
+.menu ul {
 	display: none;
+}
+
+.menu > ul {
 	position: absolute;
 	margin: 0;
 	padding: 0;
 	left: 0;
 	right: 0;
 	top: 54px;
-	background: rgba(36,36,36,0.8);
+	background: rgba(36,36,36,0.95);
 	z-index: 100;
 }
 
@@ -1743,6 +1746,29 @@ button.swiper-pagination-bullet {
 		top: 0;
 		width: 70px;
 		height: 78px;
+	}
+
+	.menu a {
+		display: block;
+	}
+
+	.menu__top-item {
+		display: block;
+		border-bottom: 1px solid #FFFFFF;
+		font-weight: bold;
+	}
+
+	.menu__top-item a {
+		padding: 9px 10px;
+	}
+
+	.menu__submenu {
+		margin-left: 2em;
+		margin-left: 2em;
+	}
+
+	.menu__submenu a {
+		padding: 3px 8px;
 	}
 
 	.languages {
