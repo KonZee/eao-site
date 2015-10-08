@@ -1568,15 +1568,16 @@ button.swiper-pagination-bullet {
 		display: block;
 		width: 100%;
 		position: relative;
+		width: 300px;
 	}
 
 	.menu__item a {
 		display: block;
-		white-space: nowrap;
 		background: #242424;
-		padding: 10px 18px;
+		padding: 10px 30px 10px 18px;
 		color: #FFFFFF;
 		text-decoration: none;
+		width: 100%;
 	}
 
 	.menu__item a:hover {
@@ -1617,24 +1618,23 @@ button.swiper-pagination-bullet {
 		top: 0;
 	}
 
-	.menu__top-item:nth-last-child(-n+2) .menu__item--submenu > a {
-		padding-left: 30px;
-		padding-right: 18px;
+	.menu__top-item:nth-last-child(-n+3) .menu__item a {
+		padding: 10px 18px 10px 30px;
 	}
 
-	.menu__top-item:nth-last-child(-n+2) .menu__item--submenu > a:after {
+	.menu__top-item:nth-last-child(-n+3) .menu__item--submenu > a:after {
 		right: auto;
 		left: 15px;
 		-webkit-transform: rotate(180deg);
 		        transform: rotate(180deg);
 	}
 
-	.menu__top-item:nth-last-child(-n+2) .menu__submenu--1 {
+	.menu__top-item:nth-last-child(-n+3) .menu__submenu--1 {
 		left: auto;
 		right: 0;
 	}
 
-	.menu__top-item:nth-last-child(-n+2) .menu__submenu--2 {
+	.menu__top-item:nth-last-child(-n+3) .menu__submenu--2 {
 		left: auto;
 		right: 100%;
 	}

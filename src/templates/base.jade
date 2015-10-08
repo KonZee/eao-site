@@ -174,8 +174,15 @@ html(lang='ru')
 								li.menu__top-item.menu__top-item--submenu
 									a(href="") Пресс-центр
 									ul.menu__submenu.menu__submenu--1
-										li.menu__item
-											a(href="") Submenu item
+										li.menu__item.menu__item--submenu
+											a(href="") Календарь мероприятий органов исполнительной власти области
+											ul.menu__submenu.menu__submenu--2
+												li.menu__item
+													a(href="")
+														+lipsum(9, 'words')
+												li.menu__item
+													a(href="")
+														+lipsum(9, 'words')
 										li.menu__item
 											a(href="") Submenu item
 										li.menu__item
