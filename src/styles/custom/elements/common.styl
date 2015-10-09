@@ -31,6 +31,7 @@ body
 
 body
 	flex 1 1 auto
+	position relative
 
 .header
 .footer
@@ -52,3 +53,22 @@ h5
 @media screen and (max-width: $screen-sm-max)
 	.no-mobile-relative
 		position static
+
+.colorbox
+	display none
+	position absolute
+	left 0
+	right 0
+	top 0
+	bottom 0
+	background rgba(0,0,0,0.8)
+	z-index 1000
+	cursor pointer
+	&__content
+		position fixed
+		left 50%
+		top 50%
+		transform translate(-50%, -50%)
+		background white
+		max-width 80vw
+		max-height 80vh

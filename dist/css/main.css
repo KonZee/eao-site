@@ -42,6 +42,7 @@ body {
 	-webkit-flex: 1 1 auto;
 	    -ms-flex: 1 1 auto;
 	        flex: 1 1 auto;
+	position: relative;
 }
 
 .header,
@@ -68,6 +69,29 @@ h5 {
 
 .text-brand {
 	color: #0E9877;
+}
+
+.colorbox {
+	display: none;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background: rgba(0,0,0,0.8);
+	z-index: 1000;
+	cursor: pointer;
+}
+
+.colorbox__content {
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	        transform: translate(-50%, -50%);
+	background: #FFFFFF;
+	max-width: 80vw;
+	max-height: 80vh;
 }
 
 .header {
@@ -1124,6 +1148,34 @@ button.swiper-pagination-bullet {
 	margin-bottom: 30px;
 }
 
+.post-page__photos {
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display:         flex;
+	-webkit-flex-wrap: wrap;
+	    -ms-flex-wrap: wrap;
+	        flex-wrap: wrap;
+	-webkit-justify-content: flex-start;
+	-ms-flex-pack: start;
+	        justify-content: flex-start;
+	margin-top: 20px;
+	margin-left: -15px;
+	margin-right: -15px;
+}
+
+.post-page__photos a {
+	display: block;
+	padding: 0 15px;
+	margin-bottom: 15px;
+	-webkit-flex: 0 0 auto;
+	    -ms-flex: 0 0 auto;
+	        flex: 0 0 auto;
+}
+
+.post-page__photos a img {
+	max-width: 100%;
+}
+
 .other-news {
 	background: #F2F2F2;
 }
@@ -1491,6 +1543,12 @@ button.swiper-pagination-bullet {
 	}
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+	.post-page__photos a {
+		width: 20%;
+	}
+}
+
 @media screen and (min-width: 992px) {
 	.header__title {
 		margin: 22px 100px;
@@ -1756,6 +1814,10 @@ button.swiper-pagination-bullet {
 
 	.slider--multiply .slider__item {
 		width: 20%;
+	}
+
+	.post-page__photos a {
+		width: 16.666666666666668%;
 	}
 }
 

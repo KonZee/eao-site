@@ -352,6 +352,17 @@ $(document).ready(function(){
 	});
 
 	/*
+	 * Post page photos
+	 */
+	$('.post-page__photos a').click(function(e){
+		e.preventDefault();
+		var url = $(this).data('url');
+		console.log(url);
+		$('.colorbox__content').append('<img src="'+ url +'">');
+		$('.colorbox').fadeIn();
+	});
+
+	/*
 	 * Accessibility
 	 */
 
