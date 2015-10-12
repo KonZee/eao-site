@@ -1206,6 +1206,7 @@ button.swiper-pagination-bullet {
 	-webkit-flex: 0 0 auto;
 	    -ms-flex: 0 0 auto;
 	        flex: 0 0 auto;
+	text-align: center;
 }
 
 .post-page__photos a img {
