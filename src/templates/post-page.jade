@@ -21,6 +21,21 @@ block content
 						.post-page__data 27.09.2015
 						.post-page__text
 							+lipsum(3, "paragraphs")
+						.post-page__photos
+							a(href="" data-url="http://dummyimage.com/800x600/000000/fff")
+								img(src="http://dummyimage.com/120x80/000000/fff" )
+							a(href="" data-url="http://dummyimage.com/1000x600/00ff00/fff")
+								img(src="http://dummyimage.com/120x80/00ff00/fff")
+							a(href="" data-url="http://dummyimage.com/600x800/0000ff/fff")
+								img(src="http://dummyimage.com/120x80/0000ff/fff")
+							a(href="" data-url="http://dummyimage.com/800x600/ff0000/fff")
+								img(src="http://dummyimage.com/120x80/ff0000/fff")
+							a(href="" data-url="http://dummyimage.com/800x600/00ffff/fff")
+								img(src="http://dummyimage.com/120x80/00ffff/fff")
+							a(href="" data-url="http://dummyimage.com/800x600/ffff00/fff")
+								img(src="http://dummyimage.com/120x80/ffff00/fff")
+							a(href="" data-url="http://dummyimage.com/800x600/ff00ff/fff")
+								img(src="http://dummyimage.com/120x80/ff00ff/fff")
 				.col-md-4
 					aside.other-news
 						h2 Другие новости
@@ -45,6 +60,11 @@ block content
 								+lipsum(Math.floor(Math.random() * 4 + 8),"words")
 								| ...
 						a(href="").other-news__list Перейти к архиву новостей
+	.colorbox
+		.colorbox__content
+			i.fa.fa-chevron-left.arrow.arrow--left
+			i.fa.fa-chevron-right.arrow.arrow--right
+			i.fa.fa-times.times
 
 
 

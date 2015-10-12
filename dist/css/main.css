@@ -94,6 +94,42 @@ h5 {
 	max-height: 80vh;
 }
 
+.colorbox__content .arrow {
+	position: absolute;
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	        transform: translateY(-50%);
+	background: rgba(255,255,255,0.8);
+	padding-top: 15px;
+	font-size: 2.5em;
+}
+
+.colorbox__content .arrow--left {
+	left: -70px;
+	padding-left: 14px;
+}
+
+.colorbox__content .arrow--right {
+	right: -70px;
+	padding-left: 20px;
+}
+
+.colorbox__content .times {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	top: -50px;
+	right: -50px;
+	background: rgba(255,255,255,0.8);
+	padding-top: 7px;
+	padding-left: 10px;
+	font-size: 1.8em;
+}
+
 .header {
 	position: relative;
 }

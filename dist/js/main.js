@@ -354,13 +354,50 @@ $(document).ready(function(){
 	/*
 	 * Post page photos
 	 */
+	var colorboxIndex = 0;
 	$('.post-page__photos a').click(function(e){
 		e.preventDefault();
-		var url = $(this).data('url');
-		console.log(url);
-		$('.colorbox__content').append('<img src="'+ url +'">');
-		$('.colorbox').fadeIn();
+		colorboxIndex = $(this).index();
+		// Create images if isn't exits
+		if($('.colorbox__content').children('img').length == 0){
+			$('.post-page__photos a').each(function(){
+				var url = $(this).data('url');
+				$('.colorbox__content').append('<img src="'+ url +'">');
+			});
+		}
+		$('.colorbox__content img').hide();
+		$('.colorbox__content img').eq(colorboxIndex).show();
+		$('.colorbox').fadeIn(150);
+
 	});
+	$('.colorbox, .colorbox .times').click(function(){
+		var colorbox = $('.colorbox');
+		colorbox.fadeOut(150);
+	});
+	$('.colorbox *').click(function(e){
+		e.stopPropagation();
+	});
+	$('.colorbox .arrow--left').click(function(){
+		var nextIndex = colorboxIndex - 1;
+		if (nextIndex < 0){nextIndex = $('.colorbox__content img').length - 1;}
+		colorboxIndex = nextIndex;
+		$('.colorbox__content img').hide();
+		$('.colorbox__content img').eq(colorboxIndex).fadeIn();
+	});
+	$('.colorbox__content').on('click', 'img', function(){
+		right();
+	});
+	$('.colorbox__content .arrow--right').click(function(){
+		right();
+	});
+	var right = function(){
+		var nextIndex = colorboxIndex + 1;
+		if (nextIndex === $('.colorbox__content img').length){nextIndex = 0;}
+		colorboxIndex = nextIndex;
+		$('.colorbox__content img').hide();
+		$('.colorbox__content img').eq(colorboxIndex).fadeIn();
+	};
+
 
 	/*
 	 * Accessibility
