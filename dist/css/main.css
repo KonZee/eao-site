@@ -1698,6 +1698,7 @@ button.swiper-pagination-bullet {
 		color: #FFFFFF;
 		text-decoration: none;
 		width: 100%;
+		text-align: initial;
 	}
 
 	.menu__item a:hover {

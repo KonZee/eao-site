@@ -255,6 +255,7 @@ li {
 .menu__top-item > a {
 	display: inline-block;
 	padding: 13px 14px;
+	padding: 13px 1.1em;
 }
 .menu__top-item > a.active {
 	font-weight: bold;
@@ -286,10 +287,10 @@ li {
 	display: block;
 	width: 100%;
 	position: relative;
+	width: 300px;
 }
 .menu__item a {
 	display: block;
-	white-space: nowrap;
 	background: #000000;
 	padding: 10px 18px;
 	color: #FFFFFF;
@@ -302,7 +303,7 @@ li {
 	display: block;
 	content: '\f054';
 	font-family: FontAwesome;
-	font-size: 10px;
+	font-size: 0.7em;
 	top: 16px;
 	right: 15px;
 }
@@ -329,6 +330,62 @@ li {
 	visibility: visible;
 	opacity: 1;
 	pointer-events: auto;
+}
+body:not(.medium):not(.big) .menu__top-item:nth-last-child(-n+2) .menu__item a {
+	padding: 10px 18px 10px 30px;
+}
+body:not(.medium):not(.big) .menu__top-item:nth-last-child(-n+2) .menu__item--submenu > a:after {
+	content: '\f053';
+	right: auto;
+	left: 15px;
+}
+body:not(.medium):not(.big) .menu__top-item:nth-last-child(-n+2) .menu__submenu--1 {
+	left: auto;
+	right: 0;
+}
+body:not(.medium):not(.big) .menu__top-item:nth-last-child(-n+2) .menu__submenu--2 {
+	left: auto;
+	right: 100%;
+}
+body.medium .menu__top-item:nth-last-child(2) .menu__item a,
+body.medium .menu__top-item:nth-last-child(3) .menu__item a {
+	padding: 10px 18px 10px 30px;
+}
+body.medium .menu__top-item:nth-last-child(2) .menu__item--submenu > a:after,
+body.medium .menu__top-item:nth-last-child(3) .menu__item--submenu > a:after {
+	content: '\f053';
+	right: auto;
+	left: 15px;
+}
+body.medium .menu__top-item:nth-last-child(2) .menu__submenu--1,
+body.medium .menu__top-item:nth-last-child(3) .menu__submenu--1 {
+	left: auto;
+	right: 0;
+}
+body.medium .menu__top-item:nth-last-child(2) .menu__submenu--2,
+body.medium .menu__top-item:nth-last-child(3) .menu__submenu--2 {
+	left: auto;
+	right: 100%;
+}
+body.big .menu__top-item:nth-last-child(3) .menu__item a,
+body.big .menu__top-item:nth-last-child(4) .menu__item a {
+	padding: 10px 18px 10px 30px;
+}
+body.big .menu__top-item:nth-last-child(3) .menu__item--submenu > a:after,
+body.big .menu__top-item:nth-last-child(4) .menu__item--submenu > a:after {
+	content: '\f053';
+	right: auto;
+	left: 15px;
+}
+body.big .menu__top-item:nth-last-child(3) .menu__submenu--1,
+body.big .menu__top-item:nth-last-child(4) .menu__submenu--1 {
+	left: auto;
+	right: 0;
+}
+body.big .menu__top-item:nth-last-child(3) .menu__submenu--2,
+body.big .menu__top-item:nth-last-child(4) .menu__submenu--2 {
+	left: auto;
+	right: 100%;
 }
 .swiper-container {
 	margin: 0 auto;
