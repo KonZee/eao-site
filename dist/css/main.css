@@ -1773,7 +1773,7 @@ button.swiper-pagination-bullet {
 
 	.swiper-button-prev:hover,
 	.swiper-button-next:hover {
-		background-color: rgba(24,24,24,0.44);
+		background-color: rgba(0,0,0,0.68);
 	}
 
 	.swiper-button-prev,
