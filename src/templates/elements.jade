@@ -1,0 +1,45 @@
+extends base
+
+block content
+	main
+		.container
+			.row
+				.col-xs-12
+					p button
+					button.input__button Кнопка
+					br
+
+					p textfield
+					input(type="text" placeholder="Enabled").input__text
+					input(type="text" disabled placeholder="Disabled").input__text
+					br
+
+					p select
+					.input__select
+						select
+							option(disabled) Выберите вариант
+							option dasdas
+							option zcwdsfasdf
+					br
+
+					p textarea
+					textarea(placeholder="Enabled")
+					textarea(disabled, placeholder="Disabled")
+					br
+
+					p checkboxes
+					label.input__checkbox
+						input(type="checkbox")
+						span Чекбокс
+					label.input__checkbox
+						input(type="checkbox")
+						span Чекбокс
+					br
+
+					p radio
+					label.input__radio
+						input(type="radio" name="radio")
+						span Радио 1
+					label.input__radio
+						input(type="radio" name="radio")
+						span Радио 2
