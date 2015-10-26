@@ -141,8 +141,8 @@
                   <ul class="menu__submenu menu__submenu--1">
                     <li class="menu__item menu__item--submenu"><a href="">Календарь мероприятий органов исполнительной власти области</a>
                       <ul class="menu__submenu menu__submenu--2">
-                        <li class="menu__item"><a href="">Enim non anim consectetur excepteur proident cupidatat nostrud tempor </a></li>
-                        <li class="menu__item"><a href="">Adipiscing ullamco ipsum elit magna in commodo nulla sint </a></li>
+                        <li class="menu__item"><a href="">Dolor aliqua aute sit ipsum veniam ut magna minim </a></li>
+                        <li class="menu__item"><a href="">Ut mollit aliquip aliquip in id in lorem qui </a></li>
                       </ul>
                     </li>
                     <li class="menu__item"><a href="">Submenu item</a></li>
@@ -161,9 +161,9 @@
                     <li class="menu__item"><a href="">Submenu item</a></li>
                     <li class="menu__item"><a href="">Submenu item</a></li>
                     <li class="menu__item"><a href="">Submenu item</a></li>
-                    <li class="menu__item menu__item--submenu"><a href="">Ipsum esse incididunt nostrud ullamco eu mollit fugiat sed </a>
+                    <li class="menu__item menu__item--submenu"><a href="">Elit fugiat ut ut voluptate ut proident laborum aute </a>
                       <ul class="menu__submenu menu__submenu--2">
-                        <li class="menu__item"><a href="">Reprehenderit dolore ut consequat dolor laboris fugiat fugiat officia </a></li>
+                        <li class="menu__item"><a href="">Id aliquip ipsum enim do sit id esse consectetur </a></li>
                         <li class="menu__item"><a href="">Submenu level 2</a></li>
                         <li class="menu__item"><a href="">Submenu level 2</a></li>
                       </ul>
@@ -265,5 +265,14 @@
   <script src="js/libs/swiper.jquery.js"></script><!--<![endif]-->
   <!--[if IE 9 ]>
   <![endif]-->
+  <script src="js/classie.js"></script>
+  <script src="js/selectFx.js"></script>
+  <script>
+    (function() {
+    	[].slice.call( document.querySelectorAll( '.input__select select' ) ).forEach( function(el) {
+    		new SelectFx(el);
+    	} );
+    })();
+  </script>
   <script src="js/main.js"></script>
 </html>

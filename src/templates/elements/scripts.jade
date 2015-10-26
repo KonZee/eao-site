@@ -5,4 +5,12 @@ script(src='js/libs/swiper.jquery.js')
 <!--<![endif]-->
 <!--[if IE 9 ]>
 <![endif]-->
+script(src='js/classie.js')
+script(src='js/selectFx.js')
+script.
+	(function() {
+		[].slice.call( document.querySelectorAll( '.input__select select' ) ).forEach( function(el) {
+			new SelectFx(el);
+		} );
+	})();
 script(src='js/main.js')
