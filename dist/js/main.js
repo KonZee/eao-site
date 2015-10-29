@@ -360,13 +360,11 @@ $(document).ready(function(){
 	$('.post-page__photos a').click(function(e){
 		e.preventDefault();
 		colorboxIndex = $(this).index();
-		// Create images if isn't exits
-		if($('.colorbox__content').children('img').length == 0){
-			$('.post-page__photos a').each(function(){
-				var url = $(this).data('url');
-				$('.colorbox__content').append('<img src="'+ url +'">');
-			});
-		}
+		// Create images
+		$(this).parent().children().each(function(){
+			var url = $(this).data('url');
+			$('.colorbox__content').append('<img src="'+ url +'">');
+		});
 		$('.colorbox__content img').hide();
 		$('.colorbox__content img').eq(colorboxIndex).show();
 		$('.colorbox').fadeIn(150);
@@ -375,6 +373,9 @@ $(document).ready(function(){
 	$('.colorbox, .colorbox .times').click(function(){
 		var colorbox = $('.colorbox');
 		colorbox.fadeOut(150);
+		setTimeout(function(){
+			$('.colorbox__content img').remove();
+		}, 150);
 	});
 	$('.colorbox *').click(function(e){
 		e.stopPropagation();
