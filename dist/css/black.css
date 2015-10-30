@@ -835,7 +835,8 @@ button.swiper-pagination-bullet {
 }
 @media screen and (min-width: 992px) {
 	.slider--text {
-		max-width: 50%;
+		max-width: calc(50% - 15px);
+		min-width: calc(50% - 15px);
 		float: left;
 	}
 	.slider--text img {
@@ -850,11 +851,6 @@ button.swiper-pagination-bullet {
 	width: 100%;
 	max-width: 100%;
 	height: auto;
-}
-@media screen and (min-width: 768px) {
-	.slider-text {
-		margin-left: 50%;
-	}
 }
 .slider-text__tab:not(:first-child) {
 	display: none;
