@@ -1137,6 +1137,10 @@ button.swiper-pagination-bullet {
 	right: 0;
 }
 
+.news h1 + .news__item {
+	margin-top: 30px;
+}
+
 .news__item {
 	padding: 30px;
 	box-shadow: 0 0 2px 1px #F5F5F5;
@@ -1147,11 +1151,12 @@ button.swiper-pagination-bullet {
 .news__item h3 {
 	margin-top: 0;
 	color: #242424;
+	margin-bottom: 15px;
 }
 
 .news__item .data {
 	color: #CCCCCC;
-	margin: 15px 0 20px;
+	margin: 0 0 20px;
 }
 
 .news__item .text {
@@ -1215,6 +1220,7 @@ button.swiper-pagination-bullet {
 
 .other-news {
 	background: #F2F2F2;
+	padding-top: 30px;
 }
 
 .other-news h2 {
