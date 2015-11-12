@@ -1437,16 +1437,18 @@ button.swiper-pagination-bullet {
 
 .section__docs {
 	margin-top: 60px;
-	font-size: 16px;
+	font-size: 14px;
 }
 
 .section__docs li {
 	list-style-position: inside;
-	margin: 0 0 25px;
+	margin: 0 0 20px;
+	font-weight: 400;
 }
 
 .section__docs a {
 	color: #242424;
+	text-decoration: underline;
 }
 
 .section__docs a:hover {
@@ -1501,12 +1503,18 @@ button.swiper-pagination-bullet {
 }
 
 .section__other a {
-	font-size: 16px;
+	font-size: 14px;
 	display: list-item;
 	color: #242424;
 	text-decoration: underline;
 	list-style-position: inside;
-	margin: 5px 0;
+	margin: 0 0 20px;
+	font-weight: 400;
+	line-height: 1.6;
+}
+
+.section__other a:hover {
+	color: #0E9877;
 }
 
 .section__slider {
